@@ -1,0 +1,12 @@
+<map id="ippl::FEMMaxwellDiffusionSolver&lt; FieldType &gt;" name="ippl::FEMMaxwellDiffusionSolver&lt; FieldType &gt;">
+<area shape="rect" id="node1" title="A solver for the electric diffusion equation given by &#160;and &#160;using the Nédélec basis functions." alt="" coords="339,1331,568,1555"/>
+<area shape="rect" id="node2" href="$classippl_1_1Maxwell.html" title=" " alt="" coords="5,993,195,1217"/>
+<area shape="rect" id="node3" href="$classippl_1_1NedelecSpace.html" title=" " alt="" coords="219,941,432,1268"/>
+<area shape="rect" id="node4" href="$classippl_1_1FiniteElementSpace.html" title=" " alt="" coords="187,492,453,892"/>
+<area shape="rect" id="node5" href="$classippl_1_1CG.html" title=" " alt="" coords="457,985,709,1224"/>
+<area shape="rect" id="node6" href="$classippl_1_1SolverAlgorithm.html" title=" " alt="" coords="477,639,699,745"/>
+<area shape="rect" id="node7" href="$classippl_1_1GaussJacobiQuadrature.html" title=" " alt="" coords="733,1015,955,1195"/>
+<area shape="rect" id="node8" href="$classippl_1_1Quadrature.html" title="This is the base class for all quadrature rules." alt="" coords="733,543,955,841"/>
+<area shape="rect" id="node9" href="$classippl_1_1Vector.html" title=" " alt="" coords="729,161,959,400"/>
+<area shape="rect" id="node10" href="$structippl_1_1detail_1_1Expression.html" title=" " alt="" coords="745,5,943,112"/>
+</map>
