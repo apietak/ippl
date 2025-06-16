@@ -82,15 +82,15 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="comment">// LagrangeSpace constructor, which calls the FiniteElementSpace constructor,</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="comment">// and decomposes the elements among ranks according to layout.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#ad6332959b362f7ba565d82bdb58b11f5">    8</a></span>&#160;    <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html#ad6332959b362f7ba565d82bdb58b11f5">LagrangeSpaceFEMVector&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS, FieldRHS&gt;::LagrangeSpaceFEMVector</a>(</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="classippl_1_1UniformCartesian.html">UniformCartesian&lt;T, Dim&gt;</a>&amp; mesh, ElementType&amp; ref_element, <span class="keyword">const</span> QuadratureType&amp; quadrature,</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">const</span> <a class="code" href="classippl_1_1FieldLayout.html">Layout_t</a>&amp; layout)</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        : <a class="code" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <a class="code" href="LagrangeSpace_8h.html#a93057c2a5a4d1be46e205a80cb831a0c">getLagrangeNumElementDOFs</a>(<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order), ElementType,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        : <a class="code" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt;T, Dim, <a class="code" href="LagrangeSpace_8h.html#a93057c2a5a4d1be46e205a80cb831a0c">getLagrangeNumElementDOFs</a>(Dim, Order), ElementType,</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                             QuadratureType, FieldLHS, FieldLHS&gt;(mesh, ref_element, quadrature) {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="comment">// Assert that the dimension is either 1, 2 or 3.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        static_assert(<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;= 1 &amp;&amp; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &lt;= 3,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        static_assert(Dim &gt;= 1 &amp;&amp; Dim &lt;= 3,</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                      <span class="stringliteral">&quot;Finite Element space only supports 1D, 2D and 3D meshes&quot;</span>);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">// Initialize the elementIndices view</span></div>
@@ -98,26 +98,26 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// LagrangeSpace constructor, which calls the FiniteElementSpace constructor.</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a0ac3896ab6aadba72e6acf49e4a7d699">   24</a></span>&#160;    <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html#ad6332959b362f7ba565d82bdb58b11f5">LagrangeSpaceFEMVector&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS, FieldRHS&gt;::LagrangeSpaceFEMVector</a>(</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classippl_1_1UniformCartesian.html">UniformCartesian&lt;T, Dim&gt;</a>&amp; mesh, ElementType&amp; ref_element, <span class="keyword">const</span> QuadratureType&amp; quadrature)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        : <a class="code" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <a class="code" href="LagrangeSpace_8h.html#a93057c2a5a4d1be46e205a80cb831a0c">getLagrangeNumElementDOFs</a>(<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order), ElementType,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        : <a class="code" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt;T, Dim, <a class="code" href="LagrangeSpace_8h.html#a93057c2a5a4d1be46e205a80cb831a0c">getLagrangeNumElementDOFs</a>(Dim, Order), ElementType,</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                             QuadratureType, FieldLHS, FieldLHS&gt;(mesh, ref_element, quadrature) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// Assert that the dimension is either 1, 2 or 3.</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        static_assert(<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;= 1 &amp;&amp; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &lt;= 3,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        static_assert(Dim &gt;= 1 &amp;&amp; Dim &lt;= 3,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                      <span class="stringliteral">&quot;Finite Element space only supports 1D, 2D and 3D meshes&quot;</span>);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// LagrangeSpace initializer, to be made available to the FEMPoissonSolver </span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// such that we can call it from setRhs.</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// Sets the correct mesh ad decomposes the elements among ranks according to layout.</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a665271da51096c67b85e2d8038f34d30">   38</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html#a665271da51096c67b85e2d8038f34d30">LagrangeSpaceFEMVector&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS, FieldRHS&gt;::initialize</a>(</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classippl_1_1UniformCartesian.html">UniformCartesian&lt;T, Dim&gt;</a>&amp; mesh, <span class="keyword">const</span> <a class="code" href="classippl_1_1FieldLayout.html">Layout_t</a>&amp; layout)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <a class="code" href="LagrangeSpace_8h.html#a93057c2a5a4d1be46e205a80cb831a0c">getLagrangeNumElementDOFs</a>(<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order), ElementType,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt;T, Dim, <a class="code" href="LagrangeSpace_8h.html#a93057c2a5a4d1be46e205a80cb831a0c">getLagrangeNumElementDOFs</a>(Dim, Order), ElementType,</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                           QuadratureType, FieldLHS, FieldLHS&gt;::setMesh(mesh);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// Initialize the elementIndices view</span></div>
@@ -125,9 +125,9 @@ $(function() {
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// Initialize element indices Kokkos View</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#ac5f0bee29e1f621ac5113fb922ec90bd">   52</a></span>&#160;                       FieldRHS&gt;::initializeElementIndices(<span class="keyword">const</span> <a class="code" href="classippl_1_1FieldLayout.html">Layout_t</a>&amp; layout) {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        layout_m = layout;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ldom = layout.<a class="code" href="classippl_1_1FieldLayout.html#a2c9a7b8dec5ecc6519afc374b45c3a21">getLocalNDIndex</a>();</div>
@@ -136,7 +136,7 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">auto</span> last        = ldom.last();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="classippl_1_1Vector.html">ippl::Vector&lt;double, Dim&gt;</a> bounds;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            bounds[d] = this-&gt;nr_m[d] - 1;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
@@ -149,7 +149,7 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordtype">int</span> idx = i;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <a class="code" href="classippl_1_1Vector.html">indices_t</a> val;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordtype">bool</span> isBoundary = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    <span class="keywordtype">int</span> range = last[d] - first[d] + 1;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    val[d]    = first[d] + (idx % range);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    idx /= range;</div>
@@ -177,24 +177,24 @@ $(function() {
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    KOKKOS_FUNCTION <span class="keywordtype">size_t</span> LagrangeSpaceFEMVector&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    KOKKOS_FUNCTION <span class="keywordtype">size_t</span> LagrangeSpaceFEMVector&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#ac6390c3d46d2b424661e5b8210d9b2f1">  107</a></span>&#160;                                         FieldRHS&gt;::numGlobalDOFs()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#ac5f0bee29e1f621ac5113fb922ec90bd">  108</a></span>&#160;        <span class="keywordtype">size_t</span> num_global_dofs = 1;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            num_global_dofs *= this-&gt;nr_m[d] * Order;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">return</span> num_global_dofs;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
 <div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#ac6390c3d46d2b424661e5b8210d9b2f1">  118</a></span>&#160;    KOKKOS_FUNCTION</div>
 <div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a4c12fa14407a32763e1b457aa0828a0c">  119</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html#a4c12fa14407a32763e1b457aa0828a0c">LagrangeSpaceFEMVector&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS, FieldRHS&gt;::getLocalDOFIndex</a></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    (<span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; elementIndex, <span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; globalDOFIndex)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        static_assert(<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 1 || <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 2 || <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 3, <span class="stringliteral">&quot;Dim must be 1, 2 or 3&quot;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        static_assert(Dim == 1 || Dim == 2 || Dim == 3, <span class="stringliteral">&quot;Dim must be 1, 2 or 3&quot;</span>);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">// TODO fix not order independent, only works for order 1</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        static_assert(Order == 1, <span class="stringliteral">&quot;Only order 1 is supported at the moment&quot;</span>);</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
@@ -203,11 +203,11 @@ $(function() {
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            this-&gt;getGlobalDOFIndices(elementIndex);</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
 <div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a4c12fa14407a32763e1b457aa0828a0c">  129</a></span>&#160;        <a class="code" href="classippl_1_1Vector.html">ippl::Vector</a>&lt;size_t, this-&gt;numElementDOFs&gt; dof_mapping;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 1) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">if</span> (Dim == 1) {</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            dof_mapping = {0, 1};</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 2) {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Dim == 2) {</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            dof_mapping = {0, 1, 3, 2};</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 3) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Dim == 3) {</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            dof_mapping = {0, 1, 3, 2, 4, 5, 7, 6};</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        }</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
@@ -223,10 +223,10 @@ $(function() {
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">//                    &quot;FEM Lagrange Space: Global DOF not found in specified element&quot;);</span></div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a613e07dfce66aa9865c64cf77f2c99f3">  150</a></span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a613e07dfce66aa9865c64cf77f2c99f3">  150</a></span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    KOKKOS_FUNCTION <span class="keywordtype">size_t</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a2b2cf408d7c1c8e89fa9a9cedf261b5e">  154</a></span>&#160;                  FieldRHS&gt;::getGlobalDOFIndex(<span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; elementIndex,</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                                               <span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; localDOFIndex)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> global_dofs = this-&gt;getGlobalDOFIndices(elementIndex);</div>
@@ -234,11 +234,11 @@ $(function() {
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">return</span> global_dofs[localDOFIndex];</div>
 <div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a4a76d8247db56e63b71d6f0beddda10e">  159</a></span>&#160;    }</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    KOKKOS_FUNCTION <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType,</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    KOKKOS_FUNCTION <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType,</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                                                 FieldLHS, FieldRHS&gt;::numElementDOFs&gt;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a613e07dfce66aa9865c64cf77f2c99f3">  166</a></span>&#160;                  FieldRHS&gt;::getLocalDOFIndices()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <a class="code" href="classippl_1_1Vector.html">Vector&lt;size_t, numElementDOFs&gt;</a> localDOFs;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
@@ -249,11 +249,11 @@ $(function() {
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> localDOFs;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
 <div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a38907f682034cd716d0d435c9d0d5c25">  175</a></span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    KOKKOS_FUNCTION <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType,</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    KOKKOS_FUNCTION <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType,</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                                                 FieldLHS, FieldRHS&gt;::numElementDOFs&gt;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a4a76d8247db56e63b71d6f0beddda10e">  181</a></span>&#160;                  FieldRHS&gt;::getGlobalDOFIndices(<span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; elementIndex)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, this-&gt;numElementDOFs&gt; globalDOFs(0);</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
@@ -263,7 +263,7 @@ $(function() {
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="comment">// Compute the vector to multiply the ndindex with</span></div>
 <div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#ae919e0ffde6cdd46b39988775ed951b3">  188</a></span>&#160;        <a class="code" href="classippl_1_1Vector.html">ippl::Vector&lt;size_t, Dim&gt;</a> vec(1);</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 1; d &lt; dim; ++d) {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d2 = d; d2 &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d2) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d2 = d; d2 &lt; Dim; ++d2) {</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                vec[d2] *= this-&gt;nr_m[d - 1];</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            }</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }</div>
@@ -274,11 +274,11 @@ $(function() {
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        globalDOFs[0] = smallestGlobalDOF;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        globalDOFs[1] = smallestGlobalDOF + Order;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;= 2) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">if</span> (Dim &gt;= 2) {</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            globalDOFs[2] = globalDOFs[1] + this-&gt;nr_m[1] * Order;</div>
 <div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a2aad433b6c0dc0256db1d26575d10cd0">  203</a></span>&#160;            globalDOFs[3] = globalDOFs[0] + this-&gt;nr_m[1] * Order;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;= 3) {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">if</span> (Dim &gt;= 3) {</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            globalDOFs[4] = globalDOFs[0] + this-&gt;nr_m[1] * this-&gt;nr_m[2] * Order;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            globalDOFs[5] = globalDOFs[1] + this-&gt;nr_m[1] * this-&gt;nr_m[2] * Order;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            globalDOFs[6] = globalDOFs[2] + this-&gt;nr_m[1] * this-&gt;nr_m[2] * Order;</div>
@@ -290,7 +290,7 @@ $(function() {
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="comment">// done</span></div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="comment">// Add the edge DOFs</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;= 2) {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordflow">if</span> (Dim &gt;= 2) {</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; Order - 1; ++i) {</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    globalDOFs[8 + i]                   = globalDOFs[0] + i + 1;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    globalDOFs[8 + Order - 1 + i]       = globalDOFs[1] + (i + 1) * this-&gt;nr_m[1];</div>
@@ -298,12 +298,12 @@ $(function() {
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    globalDOFs[8 + 3 * (Order - 1) + i] = globalDOFs[3] - (i + 1) * this-&gt;nr_m[1];</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                }</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            }</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;= 3) {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">if</span> (Dim &gt;= 3) {</div>
 <div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#af6030ff472331736b92bed5c2c375a96">  226</a></span>&#160;                <span class="comment">// TODO</span></div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            }</div>
 <div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a5da458cab97248e71691da047777ee82">  228</a></span>&#160; </div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="comment">// Add the face DOFs</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;= 2) {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">if</span> (Dim &gt;= 2) {</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; Order - 1; ++i) {</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; Order - 1; ++j) {</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                        <span class="comment">// TODO CHECK</span></div>
@@ -326,13 +326,13 @@ $(function() {
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    KOKKOS_FUNCTION <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    KOKKOS_FUNCTION T</div>
 <div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a38907f682034cd716d0d435c9d0d5c25">  259</a></span>&#160;    <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html#a38907f682034cd716d0d435c9d0d5c25">LagrangeSpaceFEMVector&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS, FieldRHS&gt;::</a></div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html#a38907f682034cd716d0d435c9d0d5c25">        evaluateRefElementShapeFunction</a>(</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; localDOF,</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="keyword">const</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="keyword">const</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                                FieldRHS&gt;::<a class="code" href="classippl_1_1Vector.html">point_t</a>&amp; localPoint)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        static_assert(Order == 1, <span class="stringliteral">&quot;Only order 1 is supported at the moment&quot;</span>);</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="comment">// Assert that the local vertex index is valid.</span></div>
@@ -347,9 +347,9 @@ $(function() {
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keyword">const</span> <a class="code" href="classippl_1_1Vector.html">point_t</a> ref_element_point = this-&gt;ref_element_m.getLocalVertices()[localDOF];</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="comment">// The variable that accumulates the product of the shape functions.</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> product = 1;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        T product = 1;</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; d++) {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 0; d &lt; Dim; d++) {</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="keywordflow">if</span> (localPoint[d] &lt; ref_element_point[d]) {</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                product *= localPoint[d];</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            } <span class="keywordflow">else</span> {</div>
@@ -360,14 +360,14 @@ $(function() {
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">return</span> product;</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    KOKKOS_FUNCTION <span class="keyword">typename</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    KOKKOS_FUNCTION <span class="keyword">typename</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                                           FieldRHS&gt;::point_t</div>
 <div class="line"><a name="l00294"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#ae919e0ffde6cdd46b39988775ed951b3">  294</a></span>&#160;    <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html#ae919e0ffde6cdd46b39988775ed951b3">LagrangeSpaceFEMVector&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS, FieldRHS&gt;::</a></div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html#ae919e0ffde6cdd46b39988775ed951b3">        evaluateRefElementShapeFunctionGradient</a>(</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">size_t</span>&amp; localDOF,</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keyword">const</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keyword">const</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                                FieldRHS&gt;::<a class="code" href="classippl_1_1Vector.html">point_t</a>&amp; localPoint)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="comment">// TODO fix not order independent, only works for order 1</span></div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        static_assert(Order == 1 &amp;&amp; <span class="stringliteral">&quot;Only order 1 is supported at the moment&quot;</span>);</div>
@@ -389,11 +389,11 @@ $(function() {
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="comment">// shape functions in each dimension except the current one. The one of the current</span></div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="comment">// dimension is replaced by the derivative of the shape function in that dimension,</span></div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="comment">// which is either 1 or -1.</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; d++) {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 0; d &lt; Dim; d++) {</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="comment">// The variable that accumulates the product of the shape functions.</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> product = 1;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            T product = 1;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d2 = 0; d2 &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; d2++) {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d2 = 0; d2 &lt; Dim; d2++) {</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                <span class="keywordflow">if</span> (d2 == d) {</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    <span class="keywordflow">if</span> (localPoint[d] &lt; local_vertex_point[d]) {</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                        product *= 1;</div>
@@ -416,10 +416,10 @@ $(function() {
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> F&gt;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    FieldLHS <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    FieldLHS <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l00353"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a2aad433b6c0dc0256db1d26575d10cd0">  353</a></span>&#160;                           FieldRHS&gt;::evaluateAx(FieldLHS&amp; vector, F&amp; evalFunction)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <a class="code" href="classInform.html">Inform</a> m(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        </div>
@@ -472,8 +472,8 @@ $(function() {
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="comment">// to the position end+1, but simply to end</span></div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <a class="code" href="classippl_1_1Vector.html">ippl::Vector&lt;size_t, Dim&gt;</a> extents = (ldom.last()+1) - ldom.first() + 2;</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <a class="code" href="classippl_1_1Vector.html">ippl::Vector&lt;size_t, Dim&gt;</a> v(1);</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++i) {</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = i; j &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++j) {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; Dim; ++i) {</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = i; j &lt; Dim; ++j) {</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                v(j) *= extents(i-1);</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            }</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        }</div>
@@ -496,7 +496,7 @@ $(function() {
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                <span class="keywordtype">size_t</span> i, j;</div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                <span class="comment">// Element matrix</span></div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, this-&gt;numElementDOFs&gt;, this-&gt;numElementDOFs&gt; A_K;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;T, this-&gt;numElementDOFs&gt;, this-&gt;numElementDOFs&gt; A_K;</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;                <span class="comment">// 1. Compute the Galerkin element matrix A_K</span></div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;                <span class="keywordflow">for</span> (i = 0; i &lt; this-&gt;numElementDOFs; ++i) {</div>
@@ -523,7 +523,7 @@ $(function() {
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160; </div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                    <span class="comment">// get the appropriate index for the Kokkos view of the field</span></div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                    I = 0;</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                        I_nd[d] = I_nd[d] - ldom[d].first() + 1;</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;                        I += v[d]*I_nd[d];</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                    }</div>
@@ -538,7 +538,7 @@ $(function() {
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                        <span class="comment">// get the appropriate index for the Kokkos view of the field</span></div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                        J = 0;</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                            J_nd[d] = J_nd[d] - ldom[d].first() + 1;</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                            J += v[d]*J_nd[d];</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                        }</div>
@@ -554,9 +554,9 @@ $(function() {
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        <span class="keywordflow">return</span> resultVector;</div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    }</div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160; </div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l00490"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a9c80ea6e24778d49dee566378bf044e1">  490</a></span>&#160;                       FieldRHS&gt;::evaluateLoadVector(FieldLHS&amp; vector)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        <a class="code" href="classInform.html">Inform</a> m(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        </div>
@@ -575,7 +575,7 @@ $(function() {
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        <span class="keyword">const</span> <a class="code" href="classippl_1_1Vector.html">indices_t</a> zeroNdIndex = <a class="code" href="classippl_1_1Vector.html">Vector&lt;size_t, Dim&gt;</a>(0);</div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160; </div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        <span class="comment">// Evaluate the basis functions for the DOF at the quadrature nodes</span></div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, this-&gt;numElementDOFs&gt;, QuadratureType::numElementNodes&gt; basis_q;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;T, this-&gt;numElementDOFs&gt;, QuadratureType::numElementNodes&gt; basis_q;</div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0; k &lt; QuadratureType::numElementNodes; ++k) {</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;numElementDOFs; ++i) {</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;                basis_q[k][i] = this-&gt;evaluateRefElementShapeFunction(i, q[k]);</div>
@@ -583,7 +583,7 @@ $(function() {
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        }</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160; </div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        <span class="comment">// Absolute value of det Phi_K</span></div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <span class="keyword">const</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> absDetDPhi = Kokkos::abs(this-&gt;ref_element_m.getDeterminantOfTransformationJacobian(</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <span class="keyword">const</span> T absDetDPhi = Kokkos::abs(this-&gt;ref_element_m.getDeterminantOfTransformationJacobian(</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;            this-&gt;getElementMeshVertexPoints(zeroNdIndex)));</div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160; </div>
 <div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <span class="comment">// Get domain information and ghost cells</span></div>
@@ -614,8 +614,8 @@ $(function() {
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        <span class="comment">// to the position end+1, but simply to end</span></div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        <a class="code" href="classippl_1_1Vector.html">ippl::Vector&lt;size_t, Dim&gt;</a> extents = (ldom.last()+1) - ldom.first() + 2;</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        <a class="code" href="classippl_1_1Vector.html">ippl::Vector&lt;size_t, Dim&gt;</a> v(1);</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++i) {</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = i; j &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++j) {</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; Dim; ++i) {</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = i; j &lt; Dim; ++j) {</div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;                v(j) *= extents(i-1);</div>
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;            }</div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        }</div>
@@ -643,16 +643,16 @@ $(function() {
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;                    }</div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160; </div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;                    <span class="comment">// calculate the contribution of this element</span></div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;                    <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> contrib = 0;</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;                    T contrib = 0;</div>
 <div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0; k &lt; QuadratureType::numElementNodes; ++k) {</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;                        <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> val = 0;</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;                        T val = 0;</div>
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; this-&gt;numElementDOFs; ++j) {</div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;                            <span class="comment">// get field index corresponding to this DOF</span></div>
 <div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;                            <span class="keywordtype">size_t</span> J           = global_dofs[j];</div>
 <div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;                            <span class="keyword">auto</span> dof_ndindex_J = this-&gt;getMeshVertexNDIndex(J);</div>
 <div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                            JJ = 0;</div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;                            </div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;                            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;                            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                                dof_ndindex_J[d] = dof_ndindex_J[d] - ldom[d].first() + 1;</div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                                JJ += dof_ndindex_J[d]*v[d];</div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                            }</div>
@@ -667,7 +667,7 @@ $(function() {
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160; </div>
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                    <span class="comment">// get the appropriate index for the Kokkos view of the field</span></div>
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                    II = 0;</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;                        dof_ndindex_I[d] = dof_ndindex_I[d] - ldom[d].first() + 1;</div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;                        II += dof_ndindex_I[d]*v[d];</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                    }</div>
@@ -687,9 +687,9 @@ $(function() {
 <div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    }</div>
 <div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160; </div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160; </div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    FieldLHS <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    FieldLHS <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l00623"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#af6030ff472331736b92bed5c2c375a96">  623</a></span>&#160;        FieldRHS&gt;::interpolateToFEMVector(<span class="keyword">const</span> FieldRHS&amp; field)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;        </div>
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;        <span class="comment">// The Kokkos view.</span></div>
@@ -697,15 +697,15 @@ $(function() {
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;        </div>
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;        <span class="comment">// figure out the total number of elements in the field.</span></div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        <span class="keywordtype">size_t</span> n = 1;</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;            n *= view.extent(d);</div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;        }</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160; </div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;        <span class="comment">// Next we need to define how we are going to do the index mappings, for</span></div>
 <div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        <span class="comment">// this we rely on the mapping from ndIndex to number.</span></div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;        <a class="code" href="classippl_1_1Vector.html">ippl::Vector&lt;size_t, Dim&gt;</a> v(1);</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++i) {</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = i; j &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++j) {</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; Dim; ++i) {</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = i; j &lt; Dim; ++j) {</div>
 <div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;                v(j) *= view.extent(i-1);</div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;            }</div>
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;        }</div>
@@ -768,17 +768,17 @@ $(function() {
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;<span class="comment">                }</span></div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;<span class="comment">                */</span></div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 1) {</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;                <span class="keywordflow">if</span> (Dim == 1) {</div>
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = sendRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[0]; x &lt; sendRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[0]; x++) {</div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;                        sendIdxsTemp[idx].push_back(x);</div>
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;                    }</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 2) {</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Dim == 2) {</div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = sendRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[0]; x &lt; sendRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[0]; x++) {</div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = sendRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[1]; y &lt; sendRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[1]; y++) {</div>
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;                            sendIdxsTemp[idx].push_back(x*v[0] + y*v[1]);</div>
 <div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;                        }</div>
 <div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;                    }</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 3) {</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Dim == 3) {</div>
 <div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = sendRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[0]; x &lt; sendRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[0]; x++) {</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = sendRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[1]; y &lt; sendRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[1]; y++) {</div>
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;                            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> z = sendRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[2]; z &lt; sendRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[2]; z++) {</div>
@@ -798,11 +798,11 @@ $(function() {
 <div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;<span class="comment">                }</span></div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="comment">                */</span></div>
 <div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160; </div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 1) {</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;                <span class="keywordflow">if</span> (Dim == 1) {</div>
 <div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = recvRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[0]; x &lt; recvRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[0]; x++) {</div>
 <div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;                        recvIdxsTemp[idx].push_back(x);</div>
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;                    }</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 2) {</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Dim == 2) {</div>
 <div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = recvRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[0]; x &lt; recvRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[0]; x++) {</div>
 <div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = recvRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[1]; y &lt; recvRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[1]; y++) {</div>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;                            recvIdxsTemp[idx].push_back(x*v[0] + y*v[1]);</div>
@@ -814,7 +814,7 @@ $(function() {
 <div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;<span class="comment">                            */</span></div>
 <div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;                        }</div>
 <div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;                    }</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 3) {</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Dim == 3) {</div>
 <div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = recvRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[0]; x &lt; recvRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[0]; x++) {</div>
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = recvRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[1]; y &lt; recvRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[1]; y++) {</div>
 <div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;                            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> z = recvRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[2]; z &lt; recvRange.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[2]; z++) {</div>
@@ -865,7 +865,7 @@ $(function() {
 <div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;            <span class="stringliteral">&quot;LagrangeSpaceFEMVector::interpolateToFEMVector&quot;</span>, <a class="code" href="namespaceippl.html#a364616f2ed1bf4fb3183c653fff8de21">getRangePolicy</a>(fieldView),</div>
 <div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;            KOKKOS_LAMBDA(<span class="keyword">const</span> index_array_type&amp; args) {</div>
 <div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;                <span class="keywordtype">size_t</span> idx = 0;</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++i) {</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; Dim; ++i) {</div>
 <div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;                    idx += args[i]*v[i];</div>
 <div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;                }</div>
 <div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                vecView[idx] = <a class="code" href="namespaceippl.html#a204441f2757e646dfa8add627d520b01">apply</a>(fieldView, args);</div>
@@ -876,9 +876,9 @@ $(function() {
 <div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160; </div>
 <div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;    }</div>
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160; </div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l00812"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a5da458cab97248e71691da047777ee82">  812</a></span>&#160;        FieldRHS&gt;::reconstructToField(<span class="keyword">const</span> <a class="code" href="classippl_1_1FEMVector.html">FEMVector&lt;T&gt;</a>&amp; vector, FieldRHS&amp; field)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;        </div>
 <div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160; </div>
@@ -887,8 +887,8 @@ $(function() {
 <div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        <span class="keyword">auto</span> fieldView = field.getView();</div>
 <div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160; </div>
 <div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;        <a class="code" href="classippl_1_1Vector.html">ippl::Vector&lt;size_t, Dim&gt;</a> v(1);</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++i) {</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = i; j &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++j) {</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; Dim; ++i) {</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = i; j &lt; Dim; ++j) {</div>
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;                v(j) *= fieldView.extent(i-1);</div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;            }</div>
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;        }</div>
@@ -902,7 +902,7 @@ $(function() {
 <div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;            <span class="stringliteral">&quot;LagrangeSpaceFEMVector::reconstructToFEMVector&quot;</span>, <a class="code" href="namespaceippl.html#a364616f2ed1bf4fb3183c653fff8de21">getRangePolicy</a>(fieldView),</div>
 <div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;            KOKKOS_LAMBDA(<span class="keyword">const</span> index_array_type&amp; args) {</div>
 <div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;                <span class="keywordtype">size_t</span> idx = 0;</div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++i) {</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; Dim; ++i) {</div>
 <div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;                    idx += args[i]*v[i];</div>
 <div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;                }</div>
 <div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160; </div>
@@ -995,10 +995,10 @@ $(function() {
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;<span class="comment">    }</span></div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
 <div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> F&gt;</div>
-<div class="line"><a name="l00931"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a86093fd669be4afc03e66e6c20a122da">  931</a></span>&#160;    <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html#a86093fd669be4afc03e66e6c20a122da">LagrangeSpaceFEMVector&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS, FieldRHS&gt;::computeError</a>(</div>
+<div class="line"><a name="l00931"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a86093fd669be4afc03e66e6c20a122da">  931</a></span>&#160;    T <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html#a86093fd669be4afc03e66e6c20a122da">LagrangeSpaceFEMVector&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS, FieldRHS&gt;::computeError</a>(</div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;        <span class="keyword">const</span> FieldRHS&amp; u_h, <span class="keyword">const</span> F&amp; u_sol)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;        <span class="keywordflow">if</span> (this-&gt;quadrature_m.getOrder() &lt; (2 * Order + 1)) {</div>
 <div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;            <span class="comment">// throw exception</span></div>
@@ -1016,7 +1016,7 @@ $(function() {
 <div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;            this-&gt;quadrature_m.getIntegrationNodesForRefElement();</div>
 <div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160; </div>
 <div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;        <span class="comment">// Evaluate the basis functions for the DOF at the quadrature nodes</span></div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;        <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, this-&gt;numElementDOFs&gt;, QuadratureType::numElementNodes&gt; basis_q;</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;        <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;T, this-&gt;numElementDOFs&gt;, QuadratureType::numElementNodes&gt; basis_q;</div>
 <div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0; k &lt; QuadratureType::numElementNodes; ++k) {</div>
 <div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;numElementDOFs; ++i) {</div>
 <div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;                basis_q[k][i] = this-&gt;evaluateRefElementShapeFunction(i, q[k]);</div>
@@ -1026,11 +1026,11 @@ $(function() {
 <div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;        <span class="keyword">const</span> <a class="code" href="classippl_1_1Vector.html">indices_t</a> zeroNdIndex = <a class="code" href="classippl_1_1Vector.html">Vector&lt;size_t, Dim&gt;</a>(0);</div>
 <div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160; </div>
 <div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;        <span class="comment">// Absolute value of det Phi_K</span></div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;        <span class="keyword">const</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> absDetDPhi = Kokkos::abs(this-&gt;ref_element_m.getDeterminantOfTransformationJacobian(</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;        <span class="keyword">const</span> T absDetDPhi = Kokkos::abs(this-&gt;ref_element_m.getDeterminantOfTransformationJacobian(</div>
 <div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;            this-&gt;getElementMeshVertexPoints(zeroNdIndex)));</div>
 <div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160; </div>
 <div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;        <span class="comment">// Variable to sum the error to</span></div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;        <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> error = 0;</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;        T error = 0;</div>
 <div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160; </div>
 <div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;        <span class="comment">// Get domain information and ghost cells</span></div>
 <div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;        <span class="keyword">auto</span> ldom        = (u_h.getLayout()).getLocalNDIndex();</div>
@@ -1048,18 +1048,18 @@ $(function() {
 <div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;                    this-&gt;getGlobalDOFIndices(elementIndex);</div>
 <div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160; </div>
 <div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;                <span class="comment">// contribution of this element to the error</span></div>
-<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;                <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> contrib = 0;</div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;                T contrib = 0;</div>
 <div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0; k &lt; QuadratureType::numElementNodes; ++k) {</div>
-<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;                    <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> val_u_sol = u_sol(this-&gt;ref_element_m.localToGlobal(</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;                    T val_u_sol = u_sol(this-&gt;ref_element_m.localToGlobal(</div>
 <div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;                        this-&gt;getElementMeshVertexPoints(this-&gt;getElementNDIndex(elementIndex)),</div>
 <div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;                        q[k]));</div>
 <div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160; </div>
-<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;                    <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> val_u_h = 0;</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;                    T val_u_h = 0;</div>
 <div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;numElementDOFs; ++i) {</div>
 <div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;                        <span class="comment">// get field index corresponding to this DOF</span></div>
 <div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;                        <span class="keywordtype">size_t</span> I           = global_dofs[i];</div>
 <div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;                        <span class="keyword">auto</span> dof_ndindex_I = this-&gt;getMeshVertexNDIndex(I);</div>
-<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;                            dof_ndindex_I[d] = dof_ndindex_I[d] - ldom[d].first() + nghost;</div>
 <div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;                        }</div>
 <div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160; </div>
@@ -1074,16 +1074,16 @@ $(function() {
 <div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;            Kokkos::Sum&lt;double&gt;(error));</div>
 <div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160; </div>
 <div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;        <span class="comment">// MPI reduce</span></div>
-<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;        <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> global_error = 0.0;</div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;        T global_error = 0.0;</div>
 <div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;        <a class="code" href="namespaceippl.html#abfab7f67f977ee069d97c58cef8bd486">Comm</a>-&gt;allreduce(error, global_error, 1, std::plus&lt;T&gt;());</div>
 <div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160; </div>
 <div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;        <span class="keywordflow">return</span> Kokkos::sqrt(global_error);</div>
 <div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;    }</div>
 <div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160; </div>
-<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">unsigned</span> Dim, <span class="keywordtype">unsigned</span> Order, <span class="keyword">typename</span> ElementType,</div>
 <div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;              <span class="keyword">typename</span> QuadratureType, <span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
 <div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> F&gt;</div>
-<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;    <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldLHS,</div>
+<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;    T <a class="code" href="classippl_1_1LagrangeSpaceFEMVector.html">LagrangeSpaceFEMVector</a>&lt;T, Dim, Order, ElementType, QuadratureType, FieldLHS,</div>
 <div class="line"><a name="l01017"></a><span class="lineno"><a class="line" href="classippl_1_1LagrangeSpaceFEMVector.html#a23a731ea4e6bb537a199fcf4f41a74f3"> 1017</a></span>&#160;                    FieldRHS&gt;::computeErrorInf(<span class="keyword">const</span> FieldRHS&amp; u_h, <span class="keyword">const</span> F&amp; u_sol)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;        <span class="keywordflow">if</span> (this-&gt;quadrature_m.getOrder() &lt; (2 * Order + 1)) {</div>
 <div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;            <span class="comment">// throw exception</span></div>
@@ -1101,7 +1101,7 @@ $(function() {
 <div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;            this-&gt;quadrature_m.getIntegrationNodesForRefElement();</div>
 <div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160; </div>
 <div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;        <span class="comment">// Evaluate the basis functions for the DOF at the quadrature nodes</span></div>
-<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;        <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, this-&gt;numElementDOFs&gt;, QuadratureType::numElementNodes&gt; basis_q;</div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;        <a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="code" href="classippl_1_1Vector.html">Vector</a>&lt;T, this-&gt;numElementDOFs&gt;, QuadratureType::numElementNodes&gt; basis_q;</div>
 <div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 0; k &lt; QuadratureType::numElementNodes; ++k) {</div>
 <div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;numElementDOFs; ++i) {</div>
 <div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;                basis_q[k][i] = this-&gt;evaluateRefElementShapeFunction(i, q[k]);</div>
@@ -1111,7 +1111,7 @@ $(function() {
 <div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;        <span class="keyword">const</span> <a class="code" href="classippl_1_1Vector.html">indices_t</a> zeroNdIndex = <a class="code" href="classippl_1_1Vector.html">Vector&lt;size_t, Dim&gt;</a>(0);</div>
 <div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160; </div>
 <div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;        <span class="comment">// Variable to sum the error to</span></div>
-<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;        <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> error = 0;</div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;        T error = 0;</div>
 <div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160; </div>
 <div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;        <span class="comment">// Get domain information and ghost cells</span></div>
 <div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;        <span class="keyword">auto</span> ldom        = (u_h.getLayout()).getLocalNDIndex();</div>
@@ -1133,17 +1133,17 @@ $(function() {
 <div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; this-&gt;numElementDOFs; ++i) {</div>
 <div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;                    <span class="keywordtype">size_t</span> I           = global_dofs[i];</div>
 <div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;                    <span class="keyword">auto</span> dof_ndindex_I = this-&gt;getMeshVertexNDIndex(I);</div>
-<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;                        dof_ndindex_I[d] = dof_ndindex_I[d] - ldom[d].first() + nghost;</div>
 <div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;                    }</div>
 <div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160; </div>
 <div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;                    <span class="comment">// computed field value at DOF</span></div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;                    <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> val_u_h = <a class="code" href="namespaceippl.html#a204441f2757e646dfa8add627d520b01">apply</a>(u_h, dof_ndindex_I);</div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;                    T val_u_h = <a class="code" href="namespaceippl.html#a204441f2757e646dfa8add627d520b01">apply</a>(u_h, dof_ndindex_I);</div>
 <div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160; </div>
 <div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;                    <span class="comment">// solution field value at DOF</span></div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;                    <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> val_u_sol = u_sol(dof_points[i]);</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;                    T val_u_sol = u_sol(dof_points[i]);</div>
 <div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160; </div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;                    <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> local_norm = Kokkos::abs(val_u_h - val_u_sol);</div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;                    T local_norm = Kokkos::abs(val_u_h - val_u_sol);</div>
 <div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160; </div>
 <div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;                    <span class="keywordflow">if</span> (local_norm &gt; local_max) {</div>
 <div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;                        local_max = local_norm;</div>
@@ -1153,15 +1153,13 @@ $(function() {
 <div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;            Kokkos::Max&lt;double&gt;(error));</div>
 <div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160; </div>
 <div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;        <span class="comment">// MPI reduce</span></div>
-<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;        <a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> global_error = 0.0;</div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;        T global_error = 0.0;</div>
 <div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;        <a class="code" href="namespaceippl.html#abfab7f67f977ee069d97c58cef8bd486">Comm</a>-&gt;allreduce(error, global_error, 1, std::greater&lt;T&gt;());</div>
 <div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160; </div>
 <div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;        <span class="keywordflow">return</span> global_error;</div>
 <div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;    }</div>
 <div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160; </div>
 <div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;}  <span class="comment">// namespace ippl</span></div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_a6b2d038ea9c8d2651eecffe0e28b7ebb"><div class="ttname"><a href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a></div><div class="ttdeci">double T</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:23</div></div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_afef54e0ebfe65da0a396b342dcbe30f5"><div class="ttname"><a href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a></div><div class="ttdeci">constexpr unsigned Dim</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:22</div></div>
 <div class="ttc" id="aLagrangeSpace_8h_html_a93057c2a5a4d1be46e205a80cb831a0c"><div class="ttname"><a href="LagrangeSpace_8h.html#a93057c2a5a4d1be46e205a80cb831a0c">getLagrangeNumElementDOFs</a></div><div class="ttdeci">constexpr unsigned getLagrangeNumElementDOFs(unsigned Dim, unsigned Order)</div><div class="ttdef"><b>Definition:</b> LagrangeSpace.h:12</div></div>
 <div class="ttc" id="aclassInform_html"><div class="ttname"><a href="classInform.html">Inform</a></div><div class="ttdef"><b>Definition:</b> Inform.h:40</div></div>
 <div class="ttc" id="aclassIpplException_html"><div class="ttname"><a href="classIpplException.html">IpplException</a></div><div class="ttdef"><b>Definition:</b> IpplException.h:6</div></div>

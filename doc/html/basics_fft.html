@@ -131,7 +131,7 @@ Usage</h1>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Fill Field fieldInput with random numbers</span></div>
-<div class="line"><span class="keyword">typename</span> <a class="code" href="AlpineManager_8h.html#abac6b71b6ea68a6c8bb864e8ebd5fe62">field_type_real::view_type</a>&amp; view            = fieldInput.getView();</div>
+<div class="line"><span class="keyword">typename</span> field_type_real::view_type&amp; view            = fieldInput.getView();</div>
 <div class="line"><span class="keyword">typename</span> field_type_real::HostMirror fieldInput_host = fieldInput.getHostMirror();</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> nghost = fieldInput.getNghost();</div>
@@ -157,7 +157,6 @@ Usage</h1>
 <div class="line"><span class="comment">// Perform FFT</span></div>
 <div class="line">fft-&gt;transform(<a class="code" href="namespaceippl.html#a12b1fb701e417c82f2d2249c31e30b02a94a1c1d486fcecd6f86646b8ace721eb">ippl::FORWARD</a>, fieldInput, fieldOutput); <span class="comment">// Forward transform</span></div>
 <div class="line">fft-&gt;transform(<a class="code" href="namespaceippl.html#a12b1fb701e417c82f2d2249c31e30b02ab4d57d0e5e5de2de6a68b7d324356e62">ippl::BACKWARD</a>, fieldInput, fieldOutput); <span class="comment">// Reverse transform</span></div>
-<div class="ttc" id="aAlpineManager_8h_html_abac6b71b6ea68a6c8bb864e8ebd5fe62"><div class="ttname"><a href="AlpineManager_8h.html#abac6b71b6ea68a6c8bb864e8ebd5fe62">view_type</a></div><div class="ttdeci">typename ippl::detail::ViewType&lt; ippl::Vector&lt; double, Dim &gt;, 1 &gt;::view_type view_type</div><div class="ttdef"><b>Definition:</b> AlpineManager.h:17</div></div>
 <div class="ttc" id="aInform_8cpp_html_a3479363bc276c3798e3f3656c66d93ed"><div class="ttname"><a href="Inform_8cpp.html#a3479363bc276c3798e3f3656c66d93ed">endl</a></div><div class="ttdeci">Inform &amp; endl(Inform &amp;inf)</div><div class="ttdef"><b>Definition:</b> Inform.cpp:42</div></div>
 <div class="ttc" id="aclassippl_1_1FFT_html"><div class="ttname"><a href="classippl_1_1FFT.html">ippl::FFT</a></div><div class="ttdef"><b>Definition:</b> FFT.h:164</div></div>
 <div class="ttc" id="aclassippl_1_1FieldLayout_html"><div class="ttname"><a href="classippl_1_1FieldLayout.html">ippl::FieldLayout</a></div><div class="ttdef"><b>Definition:</b> FieldLayout.h:166</div></div>
@@ -167,7 +166,7 @@ Usage</h1>
 <div class="ttc" id="aclassippl_1_1ParameterList_html_a6e880ee49a119e6366ee0a1d20307423"><div class="ttname"><a href="classippl_1_1ParameterList.html#a6e880ee49a119e6366ee0a1d20307423">ippl::ParameterList::get</a></div><div class="ttdeci">T get(const std::string &amp;key) const</div><div class="ttdef"><b>Definition:</b> ParameterList.h:59</div></div>
 <div class="ttc" id="aclassippl_1_1ParameterList_html_ab4b572b0db6bad6f631b23320a8f4722"><div class="ttname"><a href="classippl_1_1ParameterList.html#ab4b572b0db6bad6f631b23320a8f4722">ippl::ParameterList::add</a></div><div class="ttdeci">void add(const std::string &amp;key, const T &amp;value)</div><div class="ttdef"><b>Definition:</b> ParameterList.h:44</div></div>
 <div class="ttc" id="aclassippl_1_1UniformCartesian_html"><div class="ttname"><a href="classippl_1_1UniformCartesian.html">ippl::UniformCartesian</a></div><div class="ttdef"><b>Definition:</b> UniformCartesian.h:14</div></div>
-<div class="ttc" id="aclassippl_1_1Vector_html"><div class="ttname"><a href="classippl_1_1Vector.html">ippl::Vector&lt; double, 3 &gt;</a></div></div>
+<div class="ttc" id="aclassippl_1_1Vector_html"><div class="ttname"><a href="classippl_1_1Vector.html">ippl::Vector</a></div><div class="ttdef"><b>Definition:</b> Vector.h:23</div></div>
 <div class="ttc" id="anamespaceippl_html_a12b1fb701e417c82f2d2249c31e30b02a94a1c1d486fcecd6f86646b8ace721eb"><div class="ttname"><a href="namespaceippl.html#a12b1fb701e417c82f2d2249c31e30b02a94a1c1d486fcecd6f86646b8ace721eb">ippl::FORWARD</a></div><div class="ttdeci">@ FORWARD</div><div class="ttdef"><b>Definition:</b> FFT.h:63</div></div>
 <div class="ttc" id="anamespaceippl_html_a12b1fb701e417c82f2d2249c31e30b02ab4d57d0e5e5de2de6a68b7d324356e62"><div class="ttname"><a href="namespaceippl.html#a12b1fb701e417c82f2d2249c31e30b02ab4d57d0e5e5de2de6a68b7d324356e62">ippl::BACKWARD</a></div><div class="ttdeci">@ BACKWARD</div><div class="ttdef"><b>Definition:</b> FFT.h:64</div></div>
 <div class="ttc" id="anamespaceippl_html_abfab7f67f977ee069d97c58cef8bd486"><div class="ttname"><a href="namespaceippl.html#abfab7f67f977ee069d97c58cef8bd486">ippl::Comm</a></div><div class="ttdeci">std::unique_ptr&lt; mpi::Communicator &gt; Comm</div><div class="ttdef"><b>Definition:</b> Ippl.h:22</div></div>

@@ -141,7 +141,7 @@ $(function() {
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FieldLHS, <span class="keyword">typename</span> FieldRHS&gt;</div>
 <div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classippl_1_1P3MSolver.html#a890a454c790a305c75dc1ee5527f5494">   66</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classippl_1_1P3MSolver.html#a890a454c790a305c75dc1ee5527f5494">P3MSolver&lt;FieldLHS, FieldRHS&gt;::initializeFields</a>() {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        static_assert(<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == 3, <span class="stringliteral">&quot;Dimension other than 3 not supported in P3MSolver!&quot;</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        static_assert(Dim == 3, <span class="stringliteral">&quot;Dimension other than 3 not supported in P3MSolver!&quot;</span>);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// get layout and mesh</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        layout_mp              = &amp;(this-&gt;rhs_mp-&gt;getLayout());</div>
@@ -158,7 +158,7 @@ $(function() {
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        domain_m = layout_mp-&gt;getDomain();</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">// get the mesh spacings and sizes for each dimension</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++i) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; Dim; ++i) {</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            nr_m[i] = domain_m[i].length();</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
@@ -170,7 +170,7 @@ $(function() {
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="comment">// one of the dimensions has only (n/2 +1) as our original fields are fully real</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">// the dimension is given by the user via r2c_direction</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> RCDirection = this-&gt;params_m.template get&lt;int&gt;(<span class="stringliteral">&quot;r2c_direction&quot;</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++i) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; Dim; ++i) {</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">if</span> (i == RCDirection)</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                domainComplex_m[RCDirection] = <a class="code" href="classippl_1_1Index.html">Index</a>(nr_m[RCDirection] / 2 + 1);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">else</span></div>
@@ -194,7 +194,7 @@ $(function() {
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        fft_m-&gt;warmup(grn_m, grntr_m);  <span class="comment">// warmup the FFT object</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">// these are fields that are used for calculating the Green&#39;s function</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            grnIField_m[d].initialize(*mesh_mp, *layout_mp);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="comment">// get number of ghost points and the Kokkos view to iterate over field</span></div>
@@ -274,7 +274,7 @@ $(function() {
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="comment">// check whether the mesh spacing has changed with respect to the old one</span></div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="comment">// if yes, update and set green flag to true</span></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordtype">bool</span> green = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++i) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; Dim; ++i) {</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">if</span> (hr_m[i] != mesh_mp-&gt;getMeshSpacing(i)) {</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                hr_m[i] = mesh_mp-&gt;getMeshSpacing(i);</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                green   = <span class="keyword">true</span>;</div>
@@ -302,7 +302,7 @@ $(function() {
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <span class="comment">// Compute gradient in Fourier space and then</span></div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="comment">// take inverse FFT.</span></div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keyword">const</span> <a class="code" href="classippl_1_1P3MSolver.html#af00da3afa1ce798918e384a036c26c8f">Trhs</a> <a class="code" href="datatypes_8h.html#a43016d873124d39034edb8cd164794db">pi</a>              = Kokkos::numbers::pi_v&lt;Trhs&gt;;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keyword">const</span> <a class="code" href="classippl_1_1P3MSolver.html#af00da3afa1ce798918e384a036c26c8f">Trhs</a> pi              = Kokkos::numbers::pi_v&lt;Trhs&gt;;</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            Kokkos::complex&lt;Trhs&gt; imag = {0.0, 1.0};</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keyword">auto</span> view               = rhotr_m.getView();</div>
@@ -318,29 +318,29 @@ $(function() {
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <a class="code" href="classippl_1_1Vector.html">Vector&lt;int, Dim&gt;</a> N = nr_m;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <a class="code" href="classippl_1_1Vector.html">Vector_t</a> origin    = mesh_mp-&gt;getOrigin();</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> gd = 0; gd &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++gd) {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> gd = 0; gd &lt; Dim; ++gd) {</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                <a class="code" href="namespaceippl.html#ab5d78bcf87f750df8cdb9546221d0f71">ippl::parallel_for</a>(</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                    <span class="stringliteral">&quot;Gradient FFTPeriodicPoissonSolver&quot;</span>, <a class="code" href="namespaceippl.html#a364616f2ed1bf4fb3183c653fff8de21">getRangePolicy</a>(view, nghost),</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                    KOKKOS_LAMBDA(<span class="keyword">const</span> index_array_type&amp; args) {</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                        <a class="code" href="classippl_1_1Vector.html">Vector&lt;int, Dim&gt;</a> iVec = args - nghost;</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                            iVec[d] += lDomComplex[d].first();</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                        }</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                        <a class="code" href="classippl_1_1Vector.html">Vector_t</a> kVec;</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                            <span class="keyword">const</span> <a class="code" href="classippl_1_1P3MSolver.html#af00da3afa1ce798918e384a036c26c8f">Trhs</a> Len = N[d] * hsize[d];</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                            <span class="keywordtype">bool</span> shift     = (iVec[d] &gt; (N[d] / 2));</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                            <span class="keywordtype">bool</span> notMid    = (iVec[d] != (N[d] / 2));</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                            <span class="comment">// For the noMid part see</span></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                            <span class="comment">// https://math.mit.edu/~stevenj/fft-deriv.pdf Algorithm 1</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                            kVec[d] = notMid * 2 * <a class="code" href="datatypes_8h.html#a43016d873124d39034edb8cd164794db">pi</a> / Len * (iVec[d] - shift * N[d]);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                            kVec[d] = notMid * 2 * pi / Len * (iVec[d] - shift * N[d]);</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                        }</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                        <a class="code" href="classippl_1_1P3MSolver.html#af00da3afa1ce798918e384a036c26c8f">Trhs</a> Dr = 0;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                            Dr += kVec[d] * kVec[d];</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                        }</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
@@ -384,7 +384,7 @@ $(function() {
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        grn_m = 0.0;</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="comment">// define pi</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <a class="code" href="classippl_1_1P3MSolver.html#af00da3afa1ce798918e384a036c26c8f">Trhs</a> <a class="code" href="datatypes_8h.html#a43016d873124d39034edb8cd164794db">pi</a> = Kokkos::numbers::pi_v&lt;Trhs&gt;;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <a class="code" href="classippl_1_1P3MSolver.html#af00da3afa1ce798918e384a036c26c8f">Trhs</a> pi = Kokkos::numbers::pi_v&lt;Trhs&gt;;</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="comment">// This alpha parameter is a choice for the Green&#39;s function</span></div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="comment">// it controls the &quot;range&quot; of the Green&#39;s function (e.g.</span></div>
@@ -397,7 +397,7 @@ $(function() {
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <a class="code" href="classippl_1_1Vector.html">Vector_t</a> hrsq(hr_m * hr_m);</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="comment">// use the grnIField_m helper field to compute Green&#39;s function</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++i) {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; Dim; ++i) {</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            grn_m = grn_m + grnIField_m[i] * hrsq[i];</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        }</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
@@ -417,7 +417,7 @@ $(function() {
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">bool</span> isOrig = (ig == 0 &amp;&amp; jg == 0 &amp;&amp; kg == 0);</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                <a class="code" href="classippl_1_1P3MSolver.html#af00da3afa1ce798918e384a036c26c8f">Trhs</a> r        = Kokkos::real(Kokkos::sqrt(view(i, j, k)));</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                view(i, j, k) = (!isOrig) * (-1.0 / (4.0 * <a class="code" href="datatypes_8h.html#a43016d873124d39034edb8cd164794db">pi</a>)) * (Kokkos::erf(alpha * r) / r);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                view(i, j, k) = (!isOrig) * (-1.0 / (4.0 * pi)) * (Kokkos::erf(alpha * r) / r);</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            });</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="comment">// perform the FFT of the Green&#39;s function for the convolution</span></div>
@@ -425,7 +425,6 @@ $(function() {
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    };</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;}  <span class="comment">// namespace ippl</span></div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_afef54e0ebfe65da0a396b342dcbe30f5"><div class="ttname"><a href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a></div><div class="ttdeci">constexpr unsigned Dim</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:22</div></div>
 <div class="ttc" id="aFieldSolverBase_8h_html_a62775f861ae59098011e0a07b912f0e5"><div class="ttname"><a href="FieldSolverBase_8h.html#a62775f861ae59098011e0a07b912f0e5">FieldLayout_t</a></div><div class="ttdeci">ippl::FieldLayout&lt; Dim &gt; FieldLayout_t</div><div class="ttdef"><b>Definition:</b> FieldSolverBase.h:24</div></div>
 <div class="ttc" id="aFieldSolverBase_8h_html_acf6afef09138aaa7329f5076e9d2d27f"><div class="ttname"><a href="FieldSolverBase_8h.html#acf6afef09138aaa7329f5076e9d2d27f">Mesh_t</a></div><div class="ttdeci">ippl::UniformCartesian&lt; double, Dim &gt; Mesh_t</div><div class="ttdef"><b>Definition:</b> FieldSolverBase.h:15</div></div>
 <div class="ttc" id="aclassippl_1_1Field_html_af5d33627f142e8ec6e532828e1616fad"><div class="ttname"><a href="classippl_1_1Field.html#af5d33627f142e8ec6e532828e1616fad">ippl::Field&lt; T, Dim, Mesh_t&lt; Dim &gt;, Centering_t&lt; Dim &gt;, ViewArgs... &gt;::view_type</a></div><div class="ttdeci">typename BareField_t::view_type view_type</div><div class="ttdef"><b>Definition:</b> Field.h:27</div></div>
@@ -449,7 +448,6 @@ $(function() {
 <div class="ttc" id="aclassippl_1_1Poisson_html_afb9803ccc30ca00408107714a1f7ab41"><div class="ttname"><a href="classippl_1_1Poisson.html#afb9803ccc30ca00408107714a1f7ab41">ippl::Poisson::lhs_type</a></div><div class="ttdeci">FieldLHS lhs_type</div><div class="ttdef"><b>Definition:</b> Poisson.h:24</div></div>
 <div class="ttc" id="aclassippl_1_1Vector_html"><div class="ttname"><a href="classippl_1_1Vector.html">ippl::Vector&lt; Trhs, Dim &gt;</a></div></div>
 <div class="ttc" id="aclassippl_1_1mpi_1_1Communicator_html"><div class="ttname"><a href="classippl_1_1mpi_1_1Communicator.html">ippl::mpi::Communicator</a></div><div class="ttdef"><b>Definition:</b> Communicator.h:31</div></div>
-<div class="ttc" id="adatatypes_8h_html_a43016d873124d39034edb8cd164794db"><div class="ttname"><a href="datatypes_8h.html#a43016d873124d39034edb8cd164794db">pi</a></div><div class="ttdeci">const double pi</div><div class="ttdef"><b>Definition:</b> datatypes.h:71</div></div>
 <div class="ttc" id="anamespaceippl_html"><div class="ttname"><a href="namespaceippl.html">ippl</a></div><div class="ttdef"><b>Definition:</b> Archive.h:20</div></div>
 <div class="ttc" id="anamespaceippl_html_a12b1fb701e417c82f2d2249c31e30b02a94a1c1d486fcecd6f86646b8ace721eb"><div class="ttname"><a href="namespaceippl.html#a12b1fb701e417c82f2d2249c31e30b02a94a1c1d486fcecd6f86646b8ace721eb">ippl::FORWARD</a></div><div class="ttdeci">@ FORWARD</div><div class="ttdef"><b>Definition:</b> FFT.h:63</div></div>
 <div class="ttc" id="anamespaceippl_html_a12b1fb701e417c82f2d2249c31e30b02ab4d57d0e5e5de2de6a68b7d324356e62"><div class="ttname"><a href="namespaceippl.html#a12b1fb701e417c82f2d2249c31e30b02ab4d57d0e5e5de2de6a68b7d324356e62">ippl::BACKWARD</a></div><div class="ttdeci">@ BACKWARD</div><div class="ttdef"><b>Definition:</b> FFT.h:64</div></div>

@@ -85,7 +85,7 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceippl.html">ippl</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Field&gt;</div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="namespaceippl.html#aa7f6a4d91747fc8c8b6002758104647a">   12</a></span>&#160;    <a class="code" href="structippl_1_1detail_1_1meta__grad.html">detail::meta_grad&lt;Field&gt;</a> <a class="code" href="namespaceippl.html#aa7f6a4d91747fc8c8b6002758104647a">grad</a>(<a class="code" href="classippl_1_1Field.html">Field</a>&amp; u) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        constexpr <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> = <a class="code" href="classippl_1_1BareField.html#a6ad67c25abf0b41fe485359b55191179">Field::dim</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        constexpr <span class="keywordtype">unsigned</span> Dim = <a class="code" href="classippl_1_1BareField.html#a6ad67c25abf0b41fe485359b55191179">Field::dim</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        u.<a class="code" href="classippl_1_1BareField.html#aa5126202358432ede91a07b3f7ba4512">fillHalo</a>();</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="classippl_1_1BConds.html">BConds&lt;Field, Dim&gt;</a>&amp; bcField = u.<a class="code" href="classippl_1_1Field.html#a0ef79831ddcd53405dcbab10c21e1186">getFieldBC</a>();</div>
@@ -95,8 +95,8 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">using</span> vector_type = <span class="keyword">typename</span> mesh_type::vector_type;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        mesh_type&amp; mesh = u.<a class="code" href="classippl_1_1Field.html#a7f170a0d956f3660bfc3c2a7a359cf6c">get_mesh</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        vector_type vectors[<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>];</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; d++) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        vector_type vectors[Dim];</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; d++) {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            vectors[d]    = 0;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            vectors[d][d] = 0.5 / mesh.<a class="code" href="classippl_1_1Mesh.html#ad351b6678e7bd7b7fb1be3f16003b5fb">getMeshSpacing</a>(d);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
@@ -105,7 +105,7 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Field&gt;</div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="namespaceippl.html#a5645225d369d16cc10a5bab0ccf2f0e6">   36</a></span>&#160;    <a class="code" href="structippl_1_1detail_1_1meta__div.html">detail::meta_div&lt;Field&gt;</a> <a class="code" href="namespaceippl.html#a5645225d369d16cc10a5bab0ccf2f0e6">div</a>(<a class="code" href="classippl_1_1Field.html">Field</a>&amp; u) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        constexpr <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> = <a class="code" href="classippl_1_1BareField.html#a6ad67c25abf0b41fe485359b55191179">Field::dim</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        constexpr <span class="keywordtype">unsigned</span> Dim = <a class="code" href="classippl_1_1BareField.html#a6ad67c25abf0b41fe485359b55191179">Field::dim</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        u.<a class="code" href="classippl_1_1BareField.html#aa5126202358432ede91a07b3f7ba4512">fillHalo</a>();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classippl_1_1BConds.html">BConds&lt;Field, Dim&gt;</a>&amp; bcField = u.<a class="code" href="classippl_1_1Field.html#a0ef79831ddcd53405dcbab10c21e1186">getFieldBC</a>();</div>
@@ -115,8 +115,8 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">using</span> vector_type = <span class="keyword">typename</span> mesh_type::vector_type;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        mesh_type&amp; mesh = u.<a class="code" href="classippl_1_1Field.html#a7f170a0d956f3660bfc3c2a7a359cf6c">get_mesh</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        vector_type vectors[<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>];</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; d++) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        vector_type vectors[Dim];</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; d++) {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            vectors[d]    = 0;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            vectors[d][d] = 0.5 / mesh.<a class="code" href="classippl_1_1Mesh.html#ad351b6678e7bd7b7fb1be3f16003b5fb">getMeshSpacing</a>(d);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
@@ -125,7 +125,7 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Field&gt;</div>
 <div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="namespaceippl.html#ab3cc04dca961d33a5f00e30ba919c22c">   60</a></span>&#160;    <a class="code" href="structippl_1_1detail_1_1meta__laplace.html">detail::meta_laplace&lt;Field&gt;</a> <a class="code" href="namespaceippl.html#ab3cc04dca961d33a5f00e30ba919c22c">laplace</a>(<a class="code" href="classippl_1_1Field.html">Field</a>&amp; u) {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        constexpr <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> = <a class="code" href="classippl_1_1BareField.html#a6ad67c25abf0b41fe485359b55191179">Field::dim</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        constexpr <span class="keywordtype">unsigned</span> Dim = <a class="code" href="classippl_1_1BareField.html#a6ad67c25abf0b41fe485359b55191179">Field::dim</a>;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        u.<a class="code" href="classippl_1_1BareField.html#aa5126202358432ede91a07b3f7ba4512">fillHalo</a>();</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classippl_1_1BConds.html">BConds&lt;Field, Dim&gt;</a>&amp; bcField = u.<a class="code" href="classippl_1_1Field.html#a0ef79831ddcd53405dcbab10c21e1186">getFieldBC</a>();</div>
@@ -134,7 +134,7 @@ $(function() {
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">using</span> mesh_type = <span class="keyword">typename</span> <a class="code" href="classippl_1_1Field.html#a5214091d2fb7314226f26319bb5b764b">Field::Mesh_t</a>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        mesh_type&amp; mesh = u.<a class="code" href="classippl_1_1Field.html#a7f170a0d956f3660bfc3c2a7a359cf6c">get_mesh</a>();</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">typename</span> mesh_type::vector_type hvector(0);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; d++) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; d++) {</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            hvector[d] = 1.0 / std::pow(mesh.getMeshSpacing(d), 2);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structippl_1_1detail_1_1meta__laplace.html">detail::meta_laplace&lt;Field&gt;</a>(u, hvector);</div>
@@ -142,7 +142,7 @@ $(function() {
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Field&gt;</div>
 <div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="namespaceippl.html#a646ef9b9992be5bc0555633193377bad">   81</a></span>&#160;    <a class="code" href="structippl_1_1detail_1_1meta__curl.html">detail::meta_curl&lt;Field&gt;</a> <a class="code" href="namespaceippl.html#a646ef9b9992be5bc0555633193377bad">curl</a>(<a class="code" href="classippl_1_1Field.html">Field</a>&amp; u) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        constexpr <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> = <a class="code" href="classippl_1_1BareField.html#a6ad67c25abf0b41fe485359b55191179">Field::dim</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        constexpr <span class="keywordtype">unsigned</span> Dim = <a class="code" href="classippl_1_1BareField.html#a6ad67c25abf0b41fe485359b55191179">Field::dim</a>;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        u.<a class="code" href="classippl_1_1BareField.html#aa5126202358432ede91a07b3f7ba4512">fillHalo</a>();</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="classippl_1_1BConds.html">BConds&lt;Field, Dim&gt;</a>&amp; bcField = u.<a class="code" href="classippl_1_1Field.html#a0ef79831ddcd53405dcbab10c21e1186">getFieldBC</a>();</div>
@@ -163,7 +163,7 @@ $(function() {
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Field&gt;</div>
 <div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="namespaceippl.html#a45e1c496ef3a135e2c38bcd28de9a765">  106</a></span>&#160;    <a class="code" href="structippl_1_1detail_1_1meta__hess.html">detail::meta_hess&lt;Field&gt;</a> <a class="code" href="namespaceippl.html#a45e1c496ef3a135e2c38bcd28de9a765">hess</a>(<a class="code" href="classippl_1_1Field.html">Field</a>&amp; u) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        constexpr <span class="keywordtype">unsigned</span> <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> = <a class="code" href="classippl_1_1BareField.html#a6ad67c25abf0b41fe485359b55191179">Field::dim</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        constexpr <span class="keywordtype">unsigned</span> Dim = <a class="code" href="classippl_1_1BareField.html#a6ad67c25abf0b41fe485359b55191179">Field::dim</a>;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        u.<a class="code" href="classippl_1_1BareField.html#aa5126202358432ede91a07b3f7ba4512">fillHalo</a>();</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="classippl_1_1BConds.html">BConds&lt;Field, Dim&gt;</a>&amp; bcField = u.<a class="code" href="classippl_1_1Field.html#a0ef79831ddcd53405dcbab10c21e1186">getFieldBC</a>();</div>
@@ -173,8 +173,8 @@ $(function() {
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keyword">using</span> vector_type = <span class="keyword">typename</span> mesh_type::vector_type;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        mesh_type&amp; mesh = u.<a class="code" href="classippl_1_1Field.html#a7f170a0d956f3660bfc3c2a7a359cf6c">get_mesh</a>();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        vector_type vectors[<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>];</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; d++) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        vector_type vectors[Dim];</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; d++) {</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            vectors[d]    = 0;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            vectors[d][d] = 1;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
@@ -183,7 +183,6 @@ $(function() {
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structippl_1_1detail_1_1meta__hess.html">detail::meta_hess&lt;Field&gt;</a>(u, vectors, hvector);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}  <span class="comment">// namespace ippl</span></div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_afef54e0ebfe65da0a396b342dcbe30f5"><div class="ttname"><a href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a></div><div class="ttdeci">constexpr unsigned Dim</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:22</div></div>
 <div class="ttc" id="aclassippl_1_1BConds_html"><div class="ttname"><a href="classippl_1_1BConds.html">ippl::BConds</a></div><div class="ttdef"><b>Definition:</b> BConds.h:23</div></div>
 <div class="ttc" id="aclassippl_1_1BConds_html_a9bc34c29079a58d57facd8a21dfdde11"><div class="ttname"><a href="classippl_1_1BConds.html#a9bc34c29079a58d57facd8a21dfdde11">ippl::BConds::apply</a></div><div class="ttdeci">void apply(Field &amp;field)</div><div class="ttdef"><b>Definition:</b> BConds.hpp:29</div></div>
 <div class="ttc" id="aclassippl_1_1BareField_html_a6ad67c25abf0b41fe485359b55191179"><div class="ttname"><a href="classippl_1_1BareField.html#a6ad67c25abf0b41fe485359b55191179">ippl::BareField&lt; T, Dim, ViewArgs... &gt;::dim</a></div><div class="ttdeci">constexpr static unsigned dim</div><div class="ttdef"><b>Definition:</b> BareField.h:60</div></div>

@@ -111,7 +111,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a6a0dc0229d82274f3a42b63d0c6fd028"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Kokkos::View&lt; size_t * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1FEMVector_1_1BoundaryInfo.html#a6a0dc0229d82274f3a42b63d0c6fd028">recvIdxs_m</a></td></tr>
 <tr class="memdesc:a6a0dc0229d82274f3a42b63d0c6fd028"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores indices of <code><a class="el" href="classippl_1_1FEMVector.html#a80e2dc0b274c86f07bf43a8242c0aa41" title="Data this object is storing.">FEMVector::data_m</a></code> which are part of the halo.  <a href="structippl_1_1FEMVector_1_1BoundaryInfo.html#a6a0dc0229d82274f3a42b63d0c6fd028">More...</a><br /></td></tr>
 <tr class="separator:a6a0dc0229d82274f3a42b63d0c6fd028"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb79a857804881f558b9e690a416e9d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structippl_1_1detail_1_1FieldBufferData.html">detail::FieldBufferData</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1FEMVector_1_1BoundaryInfo.html#aeb79a857804881f558b9e690a416e9d0">commBuffer_m</a></td></tr>
+<tr class="memitem:aeb79a857804881f558b9e690a416e9d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structippl_1_1detail_1_1FieldBufferData.html">detail::FieldBufferData</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1FEMVector_1_1BoundaryInfo.html#aeb79a857804881f558b9e690a416e9d0">commBuffer_m</a></td></tr>
 <tr class="memdesc:aeb79a857804881f558b9e690a416e9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer for MPI communication.  <a href="structippl_1_1FEMVector_1_1BoundaryInfo.html#aeb79a857804881f558b9e690a416e9d0">More...</a><br /></td></tr>
 <tr class="separator:aeb79a857804881f558b9e690a416e9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -131,7 +131,7 @@ struct ippl::FEMVector&lt; T &gt;::BoundaryInfo</h3>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">ippl::FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;::BoundaryInfo::BoundaryInfo </td>
+          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">ippl::FEMVector</a>&lt; T &gt;::BoundaryInfo::BoundaryInfo </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; size_t &gt;&#160;</td>
           <td class="paramname"><em>neighbors</em>, </td>
@@ -179,7 +179,7 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structippl_1_1detail_1_1FieldBufferData.html">detail::FieldBufferData</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&gt; <a class="el" href="classippl_1_1FEMVector.html">ippl::FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;::BoundaryInfo::commBuffer_m</td>
+          <td class="memname"><a class="el" href="structippl_1_1detail_1_1FieldBufferData.html">detail::FieldBufferData</a>&lt;T&gt; <a class="el" href="classippl_1_1FEMVector.html">ippl::FEMVector</a>&lt; T &gt;::BoundaryInfo::commBuffer_m</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -198,7 +198,7 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;size_t&gt; <a class="el" href="classippl_1_1FEMVector.html">ippl::FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;::BoundaryInfo::neighbors_m</td>
+          <td class="memname">std::vector&lt;size_t&gt; <a class="el" href="classippl_1_1FEMVector.html">ippl::FEMVector</a>&lt; T &gt;::BoundaryInfo::neighbors_m</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -217,7 +217,7 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; Kokkos::View&lt;size_t*&gt; &gt; <a class="el" href="classippl_1_1FEMVector.html">ippl::FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;::BoundaryInfo::recvIdxs_m</td>
+          <td class="memname">std::vector&lt; Kokkos::View&lt;size_t*&gt; &gt; <a class="el" href="classippl_1_1FEMVector.html">ippl::FEMVector</a>&lt; T &gt;::BoundaryInfo::recvIdxs_m</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -237,7 +237,7 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; Kokkos::View&lt;size_t*&gt; &gt; <a class="el" href="classippl_1_1FEMVector.html">ippl::FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;::BoundaryInfo::sendIdxs_m</td>
+          <td class="memname">std::vector&lt; Kokkos::View&lt;size_t*&gt; &gt; <a class="el" href="classippl_1_1FEMVector.html">ippl::FEMVector</a>&lt; T &gt;::BoundaryInfo::sendIdxs_m</td>
         </tr>
       </table>
 </div><div class="memdoc">

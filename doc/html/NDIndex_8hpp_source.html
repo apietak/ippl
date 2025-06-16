@@ -89,7 +89,7 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span>... Args&gt;</div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classippl_1_1NDIndex.html#a1a7b0eeac23ce62f8a38d30d9ee36e69">   11</a></span>&#160;    KOKKOS_FUNCTION <a class="code" href="classippl_1_1NDIndex.html#a8ca5ffdd9829db26ba48f499fcac4877">NDIndex&lt;Dim&gt;::NDIndex</a>(<span class="keyword">const</span> Args&amp;... args)</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        : <a class="code" href="classippl_1_1NDIndex.html">NDIndex</a>({args...}) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        static_assert(<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> == <span class="keyword">sizeof</span>...(args), <span class="stringliteral">&quot;Wrong number of arguments.&quot;</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        static_assert(Dim == <span class="keyword">sizeof</span>...(args), <span class="stringliteral">&quot;Wrong number of arguments.&quot;</span>);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
@@ -103,7 +103,7 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classippl_1_1NDIndex.html#a91603046eb4f271f99e1e0d9c3cea9b0">   26</a></span>&#160;    KOKKOS_FUNCTION <a class="code" href="classippl_1_1NDIndex.html#a8ca5ffdd9829db26ba48f499fcac4877">NDIndex&lt;Dim&gt;::NDIndex</a>(<span class="keyword">const</span> <a class="code" href="classippl_1_1Vector.html">Vector&lt;unsigned, Dim&gt;</a>&amp; sizes) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            indices_m[d] = <a class="code" href="classippl_1_1Index.html">Index</a>(sizes[d]);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
@@ -121,7 +121,7 @@ $(function() {
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classippl_1_1NDIndex.html#a85b3bb33059b35c5ec11dcaf92d55fcf">   43</a></span>&#160;    KOKKOS_INLINE_FUNCTION <span class="keywordtype">unsigned</span> <a class="code" href="classippl_1_1NDIndex.html#a85b3bb33059b35c5ec11dcaf92d55fcf">NDIndex&lt;Dim&gt;::size</a>() const noexcept {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">unsigned</span> s = indices_m[0].length();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 1; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 1; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            s *= indices_m[d].length();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> s;</div>
@@ -130,7 +130,7 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classippl_1_1NDIndex.html#a5e8a94bd17afc5a5e8d41378477bdeb9">   52</a></span>&#160;    KOKKOS_INLINE_FUNCTION <span class="keywordtype">bool</span> <a class="code" href="classippl_1_1NDIndex.html#a5e8a94bd17afc5a5e8d41378477bdeb9">NDIndex&lt;Dim&gt;::empty</a>() const noexcept {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">bool</span> r = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            r = r || indices_m[d].empty();</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> r;</div>
@@ -139,8 +139,8 @@ $(function() {
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="namespaceippl.html#a27fa2fabde5fb035ba3cb30622107f20">   61</a></span>&#160;    <span class="keyword">inline</span> std::ostream&amp; <a class="code" href="namespaceippl.html#aadc278147969bd658a6b6a0e71617127">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex&lt;Dim&gt;</a>&amp; idx) {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        out &lt;&lt; <span class="charliteral">&#39;{&#39;</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            out &lt;&lt; idx[d] &lt;&lt; ((d == <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> - 1) ? <span class="charliteral">&#39;}&#39;</span> : <span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            out &lt;&lt; idx[d] &lt;&lt; ((d == Dim - 1) ? <span class="charliteral">&#39;}&#39;</span> : <span class="charliteral">&#39;,&#39;</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> out;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
@@ -148,7 +148,7 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classippl_1_1NDIndex.html#aaead5613b1dbf73ed6c8a8df6bd00079">   70</a></span>&#160;    KOKKOS_INLINE_FUNCTION <a class="code" href="classippl_1_1NDIndex.html">NDIndex&lt;Dim&gt;</a> <a class="code" href="classippl_1_1NDIndex.html#aaead5613b1dbf73ed6c8a8df6bd00079">NDIndex&lt;Dim&gt;::intersect</a>(<span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex&lt;Dim&gt;</a>&amp; ndi)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="classippl_1_1NDIndex.html">NDIndex&lt;Dim&gt;</a> r;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            r[d] = indices_m[d].<a class="code" href="classippl_1_1NDIndex.html#aaead5613b1dbf73ed6c8a8df6bd00079">intersect</a>(ndi[d]);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> r;</div>
@@ -157,7 +157,7 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classippl_1_1NDIndex.html#ae9c819a5525fb4566acf3799091020d7">   79</a></span>&#160;    KOKKOS_INLINE_FUNCTION <a class="code" href="classippl_1_1NDIndex.html">NDIndex&lt;Dim&gt;</a> <a class="code" href="classippl_1_1NDIndex.html#ae9c819a5525fb4566acf3799091020d7">NDIndex&lt;Dim&gt;::grow</a>(<span class="keywordtype">int</span> ncells)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="classippl_1_1NDIndex.html">NDIndex&lt;Dim&gt;</a> r;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            r[d] = indices_m[d].<a class="code" href="classippl_1_1NDIndex.html#ae9c819a5525fb4566acf3799091020d7">grow</a>(ncells);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> r;</div>
@@ -173,7 +173,7 @@ $(function() {
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classippl_1_1NDIndex.html#a400dc39095aa42b26ef0385c18e4d9f5">   95</a></span>&#160;    KOKKOS_INLINE_FUNCTION <span class="keywordtype">bool</span> <a class="code" href="classippl_1_1NDIndex.html#a400dc39095aa42b26ef0385c18e4d9f5">NDIndex&lt;Dim&gt;::touches</a>(<span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex&lt;Dim&gt;</a>&amp; a)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">bool</span> touch = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; (d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>) &amp;&amp; touch; ++d) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; (d &lt; Dim) &amp;&amp; touch; ++d) {</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            touch = touch &amp;&amp; indices_m[d].touches(a.<a class="code" href="classippl_1_1NDIndex.html#ab7662f16f6e1c29bc7f91fcf51e69b93">indices_m</a>[d]);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> touch;</div>
@@ -182,7 +182,7 @@ $(function() {
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classippl_1_1NDIndex.html#ac1f68f57b8b6f87f11185b7fba7fd71e">  104</a></span>&#160;    KOKKOS_INLINE_FUNCTION <span class="keywordtype">bool</span> <a class="code" href="classippl_1_1NDIndex.html#ac1f68f57b8b6f87f11185b7fba7fd71e">NDIndex&lt;Dim&gt;::contains</a>(<span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex&lt;Dim&gt;</a>&amp; a)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">bool</span> cont = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; (d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>) &amp;&amp; cont; ++d) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; (d &lt; Dim) &amp;&amp; cont; ++d) {</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            cont = cont &amp;&amp; indices_m[d].contains(a.<a class="code" href="classippl_1_1NDIndex.html#ab7662f16f6e1c29bc7f91fcf51e69b93">indices_m</a>[d]);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> cont;</div>
@@ -228,7 +228,7 @@ $(function() {
 <div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classippl_1_1NDIndex.html#a0a208f4dfc4be92f87914e73ec9c79ba">  149</a></span>&#160;    KOKKOS_INLINE_FUNCTION <span class="keywordtype">bool</span> <a class="code" href="classippl_1_1NDIndex.html#a9d03b85a14dc03b37ca53eac5ea8ef95">NDIndex&lt;Dim&gt;::split</a>(<a class="code" href="classippl_1_1NDIndex.html">NDIndex&lt;Dim&gt;</a>&amp; l, <a class="code" href="classippl_1_1NDIndex.html">NDIndex&lt;Dim&gt;</a>&amp; r)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max_dim    = 0;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max_length = 0;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">if</span> (indices_m[d].length() &gt; max_length) {</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                max_dim    = d;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                max_length = indices_m[d].length();</div>
@@ -268,7 +268,7 @@ $(function() {
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="classippl_1_1NDIndex.html#a1cdbdaff225500ca3de94d7626935ed3">  191</a></span>&#160;    KOKKOS_INLINE_FUNCTION constexpr <span class="keyword">typename</span> <a class="code" href="classippl_1_1Index.html">NDIndex&lt;Dim&gt;::iterator</a> <a class="code" href="classippl_1_1NDIndex.html#a1cdbdaff225500ca3de94d7626935ed3">NDIndex&lt;Dim&gt;::end</a>() {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">return</span> indices_m + <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">return</span> indices_m + Dim;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
@@ -280,12 +280,12 @@ $(function() {
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classippl_1_1NDIndex.html#a1c77433c8ac85d2eac02204b8cbb7071">  202</a></span>&#160;    KOKKOS_INLINE_FUNCTION constexpr <span class="keyword">typename</span> <a class="code" href="classippl_1_1Index.html">NDIndex&lt;Dim&gt;::const_iterator</a> <a class="code" href="classippl_1_1NDIndex.html#a1cdbdaff225500ca3de94d7626935ed3">NDIndex&lt;Dim&gt;::end</a>()<span class="keyword"></span></div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="keyword">        const </span>{</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">return</span> indices_m + <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">return</span> indices_m + Dim;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="namespaceippl.html#ad65908dfd0a46b5d73e58c8fa81b418e">  208</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="namespaceippl.html#ad65908dfd0a46b5d73e58c8fa81b418e">operator==</a>(<span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex&lt;Dim&gt;</a>&amp; nd1, <span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex&lt;Dim&gt;</a>&amp; nd2) {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; d++) {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; d++) {</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">if</span> (nd1[d] != nd2[d]) {</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            }</div>
@@ -298,7 +298,6 @@ $(function() {
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">return</span> !(nd1 == nd2);</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}  <span class="comment">// namespace ippl</span></div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_afef54e0ebfe65da0a396b342dcbe30f5"><div class="ttname"><a href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a></div><div class="ttdeci">constexpr unsigned Dim</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:22</div></div>
 <div class="ttc" id="aclassippl_1_1Index_html"><div class="ttname"><a href="classippl_1_1Index.html">ippl::Index</a></div><div class="ttdef"><b>Definition:</b> Index.h:40</div></div>
 <div class="ttc" id="aclassippl_1_1NDIndex_html"><div class="ttname"><a href="classippl_1_1NDIndex.html">ippl::NDIndex</a></div><div class="ttdef"><b>Definition:</b> NDIndex.h:21</div></div>
 <div class="ttc" id="aclassippl_1_1NDIndex_html_a1cdbdaff225500ca3de94d7626935ed3"><div class="ttname"><a href="classippl_1_1NDIndex.html#a1cdbdaff225500ca3de94d7626935ed3">ippl::NDIndex::end</a></div><div class="ttdeci">constexpr KOKKOS_INLINE_FUNCTION iterator end()</div><div class="ttdef"><b>Definition:</b> NDIndex.hpp:191</div></div>

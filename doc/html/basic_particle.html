@@ -122,8 +122,8 @@ Example: Defining a Particle Bunch</h2>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> PLayout&gt;</div>
 <div class="line"><span class="keyword">struct </span>Bunch : <span class="keyword">public</span> ParticleBase&lt;PLayout&gt; {</div>
-<div class="line">    <a class="code" href="classippl_1_1ParticleAttrib.html">ParticleAttrib&lt;double&gt;</a> mass, charge;</div>
-<div class="line">    <a class="code" href="classippl_1_1ParticleAttrib.html">ParticleAttrib&lt;Vector&lt;double&gt;</a>&gt; R, V;</div>
+<div class="line">    ParticleAttrib&lt;double&gt; mass, charge;</div>
+<div class="line">    ParticleAttrib&lt;Vector&lt;double&gt;&gt; R, V;</div>
 <div class="line"> </div>
 <div class="line">    Bunch(PLayout&amp; layout) : ParticleBase&lt;PLayout&gt;(layout) {</div>
 <div class="line">        <span class="comment">// add your own application attributes !</span></div>
@@ -136,7 +136,6 @@ Example: Defining a Particle Bunch</h2>
 <div class="line">};</div>
 <div class="line"><span class="comment">// Compiled to single Kokkos Kernel</span></div>
 <div class="line">bunch-&gt;R = bunch-&gt;R + dt * bunch-&gt;V;</div>
-<div class="ttc" id="aclassippl_1_1ParticleAttrib_html"><div class="ttname"><a href="classippl_1_1ParticleAttrib.html">ippl::ParticleAttrib</a></div><div class="ttdef"><b>Definition:</b> ParticleAttrib.h:31</div></div>
 <div class="ttc" id="anamespaceippl_html"><div class="ttname"><a href="namespaceippl.html">ippl</a></div><div class="ttdef"><b>Definition:</b> Archive.h:20</div></div>
 </div><!-- fragment --><p>This example demonstrates how to extend <code>ParticleBase</code> to create a <code>Bunch</code> class that includes common particle attributes and how to perform a single timestep.</p>
 <h2><a class="anchor" id="useful_particle_functions"></a>

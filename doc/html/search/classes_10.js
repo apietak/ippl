@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['randn_2141',['randn',['../structippl_1_1random_1_1randn.html',1,'ippl::random']]],
-  ['randu_2142',['randu',['../structippl_1_1random_1_1randu.html',1,'ippl::random']]],
-  ['rangepolicy_2143',['RangePolicy',['../structippl_1_1RangePolicy.html',1,'ippl']]],
-  ['rangepolicy_3c_201_2c_20policyargs_2e_2e_2e_20_3e_2144',['RangePolicy&lt; 1, PolicyArgs... &gt;',['../structippl_1_1RangePolicy_3_011_00_01PolicyArgs_8_8_8_01_4.html',1,'ippl']]],
-  ['rctransform_2145',['RCTransform',['../classippl_1_1RCTransform.html',1,'ippl']]],
-  ['reduction_5fidentity_3c_20ippl_3a_3avector_3c_20t_2c_20dim_20_3e_20_3e_2146',['reduction_identity&lt; ippl::Vector&lt; T, Dim &gt; &gt;',['../structKokkos_1_1reduction__identity_3_01ippl_1_1Vector_3_01T_00_01Dim_01_4_01_4.html',1,'Kokkos']]],
-  ['reflectivebc_2147',['ReflectiveBC',['../structippl_1_1detail_1_1ReflectiveBC.html',1,'ippl::detail']]],
-  ['regionlayout_2148',['RegionLayout',['../classippl_1_1detail_1_1RegionLayout.html',1,'ippl::detail']]],
-  ['regionlayout_3c_20t_2c_20dim_2c_20uniformcartesian_3c_20t_2c_20dim_20_3e_2c_20position_5fmemory_5fspace_20_3e_2149',['RegionLayout&lt; T, Dim, UniformCartesian&lt; T, Dim &gt;, position_memory_space &gt;',['../classippl_1_1detail_1_1RegionLayout.html',1,'ippl::detail']]],
-  ['request_2150',['Request',['../classippl_1_1mpi_1_1Request.html',1,'ippl::mpi']]],
-  ['rhs_5fplus_5fassign_2151',['rhs_plus_assign',['../structippl_1_1detail_1_1HaloCells_1_1rhs__plus__assign.html',1,'ippl::detail::HaloCells']]],
-  ['richardson_5fpreconditioner_2152',['richardson_preconditioner',['../structippl_1_1richardson__preconditioner.html',1,'ippl']]]
+  ['randn_1933',['randn',['../structippl_1_1random_1_1randn.html',1,'ippl::random']]],
+  ['randu_1934',['randu',['../structippl_1_1random_1_1randu.html',1,'ippl::random']]],
+  ['rangepolicy_1935',['RangePolicy',['../structippl_1_1RangePolicy.html',1,'ippl']]],
+  ['rangepolicy_3c_201_2c_20policyargs_2e_2e_2e_20_3e_1936',['RangePolicy&lt; 1, PolicyArgs... &gt;',['../structippl_1_1RangePolicy_3_011_00_01PolicyArgs_8_8_8_01_4.html',1,'ippl']]],
+  ['rctransform_1937',['RCTransform',['../classippl_1_1RCTransform.html',1,'ippl']]],
+  ['reduction_5fidentity_3c_20ippl_3a_3avector_3c_20t_2c_20dim_20_3e_20_3e_1938',['reduction_identity&lt; ippl::Vector&lt; T, Dim &gt; &gt;',['../structKokkos_1_1reduction__identity_3_01ippl_1_1Vector_3_01T_00_01Dim_01_4_01_4.html',1,'Kokkos']]],
+  ['reflectivebc_1939',['ReflectiveBC',['../structippl_1_1detail_1_1ReflectiveBC.html',1,'ippl::detail']]],
+  ['regionlayout_1940',['RegionLayout',['../classippl_1_1detail_1_1RegionLayout.html',1,'ippl::detail']]],
+  ['regionlayout_3c_20t_2c_20dim_2c_20uniformcartesian_3c_20t_2c_20dim_20_3e_2c_20position_5fmemory_5fspace_20_3e_1941',['RegionLayout&lt; T, Dim, UniformCartesian&lt; T, Dim &gt;, position_memory_space &gt;',['../classippl_1_1detail_1_1RegionLayout.html',1,'ippl::detail']]],
+  ['request_1942',['Request',['../classippl_1_1mpi_1_1Request.html',1,'ippl::mpi']]],
+  ['rhs_5fplus_5fassign_1943',['rhs_plus_assign',['../structippl_1_1detail_1_1HaloCells_1_1rhs__plus__assign.html',1,'ippl::detail::HaloCells']]],
+  ['richardson_5fpreconditioner_1944',['richardson_preconditioner',['../structippl_1_1richardson__preconditioner.html',1,'ippl']]]
 ];

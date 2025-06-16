@@ -139,7 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2cd2417480ea384dc27ede6653f2cc1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#a2cd2417480ea384dc27ede6653f2cc1b">Poisson</a> (<a class="el" href="classippl_1_1Poisson.html#afb9803ccc30ca00408107714a1f7ab41">lhs_type</a> &amp;lhs, <a class="el" href="classippl_1_1Poisson.html#a96a91a7da45bb0d881ec749ddfef38e3">rhs_type</a> &amp;rhs)</td></tr>
 <tr class="separator:a2cd2417480ea384dc27ede6653f2cc1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeffb02adbeee92aba98355bc136bdc71"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aeffb02adbeee92aba98355bc136bdc71"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#aeffb02adbeee92aba98355bc136bdc71">updateParameter</a> (const std::string &amp;key, const <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &amp;value)</td></tr>
+<tr class="memitem:aeffb02adbeee92aba98355bc136bdc71"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#aeffb02adbeee92aba98355bc136bdc71">updateParameter</a> (const std::string &amp;key, const T &amp;value)</td></tr>
 <tr class="separator:aeffb02adbeee92aba98355bc136bdc71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac81577029a8345555afccd846ab6924f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#ac81577029a8345555afccd846ab6924f">updateParameters</a> (const <a class="el" href="classippl_1_1ParameterList.html">ParameterList</a> &amp;params)</td></tr>
 <tr class="separator:ac81577029a8345555afccd846ab6924f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,9 +176,9 @@ Protected Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:a6c917449c967819efae9ac7c5d4783e3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ChargedParticles_8hpp.html#acf6afef09138aaa7329f5076e9d2d27f">FieldLHS::Mesh_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#a6c917449c967819efae9ac7c5d4783e3">Mesh</a></td></tr>
+<tr class="memitem:a6c917449c967819efae9ac7c5d4783e3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="FieldSolverBase_8h.html#acf6afef09138aaa7329f5076e9d2d27f">FieldLHS::Mesh_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#a6c917449c967819efae9ac7c5d4783e3">Mesh</a></td></tr>
 <tr class="separator:a6c917449c967819efae9ac7c5d4783e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8a60f8481a093aa37499db0bc4798a0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ChargedParticles_8hpp.html#aa0c2f6ddbc74317f18dde648c40d6123">FieldLHS::Centering_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#aa8a60f8481a093aa37499db0bc4798a0">Centering</a></td></tr>
+<tr class="memitem:aa8a60f8481a093aa37499db0bc4798a0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="FieldSolverBase_8h.html#aa0c2f6ddbc74317f18dde648c40d6123">FieldLHS::Centering_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#aa8a60f8481a093aa37499db0bc4798a0">Centering</a></td></tr>
 <tr class="separator:aa8a60f8481a093aa37499db0bc4798a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5175ff7f284e3c46fdd6446c543254ca"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1Mesh.html#a102bad798da7441046e353fc7a666f77">Mesh::matrix_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#a5175ff7f284e3c46fdd6446c543254ca">Matrix_t</a></td></tr>
 <tr class="separator:a5175ff7f284e3c46fdd6446c543254ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,7 +203,7 @@ template&lt;typename FieldLHS , typename FieldRHS &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="ChargedParticles_8hpp.html#aa0c2f6ddbc74317f18dde648c40d6123">FieldLHS::Centering_t</a> <a class="el" href="classippl_1_1Poisson.html">ippl::Poisson</a>&lt; FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1Poisson.html#aa8a60f8481a093aa37499db0bc4798a0">Centering</a></td>
+          <td class="memname">typedef <a class="el" href="FieldSolverBase_8h.html#aa0c2f6ddbc74317f18dde648c40d6123">FieldLHS::Centering_t</a> <a class="el" href="classippl_1_1Poisson.html">ippl::Poisson</a>&lt; FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1Poisson.html#aa8a60f8481a093aa37499db0bc4798a0">Centering</a></td>
         </tr>
       </table>
   </td>
@@ -283,7 +283,7 @@ template&lt;typename FieldLHS , typename FieldRHS &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="ChargedParticles_8hpp.html#acf6afef09138aaa7329f5076e9d2d27f">FieldLHS::Mesh_t</a> <a class="el" href="classippl_1_1Poisson.html">ippl::Poisson</a>&lt; FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1Poisson.html#a6c917449c967819efae9ac7c5d4783e3">Mesh</a></td>
+          <td class="memname">typedef <a class="el" href="FieldSolverBase_8h.html#acf6afef09138aaa7329f5076e9d2d27f">FieldLHS::Mesh_t</a> <a class="el" href="classippl_1_1Poisson.html">ippl::Poisson</a>&lt; FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1Poisson.html#a6c917449c967819efae9ac7c5d4783e3">Mesh</a></td>
         </tr>
       </table>
   </td>
@@ -735,7 +735,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &amp;&#160;</td>
+          <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>

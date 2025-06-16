@@ -105,7 +105,7 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">// would be 2</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> digit_swap[3] = {1, 0, 2};</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">int</span> match                      = 0;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 1; d &lt; <a class="code" href="namespaceippl_1_1detail.html#a14d88ba251231705c149f273e636d06c">detail::countHypercubes</a>(<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>); d *= 3) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 1; d &lt; <a class="code" href="namespaceippl_1_1detail.html#a14d88ba251231705c149f273e636d06c">detail::countHypercubes</a>(Dim); d *= 3) {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            match += digit_swap[index % 3] * d;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            index /= 3;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
@@ -117,7 +117,7 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        : comm(communicator)</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        , dLocalDomains_m(<span class="stringliteral">&quot;local domains (device)&quot;</span>, 0)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        , hLocalDomains_m(<a class="code" href="namespaceKokkos.html">Kokkos</a>::create_mirror_view(dLocalDomains_m)) {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="classippl_1_1FieldLayout.html#a18e6ea906d50790af20fb2459759de32">minWidth_m</a>[d] = 0;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
@@ -170,7 +170,7 @@ $(function() {
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">         * parallel dims.</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">long</span> totparelems = 1;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            totparelems *= domain[d].<a class="code" href="classippl_1_1NDIndex.html#acdbe14ad31f8a6188d2921f39e227405">length</a>();</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
@@ -242,14 +242,14 @@ $(function() {
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a4b1c9845b4d40518f146de6bf335487a">  164</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classippl_1_1FieldLayout.html#a4b1c9845b4d40518f146de6bf335487a">FieldLayout&lt;Dim&gt;::calcWidths</a>() {</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="comment">// initialize widths first</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            minWidth_m[d] = gDomain_m[d].length();</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keyword">using</span> <a class="code" href="FieldSolverBase_8h.html#a117948da4a7f2c353ea5ef900c1762c4">size_type</a> = <span class="keyword">typename</span> <a class="code" href="FieldSolverBase_8h.html#a117948da4a7f2c353ea5ef900c1762c4">host_mirror_type::size_type</a>;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="FieldSolverBase_8h.html#a117948da4a7f2c353ea5ef900c1762c4">size_type</a> i = 0; i &lt; hLocalDomains_m.size(); ++i) {</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex_t</a>&amp; dom = hLocalDomains_m(i);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">if</span> ((<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)dom[d].length() &lt; minWidth_m[d]) {</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    minWidth_m[d] = dom[d].<a class="code" href="classippl_1_1NDIndex.html#acdbe14ad31f8a6188d2921f39e227405">length</a>();</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                }</div>
@@ -263,7 +263,7 @@ $(function() {
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                                                 <span class="keyword">const</span> <span class="keywordtype">int</span> rank,</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                                                 std::map&lt;unsigned int, int&gt;&amp; offsets, <span class="keywordtype">unsigned</span> d0,</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                                                 <span class="keywordtype">unsigned</span> codim) {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = d0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++d) {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = d0; d &lt; Dim; ++d) {</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="comment">// 0 - check upper boundary</span></div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="comment">// 1 - check lower boundary</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 2; ++k) {</div>
@@ -277,21 +277,21 @@ $(function() {
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                <span class="keywordflow">if</span> (grown.<a class="code" href="classippl_1_1NDIndex.html#a400dc39095aa42b26ef0385c18e4d9f5">touches</a>(neighborDomain)) {</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    <span class="keyword">auto</span> intersect = grown.<a class="code" href="classippl_1_1NDIndex.html#aaead5613b1dbf73ed6c8a8df6bd00079">intersect</a>(neighborDomain);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [d, offset] : offsets) {</div>
-<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a9c0a535caeb826274b2379df39a24720">  201</a></span>&#160;                        neighborDomain[d] -= offset;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                        neighborDomain[d] -= offset;</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                    }</div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a7be4814e5f7e30285d0aebe191852a82">  203</a></span>&#160;                    addNeighbors(grown, localDomain, neighborDomain, intersect, nghost, rank);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    addNeighbors(grown, localDomain, neighborDomain, intersect, nghost, rank);</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [d, offset] : offsets) {</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                        neighborDomain[d] += offset;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                    }</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                <span class="keywordflow">if</span> (codim + 1 &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>) {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                <span class="keywordflow">if</span> (codim + 1 &lt; Dim) {</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                    findPeriodicNeighbors(nghost, localDomain, grown, neighborDomain, rank, offsets,</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                                          d + 1, codim + 1);</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                }</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                grown[d] -= offset;</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                offsets.erase(d);</div>
-<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a53a3c32f6a8b8182d306da01041d6b59">  215</a></span>&#160;            }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            }</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        }</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
@@ -300,7 +300,7 @@ $(function() {
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="comment">/* We need to reset the neighbor list</span></div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">         * and its ranges because of the repartitioner.</span></div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="namespaceippl_1_1detail.html#a14d88ba251231705c149f273e636d06c">detail::countHypercubes</a>(<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>) - 1; i++) {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="namespaceippl_1_1detail.html#a14d88ba251231705c149f273e636d06c">detail::countHypercubes</a>(Dim) - 1; i++) {</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            neighbors_m[i].clear();</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            neighborsSendRange_m[i].clear();</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            neighborsRecvRange_m[i].clear();</div>
@@ -324,35 +324,35 @@ $(function() {
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            }</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a2c9a7b8dec5ecc6519afc374b45c3a21">  248</a></span>&#160;            <span class="keyword">auto</span>&amp; ndNeighbor = hLocalDomains_m[rank];</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keyword">auto</span>&amp; ndNeighbor = hLocalDomains_m[rank];</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <a class="code" href="classIpplTimings.html#af9d914cab7e60b310cb44c75c8bff228">IpplTimings::startTimer</a>(findInternalNeighborsTimer);</div>
-<div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a15ae640bcad7c263b2abc9b3c768fac8">  250</a></span>&#160;            <span class="comment">// For inter-processor neighbors</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="comment">// For inter-processor neighbors</span></div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keywordflow">if</span> (gnd.touches(ndNeighbor)) {</div>
-<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a289229f77d5465bd6e38db88fabf00d9">  252</a></span>&#160;                <span class="keyword">auto</span> intersect = gnd.intersect(ndNeighbor);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <span class="keyword">auto</span> intersect = gnd.intersect(ndNeighbor);</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                addNeighbors(gnd, nd, ndNeighbor, intersect, nghost, rank);</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            }</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <a class="code" href="classIpplTimings.html#a8b229ce711198a6e0e190e7d9098c3eb">IpplTimings::stopTimer</a>(findInternalNeighborsTimer);</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <a class="code" href="classIpplTimings.html#af9d914cab7e60b310cb44c75c8bff228">IpplTimings::startTimer</a>(findPeriodicNeighborsTimer);</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">if</span> (isAllPeriodic_m) {</div>
-<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a0b47487f2d5c8740819b151c8ef5b705">  259</a></span>&#160;                std::map&lt;unsigned int, int&gt; offsets;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                std::map&lt;unsigned int, int&gt; offsets;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                findPeriodicNeighbors(nghost, nd, gnd, ndNeighbor, rank, offsets);</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            }</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <a class="code" href="classIpplTimings.html#a8b229ce711198a6e0e190e7d9098c3eb">IpplTimings::stopTimer</a>(findPeriodicNeighborsTimer);</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        }</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
-<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#abdc801346e54c33308ed5ace6d128629">  266</a></span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a1c513075136165c4c4b62389ffc7eea8">  267</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classippl_1_1FieldLayout.html#a1c513075136165c4c4b62389ffc7eea8">FieldLayout&lt;Dim&gt;::addNeighbors</a>(<span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex_t</a>&amp; gnd, <span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex_t</a>&amp; nd,</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex_t</a>&amp; ndNeighbor, <span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex_t</a>&amp; intersect,</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                        <span class="keywordtype">int</span> nghost, <span class="keywordtype">int</span> rank) {</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html">bound_type</a> rangeSend, rangeRecv;</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        rangeSend = getBounds(nd, ndNeighbor, nd, nghost);</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#ac7285e2107dd61bf4c7a564248f4a92d">  273</a></span>&#160;        rangeRecv = getBounds(ndNeighbor, nd, nd, nghost);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        rangeRecv = getBounds(ndNeighbor, nd, nd, nghost);</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordtype">int</span> index = 0;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0, digit = 1; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; d++, digit *= 3) {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0, digit = 1; d &lt; Dim; d++, digit *= 3) {</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="comment">// For each dimension, check what kind of intersection we have and construct</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <span class="comment">// an index for the component based on its base-3 representation with the</span></div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <span class="comment">// following properties for each digit:</span></div>
@@ -370,7 +370,7 @@ $(function() {
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        neighbors_m[index].push_back(rank);</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        neighborsSendRange_m[index].push_back(rangeSend);</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        neighborsRecvRange_m[index].push_back(rangeRecv);</div>
-<div class="line"><a name="l00294"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#aff8e92604ca57196d825624a44443bdb">  294</a></span>&#160;    }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    }</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00297"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#accab47279a4511ae8b61f9302c0f37e0">  297</a></span>&#160;    <span class="keyword">typename</span> <a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html">FieldLayout&lt;Dim&gt;::bound_type</a> <a class="code" href="classippl_1_1FieldLayout.html#accab47279a4511ae8b61f9302c0f37e0">FieldLayout&lt;Dim&gt;::getBounds</a>(<span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex_t</a>&amp; nd1,</div>
@@ -384,16 +384,16 @@ $(function() {
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html">bound_type</a> intersect;</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="comment">/* Obtain the intersection bounds with local ranges of the view.</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a699d4f70a8f7f8426f12a833eaa473e4">  308</a></span>&#160;<span class="comment">         * Add &quot;+1&quot; to the upper bound since Kokkos loops always to &quot;&lt; extent&quot;.</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">         * Add &quot;+1&quot; to the upper bound since Kokkos loops always to &quot;&lt; extent&quot;.</span></div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++i) {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; Dim; ++i) {</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            intersect.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a2d6dd6392a75140b398184b21046a830">lo</a>[i] = overlap[i].<a class="code" href="classippl_1_1NDIndex.html#a867c03b8f54e8241f83860b4d058c7a5">first</a>() - offset[i].<a class="code" href="classippl_1_1NDIndex.html#a867c03b8f54e8241f83860b4d058c7a5">first</a>() <span class="comment">/*offset*/</span> + nghost;</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            intersect.<a class="code" href="structippl_1_1FieldLayout_1_1bound__type.html#a3441caa41c5a22c22eb2bfb8732813f4">hi</a>[i] = overlap[i].<a class="code" href="classippl_1_1NDIndex.html#a7c0bb93c7e9561d47d380f9a8acdb5d7">last</a>() - offset[i].<a class="code" href="classippl_1_1NDIndex.html#a867c03b8f54e8241f83860b4d058c7a5">first</a>() <span class="comment">/*offset*/</span> + nghost + 1;</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        }</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">return</span> intersect;</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }</div>
-<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a0874506988ff30fe2b46a3b7bf702971">  317</a></span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> Dim&gt;</div>
 <div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a6bdb260a38bde2c9a01da44f1384a911">  319</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classippl_1_1FieldLayout.html#a6bdb260a38bde2c9a01da44f1384a911">FieldLayout&lt;Dim&gt;::getPeriodicOffset</a>(<span class="keyword">const</span> <a class="code" href="classippl_1_1NDIndex.html">NDIndex_t</a>&amp; nd, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d,</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                                            <span class="keyword">const</span> <span class="keywordtype">int</span> k) {</div>
@@ -404,18 +404,17 @@ $(function() {
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                }</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#a1c513075136165c4c4b62389ffc7eea8">  328</a></span>&#160;                <span class="keywordflow">if</span> (nd[d].<a class="code" href="namespaceippl.html#aa8e09b0ae1fe8f2da18e50c69a259872">min</a>() == gDomain_m[d].<a class="code" href="namespaceippl.html#aa8e09b0ae1fe8f2da18e50c69a259872">min</a>()) {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                <span class="keywordflow">if</span> (nd[d].<a class="code" href="namespaceippl.html#aa8e09b0ae1fe8f2da18e50c69a259872">min</a>() == gDomain_m[d].<a class="code" href="namespaceippl.html#aa8e09b0ae1fe8f2da18e50c69a259872">min</a>()) {</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                    <span class="keywordflow">return</span> gDomain_m[d].length();</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                }</div>
-<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#aa48156c2c837baa5ee3948b242e68046">  331</a></span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00333"></a><span class="lineno"><a class="line" href="classippl_1_1FieldLayout.html#ae15b1bcf738515f17c06d5271d922026">  333</a></span>&#160;                <span class="keywordflow">throw</span> <a class="code" href="classIpplException.html">IpplException</a>(<span class="stringliteral">&quot;FieldLayout:getPeriodicOffset&quot;</span>, <span class="stringliteral">&quot;k  has to be either 0 or 1&quot;</span>);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                <span class="keywordflow">throw</span> <a class="code" href="classIpplException.html">IpplException</a>(<span class="stringliteral">&quot;FieldLayout:getPeriodicOffset&quot;</span>, <span class="stringliteral">&quot;k  has to be either 0 or 1&quot;</span>);</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        }</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;}  <span class="comment">// namespace ippl</span></div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_afef54e0ebfe65da0a396b342dcbe30f5"><div class="ttname"><a href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a></div><div class="ttdeci">constexpr unsigned Dim</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:22</div></div>
 <div class="ttc" id="aFieldLayout_8h_html"><div class="ttname"><a href="FieldLayout_8h.html">FieldLayout.h</a></div></div>
 <div class="ttc" id="aFieldSolverBase_8h_html_a117948da4a7f2c353ea5ef900c1762c4"><div class="ttname"><a href="FieldSolverBase_8h.html#a117948da4a7f2c353ea5ef900c1762c4">size_type</a></div><div class="ttdeci">ippl::detail::size_type size_type</div><div class="ttdef"><b>Definition:</b> FieldSolverBase.h:26</div></div>
 <div class="ttc" id="aIpplException_8h_html"><div class="ttname"><a href="IpplException_8h.html">IpplException.h</a></div></div>

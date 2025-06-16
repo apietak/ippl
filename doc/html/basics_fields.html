@@ -76,7 +76,7 @@ $(function() {
 <div class="textblock"><h1><a class="anchor" id="field_intro"></a>
 Introduction</h1>
 <p>This sections provides the readers with a brief background on the used classes for handling Fields in IPPL. </p>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md0"></a>
 FieldLayout</h2>
 <p>FieldLayout describes how a given index space (represented by an NDIndex object) is distributed among MPI ranks. It performs the initial partitioning. The user may request that a particular dimension not be partitioned by flagging that axis as 'SERIAL' (instead of 'PARALLEL'). </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> pt = 25;</div>
 <div class="line"><a class="code" href="classippl_1_1Index.html">ippl::Index</a> I(pt);</div>
@@ -89,7 +89,7 @@ FieldLayout</h2>
 <div class="ttc" id="aclassippl_1_1Index_html"><div class="ttname"><a href="classippl_1_1Index.html">ippl::Index</a></div><div class="ttdef"><b>Definition:</b> Index.h:40</div></div>
 <div class="ttc" id="aclassippl_1_1NDIndex_html"><div class="ttname"><a href="classippl_1_1NDIndex.html">ippl::NDIndex</a></div><div class="ttdef"><b>Definition:</b> NDIndex.h:21</div></div>
 </div><!-- fragment --><p> In this example, we create a 3-dimensional FieldLayout with 25 points in each direction. The layout is distributed among MPI ranks.</p>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md1"></a>
 BareField</h2>
 <p>The BareField class in IPPL is a template class that represents a numerical field in a computational domain. It is designed to handle data in up to three dimensions and supports various data types through its template parameter T. It provides a Kokkos-based multidimensional array, or view, which is the main data structure used to store field values. The class is integrated with IPPL's field layout and halo cell system for managing computational domains and communication between them, especially in parallel computing environments. A field can be initialized with a specific layout, and it supports operations such as resizing, updating the layout, and operations related to ghost cells which are used for boundary conditions and domain communication. It offers functions for calculating aggregate values over the field, such as sums, maxima, minima, and products. Fields can be assigned values from constants or other fields through expression templates, allowing for complex computations and assignments. The class provides range policies for iteration that can exclude or include ghost layers, giving flexibility in how the field data is traversed and manipulated.</p>
 <div class="fragment"><div class="line">constexpr <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dim = 3;</div>
@@ -104,7 +104,7 @@ BareField</h2>
 </div><!-- fragment --><h1><a class="anchor" id="Field"></a>
 Field</h1>
 <p>The Field class in IPPL is an advanced version of BareField, augmented with a mesh for defining the spatial domain and equipped with customizable boundary conditions. The class is templated to be flexible for various data types (T), dimensions (Dim), mesh types (Mesh), and centering schemes (<a class="el" href="classCentering.html">Centering</a>), along with additional <a class="el" href="namespaceKokkos.html">Kokkos</a> view arguments (ViewArgs...). It's associated with a Mesh object that dictates the structure of the simulation space. Boundary conditions can be set and updated, affecting how the field interacts with the limits of the simulation space. Offers methods for calculating volume integrals and averages, which are useful for analyzing the field over its entire domain. Inherits from BareField, allowing for basic field operations and attribute access.</p>
-<h3><a class="anchor" id="autotoc_md17"></a>
+<h3><a class="anchor" id="autotoc_md2"></a>
 Example: Creating a Field</h3>
 <p>The following example showcases the creation and basic manipulation of a field in IPPL:</p>
 <div class="fragment"><div class="line"><span class="keyword">using namespace </span><a class="code" href="namespaceippl.html">ippl</a>;</div>
@@ -216,24 +216,23 @@ Initializing a Field from a Function</h3>
 </ul>
 <h3><a class="anchor" id="boundary_conditions_fields"></a>
 Boundary Conditions for Fields</h3>
-<p>Setting BCs for fields is a necessary prerequisite before applying differential operators on fields! Otherwise you will get garbage for the points close to the boundary. </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code" href="classippl_1_1BConds.html">ippl::BConds&lt;Field&lt;t, Dim&gt;</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt; bc_type;</div>
+<p>Setting BCs for fields is a necessary prerequisite before applying differential operators on fields! Otherwise you will get garbage for the points close to the boundary. </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code" href="classippl_1_1BConds.html">ippl::BConds&lt;Field&lt;t, Dim&gt;</a>, Dim&gt; bc_type;</div>
 <div class="line">bc_type bc;</div>
 <div class="line"><span class="comment">// Available BCs in Ippl see src/Field/BcTypes.h</span></div>
-<div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; 2*<a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; ++i){</div>
+<div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; 2*Dim; ++i){</div>
 <div class="line">    bc[i]= std::make_shared&lt;ippl::PeriodicFace&lt;Field&lt;T, Dim&gt;&gt;&gt;(i);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">field.setFieldBC(bc);</div>
 <div class="line">bc_type BCs = field.getFieldBC();</div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_afef54e0ebfe65da0a396b342dcbe30f5"><div class="ttname"><a href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a></div><div class="ttdeci">constexpr unsigned Dim</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:22</div></div>
 <div class="ttc" id="aclassippl_1_1BConds_html"><div class="ttname"><a href="classippl_1_1BConds.html">ippl::BConds</a></div><div class="ttdef"><b>Definition:</b> BConds.h:23</div></div>
 </div><!-- fragment --> <h3><a class="anchor" id="diff_op_fields"></a>
 Differential Operators for Fields</h3>
 <div class="fragment"><div class="line"><span class="keyword">using</span> mesh_type = <a class="code" href="classippl_1_1UniformCartesian.html">ippl::UniformCartesian&lt;T, Dim &gt;</a>;</div>
 <div class="line"><span class="keyword">using</span> centering_type = <span class="keyword">typename</span> mesh_type::DefaultCentering ;</div>
 <div class="line"><span class="keyword">using</span> sfield_type = <a class="code" href="classippl_1_1Field.html">Field&lt;double, Dim, mesh_type, centering_type&gt;</a>;</div>
-<div class="line"><span class="keyword">using</span> vfield_type = <a class="code" href="classippl_1_1Field.html">Field&lt;Vector&lt;double, Dim&gt;</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, mesh_type, centering_type&gt;;</div>
-<div class="line"><span class="keyword">using</span> mfield_type = <a class="code" href="classippl_1_1Field.html">Field &lt;Vector&lt;Vector&lt;double, Dim&gt;</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt;, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, mesh_type, centering_type&gt;;</div>
+<div class="line"><span class="keyword">using</span> vfield_type = <a class="code" href="classippl_1_1Field.html">Field&lt;Vector&lt;double, Dim&gt;</a>, Dim, mesh_type, centering_type&gt;;</div>
+<div class="line"><span class="keyword">using</span> mfield_type = <a class="code" href="classippl_1_1Field.html">Field &lt;Vector&lt;Vector&lt;double, Dim&gt;</a>, Dim&gt;, Dim, mesh_type, centering_type&gt;;</div>
 <div class="line"> </div>
 <div class="line">sfield_type sfield (field.get_mesh(), field.getLayout());</div>
 <div class="line">vfield_type vfield (field.get_mesh (), field.getLayout ());</div>

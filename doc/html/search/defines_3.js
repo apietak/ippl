@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['in_5fplace_5ffft_5fbase_5fclass_3781',['IN_PLACE_FFT_BASE_CLASS',['../FFT_8h.html#a8f9f25bdb6354b0e7bd7916c8ce8d9dd',1,'FFT.h']]],
-  ['inform_5fall_5fnodes_3782',['INFORM_ALL_NODES',['../Inform_8h.html#a92f1a0cddb2239428b24e94b918e4efb',1,'Inform.h']]],
-  ['ippl_5fenable_5ftimer_5ffences_3783',['IPPL_ENABLE_TIMER_FENCES',['../Timer_8h.html#aa5b0007f2e679e8f07953f84c4ca2c23',1,'Timer.h']]],
-  ['ippl_5ffem_5fmaxwell_5fdiffusion_5fsolver_5fh_3784',['IPPL_FEM_MAXWELL_DIFFUSION_SOLVER_H',['../FEMMaxwellDiffusionSolver_8h.html#a55edf9def64da5ae92ee71449016013c',1,'FEMMaxwellDiffusionSolver.h']]],
-  ['ippl_5fmpi_5fop_3785',['IPPL_MPI_OP',['../Operations_8h.html#a37baab2616f5c9bc58e78e80302a5dc0',1,'Operations.h']]],
-  ['ippl_5fmpi_5fserializable_3786',['IPPL_MPI_SERIALIZABLE',['../Serializable_8h.html#a4f5800854ab38bc9fee2918f3a4d3135',1,'Serializable.h']]],
-  ['ippl_5fsolver_5foperator_5fwrapper_3787',['IPPL_SOLVER_OPERATOR_WRAPPER',['../Preconditioner_8h.html#a2b8c9f5e923b5dd92d4830f80dd0a4ea',1,'IPPL_SOLVER_OPERATOR_WRAPPER():&#160;Preconditioner.h'],['../PoissonCG_8h.html#a2b8c9f5e923b5dd92d4830f80dd0a4ea',1,'IPPL_SOLVER_OPERATOR_WRAPPER():&#160;PoissonCG.h']]]
+  ['in_5fplace_5ffft_5fbase_5fclass_3401',['IN_PLACE_FFT_BASE_CLASS',['../FFT_8h.html#a8f9f25bdb6354b0e7bd7916c8ce8d9dd',1,'FFT.h']]],
+  ['inform_5fall_5fnodes_3402',['INFORM_ALL_NODES',['../Inform_8h.html#a92f1a0cddb2239428b24e94b918e4efb',1,'Inform.h']]],
+  ['ippl_5fenable_5ftimer_5ffences_3403',['IPPL_ENABLE_TIMER_FENCES',['../Timer_8h.html#aa5b0007f2e679e8f07953f84c4ca2c23',1,'Timer.h']]],
+  ['ippl_5ffem_5fmaxwell_5fdiffusion_5fsolver_5fh_3404',['IPPL_FEM_MAXWELL_DIFFUSION_SOLVER_H',['../FEMMaxwellDiffusionSolver_8h.html#a55edf9def64da5ae92ee71449016013c',1,'FEMMaxwellDiffusionSolver.h']]],
+  ['ippl_5fmpi_5fop_3405',['IPPL_MPI_OP',['../Operations_8h.html#a37baab2616f5c9bc58e78e80302a5dc0',1,'Operations.h']]],
+  ['ippl_5fmpi_5fserializable_3406',['IPPL_MPI_SERIALIZABLE',['../Serializable_8h.html#a4f5800854ab38bc9fee2918f3a4d3135',1,'Serializable.h']]],
+  ['ippl_5fsolver_5foperator_5fwrapper_3407',['IPPL_SOLVER_OPERATOR_WRAPPER',['../Preconditioner_8h.html#a2b8c9f5e923b5dd92d4830f80dd0a4ea',1,'IPPL_SOLVER_OPERATOR_WRAPPER():&#160;Preconditioner.h'],['../PoissonCG_8h.html#a2b8c9f5e923b5dd92d4830f80dd0a4ea',1,'IPPL_SOLVER_OPERATOR_WRAPPER():&#160;PoissonCG.h']]]
 ];

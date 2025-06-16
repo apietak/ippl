@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['halocells_2029',['HaloCells',['../classippl_1_1detail_1_1HaloCells.html',1,'ippl::detail']]],
-  ['halocells_3c_20t_2c_20dim_2c_20viewargs_2e_2e_2e_20_3e_2030',['HaloCells&lt; T, Dim, ViewArgs... &gt;',['../classippl_1_1detail_1_1HaloCells.html',1,'ippl::detail']]],
-  ['hefftebackendtype_2031',['HeffteBackendType',['../structippl_1_1detail_1_1HeffteBackendType.html',1,'ippl::detail']]],
-  ['hefftebackendtype_3c_20kokkos_3a_3ahostspace_20_3e_2032',['HeffteBackendType&lt; Kokkos::HostSpace &gt;',['../structippl_1_1detail_1_1HeffteBackendType_3_01Kokkos_1_1HostSpace_01_4.html',1,'ippl::detail']]],
-  ['hexahedralelement_2033',['HexahedralElement',['../classippl_1_1HexahedralElement.html',1,'ippl']]]
+  ['halocells_1834',['HaloCells',['../classippl_1_1detail_1_1HaloCells.html',1,'ippl::detail']]],
+  ['halocells_3c_20t_2c_20dim_2c_20viewargs_2e_2e_2e_20_3e_1835',['HaloCells&lt; T, Dim, ViewArgs... &gt;',['../classippl_1_1detail_1_1HaloCells.html',1,'ippl::detail']]],
+  ['hefftebackendtype_1836',['HeffteBackendType',['../structippl_1_1detail_1_1HeffteBackendType.html',1,'ippl::detail']]],
+  ['hefftebackendtype_3c_20kokkos_3a_3ahostspace_20_3e_1837',['HeffteBackendType&lt; Kokkos::HostSpace &gt;',['../structippl_1_1detail_1_1HeffteBackendType_3_01Kokkos_1_1HostSpace_01_4.html',1,'ippl::detail']]],
+  ['hexahedralelement_1838',['HexahedralElement',['../classippl_1_1HexahedralElement.html',1,'ippl']]]
 ];

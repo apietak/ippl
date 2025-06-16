@@ -119,7 +119,7 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// Start with whole domain and total number of nodes</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::vector&lt;NDIndex&lt;Dim&gt;&gt; domains = {fl.<a class="code" href="classippl_1_1FieldLayout.html#adce30cb2c6dca758608ad8ff10aacf7b">getDomain</a>()};</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classippl_1_1OrthogonalRecursiveBisection.html#a51ad429a7255471c67dbddd9cfc39a10">   43</a></span>&#160;        std::vector&lt;int&gt; procs            = {nprocs};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::vector&lt;int&gt; procs            = {nprocs};</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// Arrays for reduction</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::vector&lt;Tf&gt; reduced, reducedRank;</div>
@@ -131,14 +131,14 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">while</span> (maxprocs &gt; 1) {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="comment">// Find cut axis</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classippl_1_1OrthogonalRecursiveBisection.html#a57c30bc44ae73bd6b1088a4c12926f7d">   55</a></span>&#160;            <a class="code" href="classIpplTimings.html#af9d914cab7e60b310cb44c75c8bff228">IpplTimings::startTimer</a>(tbasicOp);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="classIpplTimings.html#af9d914cab7e60b310cb44c75c8bff228">IpplTimings::startTimer</a>(tbasicOp);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordtype">int</span> cutAxis = findCutAxis(domains[it]);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="classIpplTimings.html#a8b229ce711198a6e0e190e7d9098c3eb">IpplTimings::stopTimer</a>(tbasicOp);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="comment">// Reserve space</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="classIpplTimings.html#af9d914cab7e60b310cb44c75c8bff228">IpplTimings::startTimer</a>(tperpReduction);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            reduced.resize(domains[it][cutAxis].length());</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classippl_1_1OrthogonalRecursiveBisection.html#a990f627bc28dd376b0fcf3ff3eec5085">   62</a></span>&#160;            reducedRank.resize(domains[it][cutAxis].length());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            reducedRank.resize(domains[it][cutAxis].length());</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            std::fill(reducedRank.begin(), reducedRank.end(), 0.0);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            std::fill(reduced.begin(), reduced.end(), 0.0);</div>
@@ -147,14 +147,14 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            perpendicularReduction(reducedRank, cutAxis, domains[it]);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <a class="code" href="classIpplTimings.html#a8b229ce711198a6e0e190e7d9098c3eb">IpplTimings::stopTimer</a>(tperpReduction);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classippl_1_1OrthogonalRecursiveBisection.html#a55ed2713ea83c9351d994ebbd90d224a">   71</a></span>&#160;            <span class="comment">// Communicate to all the reduced weights</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="comment">// Communicate to all the reduced weights</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="classIpplTimings.html#af9d914cab7e60b310cb44c75c8bff228">IpplTimings::startTimer</a>(tallReduce);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            comm.allreduce(reducedRank.data(), reduced.data(), reducedRank.size(), std::plus&lt;Tf&gt;());</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <a class="code" href="classIpplTimings.html#a8b229ce711198a6e0e190e7d9098c3eb">IpplTimings::stopTimer</a>(tallReduce);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="comment">// Find median of reduced weights</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="classIpplTimings.html#af9d914cab7e60b310cb44c75c8bff228">IpplTimings::startTimer</a>(tbasicOp);</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classippl_1_1OrthogonalRecursiveBisection.html#a27ef9969ba6f536818f5fe602d8b3a31">   78</a></span>&#160;            <span class="comment">// Initialize median to some value (1 is lower bound value)</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="comment">// Initialize median to some value (1 is lower bound value)</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordtype">int</span> median = 1;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            median     = findMedian(reduced);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="classIpplTimings.html#a8b229ce711198a6e0e190e7d9098c3eb">IpplTimings::stopTimer</a>(tbasicOp);</div>
@@ -165,7 +165,7 @@ $(function() {
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="comment">// Update max procs</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            maxprocs = 0;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classippl_1_1OrthogonalRecursiveBisection.html#aac4a2f928ff4092734f64cf8087a58e2">   89</a></span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; procs.size(); i++) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; procs.size(); i++) {</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="keywordflow">if</span> (procs[i] &gt; maxprocs) {</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    maxprocs = procs[i];</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    it       = i;</div>
@@ -175,7 +175,7 @@ $(function() {
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// Clear all arrays</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="classIpplTimings.html#af9d914cab7e60b310cb44c75c8bff228">IpplTimings::startTimer</a>(tperpReduction);</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classippl_1_1OrthogonalRecursiveBisection.html#a1eeb8a0f9a3099ef1a73eab1ec7f3d5d">   99</a></span>&#160;            reduced.clear();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            reduced.clear();</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            reducedRank.clear();</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="classIpplTimings.html#a8b229ce711198a6e0e190e7d9098c3eb">IpplTimings::stopTimer</a>(tperpReduction);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
@@ -239,7 +239,7 @@ $(function() {
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">using</span> exec_space = <span class="keyword">typename</span> <a class="code" href="classippl_1_1BareField.html#ae3b8e4d26e218d9ec999a29871d61700">Field::execution_space</a>;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keyword">using</span> index_type = <span class="keyword">typename</span> <a class="code" href="structippl_1_1RangePolicy.html#acebe72fe9a3ed66692ef306dbc5a9c81">RangePolicy&lt;Dim, exec_space&gt;::index_type</a>;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        Kokkos::Array&lt;index_type, Dim&gt; begin, end;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>; d++) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> d = 0; d &lt; Dim; d++) {</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">if</span> (d == cutAxis) {</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            }</div>
@@ -369,14 +369,13 @@ $(function() {
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                <a class="code" href="classippl_1_1Vector.html">Vector&lt;size_t, Dim&gt;</a> args = index - lDom.<a class="code" href="classippl_1_1NDIndex.html#a867c03b8f54e8241f83860b4d058c7a5">first</a>() + nghost;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                <span class="comment">// Scatter</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <a class="code" href="namespaceippl_1_1detail.html#a6470d11e3ec8f67fbe25abfc02bc2227">scatterToField</a>(std::make_index_sequence&lt;1 &lt;&lt; <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt;{}, view, wlo, whi, args);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <a class="code" href="namespaceippl_1_1detail.html#a6470d11e3ec8f67fbe25abfc02bc2227">scatterToField</a>(std::make_index_sequence&lt;1 &lt;&lt; Dim&gt;{}, view, wlo, whi, args);</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            });</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        bf_m.accumulateHalo();</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}  <span class="comment">// namespace ippl</span></div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_afef54e0ebfe65da0a396b342dcbe30f5"><div class="ttname"><a href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a></div><div class="ttdeci">constexpr unsigned Dim</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:22</div></div>
 <div class="ttc" id="aIpplTimings_8h_html"><div class="ttname"><a href="IpplTimings_8h.html">IpplTimings.h</a></div></div>
 <div class="ttc" id="aclassIpplTimings_html_a06ab8330445cb281b26fa12dbfa2b72c"><div class="ttname"><a href="classIpplTimings.html#a06ab8330445cb281b26fa12dbfa2b72c">IpplTimings::TimerRef</a></div><div class="ttdeci">Timing::TimerRef TimerRef</div><div class="ttdef"><b>Definition:</b> IpplTimings.h:144</div></div>
 <div class="ttc" id="aclassIpplTimings_html_a59ffa7a04c160376d3a6593bff568fb4"><div class="ttname"><a href="classIpplTimings.html#a59ffa7a04c160376d3a6593bff568fb4">IpplTimings::getTimer</a></div><div class="ttdeci">static TimerRef getTimer(const char *nm)</div><div class="ttdef"><b>Definition:</b> IpplTimings.h:150</div></div>

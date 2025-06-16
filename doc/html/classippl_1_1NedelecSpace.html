@@ -77,6 +77,7 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classippl_1_1NedelecSpace-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -93,7 +94,7 @@ Inheritance diagram for ippl::NedelecSpace&lt; T, Dim, Order, ElementType, Quadr
 <div class="dyncontent">
 <div class="center"><img src="classippl_1_1NedelecSpace__inherit__graph.png" border="0" usemap="#aippl_1_1NedelecSpace_3_01T_00_01Dim_00_01Order_00_01ElementType_00_01QuadratureType_00_01FieldType_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aippl_1_1NedelecSpace_3_01T_00_01Dim_00_01Order_00_01ElementType_00_01QuadratureType_00_01FieldType_01_4_inherit__map" id="aippl_1_1NedelecSpace_3_01T_00_01Dim_00_01Order_00_01ElementType_00_01QuadratureType_00_01FieldType_01_4_inherit__map">
-<area shape="rect" title="A class representing a Nedelec space for finite element methods on a structured, rectilinear grid." alt="" coords="28,453,248,780"/>
+<area shape="rect" title="A class representing a Nedelec space for finite element methods on a structured, rectilinear grid." alt="" coords="28,453,248,809"/>
 <area shape="rect" href="classippl_1_1FiniteElementSpace.html" title=" " alt="" coords="5,5,271,405"/>
 </map>
 </div>
@@ -102,29 +103,29 @@ Collaboration diagram for ippl::NedelecSpace&lt; T, Dim, Order, ElementType, Qua
 <div class="dyncontent">
 <div class="center"><img src="classippl_1_1NedelecSpace__coll__graph.png" border="0" usemap="#aippl_1_1NedelecSpace_3_01T_00_01Dim_00_01Order_00_01ElementType_00_01QuadratureType_00_01FieldType_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aippl_1_1NedelecSpace_3_01T_00_01Dim_00_01Order_00_01ElementType_00_01QuadratureType_00_01FieldType_01_4_coll__map" id="aippl_1_1NedelecSpace_3_01T_00_01Dim_00_01Order_00_01ElementType_00_01QuadratureType_00_01FieldType_01_4_coll__map">
-<area shape="rect" title="A class representing a Nedelec space for finite element methods on a structured, rectilinear grid." alt="" coords="28,453,248,780"/>
+<area shape="rect" title="A class representing a Nedelec space for finite element methods on a structured, rectilinear grid." alt="" coords="28,453,248,809"/>
 <area shape="rect" href="classippl_1_1FiniteElementSpace.html" title=" " alt="" coords="5,5,271,405"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a1ad7f34eed2d3f37b53379c200b9d919"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType, QuadratureType, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a1ad7f34eed2d3f37b53379c200b9d919">indices_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a1ad7f34eed2d3f37b53379c200b9d919">indices_t</a></td></tr>
+<tr class="memitem:a1ad7f34eed2d3f37b53379c200b9d919"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; T, Dim, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType, QuadratureType, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt;, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a1ad7f34eed2d3f37b53379c200b9d919">indices_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a1ad7f34eed2d3f37b53379c200b9d919">indices_t</a></td></tr>
 <tr class="separator:a1ad7f34eed2d3f37b53379c200b9d919"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0933135b229dcee389184bee3e992572"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType, QuadratureType, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a></td></tr>
+<tr class="memitem:a0933135b229dcee389184bee3e992572"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; T, Dim, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType, QuadratureType, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt;, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a></td></tr>
 <tr class="separator:a0933135b229dcee389184bee3e992572"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90da9fd90803a6ac17805d0ca2976667"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType, QuadratureType, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a90da9fd90803a6ac17805d0ca2976667">vertex_points_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a90da9fd90803a6ac17805d0ca2976667">vertex_points_t</a></td></tr>
+<tr class="memitem:a90da9fd90803a6ac17805d0ca2976667"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; T, Dim, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType, QuadratureType, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt;, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a90da9fd90803a6ac17805d0ca2976667">vertex_points_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a90da9fd90803a6ac17805d0ca2976667">vertex_points_t</a></td></tr>
 <tr class="separator:a90da9fd90803a6ac17805d0ca2976667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d10d5317c67c9c4ef9fd57074320235"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1FieldLayout.html">FieldLayout</a>&lt; <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a></td></tr>
+<tr class="memitem:a4d10d5317c67c9c4ef9fd57074320235"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1FieldLayout.html">FieldLayout</a>&lt; Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a></td></tr>
 <tr class="separator:a4d10d5317c67c9c4ef9fd57074320235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57146ddc120cbaec0cff1f9e158c66d1"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structippl_1_1detail_1_1ViewType.html">detail::ViewType</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, 1 &gt;::<a class="el" href="AlpineManager_8h.html#abac6b71b6ea68a6c8bb864e8ebd5fe62">view_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a57146ddc120cbaec0cff1f9e158c66d1">ViewType</a></td></tr>
+<tr class="memitem:a57146ddc120cbaec0cff1f9e158c66d1"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structippl_1_1detail_1_1ViewType.html">detail::ViewType</a>&lt; T, 1 &gt;::view_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a57146ddc120cbaec0cff1f9e158c66d1">ViewType</a></td></tr>
 <tr class="separator:a57146ddc120cbaec0cff1f9e158c66d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac17b30c5701233a01bdaf842e019c26c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structippl_1_1detail_1_1ViewType.html">detail::ViewType</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, 1, Kokkos::MemoryTraits&lt; Kokkos::Atomic &gt; &gt;::<a class="el" href="AlpineManager_8h.html#abac6b71b6ea68a6c8bb864e8ebd5fe62">view_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#ac17b30c5701233a01bdaf842e019c26c">AtomicViewType</a></td></tr>
+<tr class="memitem:ac17b30c5701233a01bdaf842e019c26c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structippl_1_1detail_1_1ViewType.html">detail::ViewType</a>&lt; T, 1, Kokkos::MemoryTraits&lt; Kokkos::Atomic &gt; &gt;::view_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#ac17b30c5701233a01bdaf842e019c26c">AtomicViewType</a></td></tr>
 <tr class="separator:ac17b30c5701233a01bdaf842e019c26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classippl_1_1FiniteElementSpace"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classippl_1_1FiniteElementSpace')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace&lt; T, Dim, getNedelecNumElementDOFs(Dim, Order), ElementType, QuadratureType, FEMVector&lt; T &gt;, FEMVector&lt; T &gt; &gt;</a></td></tr>
-<tr class="memitem:a3fd4966339e615203f25519ffa0616e4 inherit pub_types_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a></td></tr>
+<tr class="memitem:a3fd4966339e615203f25519ffa0616e4 inherit pub_types_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a></td></tr>
 <tr class="separator:a3fd4966339e615203f25519ffa0616e4 inherit pub_types_classippl_1_1FiniteElementSpace"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14e949596df9f85b145b1263cac186a4 inherit pub_types_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a14e949596df9f85b145b1263cac186a4">point_t</a></td></tr>
+<tr class="memitem:a14e949596df9f85b145b1263cac186a4 inherit pub_types_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; T, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a14e949596df9f85b145b1263cac186a4">point_t</a></td></tr>
 <tr class="separator:a14e949596df9f85b145b1263cac186a4 inherit pub_types_classippl_1_1FiniteElementSpace"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5171c6b1d5177882d494c6087d205842 inherit pub_types_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1FiniteElementSpace.html#a60db42bceccdd9d7466d66f41895879e">numElementVertices</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a5171c6b1d5177882d494c6087d205842">vertex_indices_t</a></td></tr>
 <tr class="separator:a5171c6b1d5177882d494c6087d205842 inherit pub_types_classippl_1_1FiniteElementSpace"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,13 +136,13 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8ac0f1d0b1a7007c36f26d1a7229a9ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a8ac0f1d0b1a7007c36f26d1a7229a9ac">NedelecSpace</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;mesh, ElementType &amp;ref_element, const QuadratureType &amp;quadrature, const <a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a> &amp;layout)</td></tr>
+<tr class="memitem:a8ac0f1d0b1a7007c36f26d1a7229a9ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a8ac0f1d0b1a7007c36f26d1a7229a9ac">NedelecSpace</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;mesh, ElementType &amp;ref_element, const QuadratureType &amp;quadrature, const <a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a> &amp;layout)</td></tr>
 <tr class="memdesc:a8ac0f1d0b1a7007c36f26d1a7229a9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classippl_1_1NedelecSpace.html" title="A class representing a Nedelec space for finite element methods on a structured, rectilinear grid.">NedelecSpace</a> object.  <a href="classippl_1_1NedelecSpace.html#a8ac0f1d0b1a7007c36f26d1a7229a9ac">More...</a><br /></td></tr>
 <tr class="separator:a8ac0f1d0b1a7007c36f26d1a7229a9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43bd5588bd3fe6a8fad8a1762f74f9c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a43bd5588bd3fe6a8fad8a1762f74f9c7">NedelecSpace</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;mesh, ElementType &amp;ref_element, const QuadratureType &amp;quadrature)</td></tr>
+<tr class="memitem:a43bd5588bd3fe6a8fad8a1762f74f9c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a43bd5588bd3fe6a8fad8a1762f74f9c7">NedelecSpace</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;mesh, ElementType &amp;ref_element, const QuadratureType &amp;quadrature)</td></tr>
 <tr class="memdesc:a43bd5588bd3fe6a8fad8a1762f74f9c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classippl_1_1NedelecSpace.html" title="A class representing a Nedelec space for finite element methods on a structured, rectilinear grid.">NedelecSpace</a> object (without layout) This constructor is made to work with the default constructor in <a class="el" href="FEMPoissonSolver_8h.html">FEMPoissonSolver.h</a> such that it is compatible with alpine.  <a href="classippl_1_1NedelecSpace.html#a43bd5588bd3fe6a8fad8a1762f74f9c7">More...</a><br /></td></tr>
 <tr class="separator:a43bd5588bd3fe6a8fad8a1762f74f9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d62d8ebbb254b86a4228f6c30bdc551"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a3d62d8ebbb254b86a4228f6c30bdc551">initialize</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;mesh, const <a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a> &amp;layout)</td></tr>
+<tr class="memitem:a3d62d8ebbb254b86a4228f6c30bdc551"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a3d62d8ebbb254b86a4228f6c30bdc551">initialize</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;mesh, const <a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a> &amp;layout)</td></tr>
 <tr class="memdesc:a3d62d8ebbb254b86a4228f6c30bdc551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a <a class="el" href="classippl_1_1NedelecSpace.html" title="A class representing a Nedelec space for finite element methods on a structured, rectilinear grid.">NedelecSpace</a> object created with the default constructor.  <a href="classippl_1_1NedelecSpace.html#a3d62d8ebbb254b86a4228f6c30bdc551">More...</a><br /></td></tr>
 <tr class="separator:a3d62d8ebbb254b86a4228f6c30bdc551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a447fb23307b18f780f8edf6b3a2948ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a447fb23307b18f780f8edf6b3a2948ae">initializeElementIndices</a> (const <a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a> &amp;layout)</td></tr>
@@ -159,24 +160,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba9a8899a35a87324625f1c471fe38fd"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#aba9a8899a35a87324625f1c471fe38fd">getLocalDOFIndices</a> () const override</td></tr>
 <tr class="memdesc:aba9a8899a35a87324625f1c471fe38fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the local DOF indices (vector of local DOF indices) They are independent of the specific element because it only depends on the reference element type.  <a href="classippl_1_1NedelecSpace.html#aba9a8899a35a87324625f1c471fe38fd">More...</a><br /></td></tr>
 <tr class="separator:aba9a8899a35a87324625f1c471fe38fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d9df37faf249022213914890ba1242a"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a9d9df37faf249022213914890ba1242a">getGlobalDOFIndices</a> (const size_t &amp;element_index) const override</td></tr>
-<tr class="memdesc:a9d9df37faf249022213914890ba1242a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the global DOF indices (vector of global DOF indices) of an element.  <a href="classippl_1_1NedelecSpace.html#a9d9df37faf249022213914890ba1242a">More...</a><br /></td></tr>
-<tr class="separator:a9d9df37faf249022213914890ba1242a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ec8dfda5be9cc8d58d5069c5a79070"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a89ec8dfda5be9cc8d58d5069c5a79070">getGlobalDOFIndices</a> (const size_t &amp;elementIndex) const override</td></tr>
+<tr class="memdesc:a89ec8dfda5be9cc8d58d5069c5a79070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the global DOF indices (vector of global DOF indices) of an element.  <a href="classippl_1_1NedelecSpace.html#a89ec8dfda5be9cc8d58d5069c5a79070">More...</a><br /></td></tr>
+<tr class="separator:a89ec8dfda5be9cc8d58d5069c5a79070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af70e2038edbf10016c9d0c88a2bbab8d"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#af70e2038edbf10016c9d0c88a2bbab8d">getGlobalDOFIndices</a> (const <a class="el" href="classippl_1_1NedelecSpace.html#a1ad7f34eed2d3f37b53379c200b9d919">indices_t</a> &amp;elementIndex) const</td></tr>
+<tr class="memdesc:af70e2038edbf10016c9d0c88a2bbab8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the global DOF indices (vector of global DOF indices) of an element.  <a href="classippl_1_1NedelecSpace.html#af70e2038edbf10016c9d0c88a2bbab8d">More...</a><br /></td></tr>
+<tr class="separator:af70e2038edbf10016c9d0c88a2bbab8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7faaad63add57a344ad72036b9af60"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a1e7faaad63add57a344ad72036b9af60">getFEMVectorDOFIndices</a> (const size_t &amp;elementIndex, <a class="el" href="classippl_1_1NDIndex.html">NDIndex</a>&lt; Dim &gt; ldom) const</td></tr>
+<tr class="memdesc:a1e7faaad63add57a344ad72036b9af60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the DOF indices (vector of indices) corresponding to the position inside the <a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> of an element.  <a href="classippl_1_1NedelecSpace.html#a1e7faaad63add57a344ad72036b9af60">More...</a><br /></td></tr>
+<tr class="separator:a1e7faaad63add57a344ad72036b9af60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd83b089a31e9b29fab809d8bccb230"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#adcd83b089a31e9b29fab809d8bccb230">getFEMVectorDOFIndices</a> (<a class="el" href="classippl_1_1NedelecSpace.html#a1ad7f34eed2d3f37b53379c200b9d919">indices_t</a> elementIndex, <a class="el" href="classippl_1_1NDIndex.html">NDIndex</a>&lt; Dim &gt; ldom) const</td></tr>
+<tr class="memdesc:adcd83b089a31e9b29fab809d8bccb230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the DOF indices (vector of indices) corresponding to the position inside the <a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> of an element.  <a href="classippl_1_1NedelecSpace.html#adcd83b089a31e9b29fab809d8bccb230">More...</a><br /></td></tr>
+<tr class="separator:adcd83b089a31e9b29fab809d8bccb230"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56f3ed7b4bdfdcc60069573c3dbf7ce9"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION <a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a56f3ed7b4bdfdcc60069573c3dbf7ce9">getLocalDOFPosition</a> (size_t localDOFIndex) const</td></tr>
 <tr class="memdesc:a56f3ed7b4bdfdcc60069573c3dbf7ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the cartesion position of a local DOF in the reference element.  <a href="classippl_1_1NedelecSpace.html#a56f3ed7b4bdfdcc60069573c3dbf7ce9">More...</a><br /></td></tr>
 <tr class="separator:a56f3ed7b4bdfdcc60069573c3dbf7ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af775cd826dfec4d2b9e88afcd12b09e7"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION std::function&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>(size_t, size_t, size_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#af775cd826dfec4d2b9e88afcd12b09e7">curlCurlOperator</a> () const</td></tr>
-<tr class="memdesc:af775cd826dfec4d2b9e88afcd12b09e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basis functions and gradients /////////////////////////////////////.  <a href="classippl_1_1NedelecSpace.html#af775cd826dfec4d2b9e88afcd12b09e7">More...</a><br /></td></tr>
-<tr class="separator:af775cd826dfec4d2b9e88afcd12b09e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa50f364aa4a2ed024345393ecca61556"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION std::function&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>(size_t, size_t, size_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#aa50f364aa4a2ed024345393ecca61556">massOperator</a> () const</td></tr>
-<tr class="memdesc:aa50f364aa4a2ed024345393ecca61556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for evaluating a the bilinear form of $(b_j, b_i)$.  <a href="classippl_1_1NedelecSpace.html#aa50f364aa4a2ed024345393ecca61556">More...</a><br /></td></tr>
-<tr class="separator:aa50f364aa4a2ed024345393ecca61556"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac900e5833cee1e74d1fde973077d5100"><td class="memTemplParams" colspan="2">template&lt;typename Functor &gt; </td></tr>
-<tr class="memitem:ac900e5833cee1e74d1fde973077d5100"><td class="memTemplItemLeft" align="right" valign="top">KOKKOS_FUNCTION std::function&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>(size_t, size_t, <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#ac900e5833cee1e74d1fde973077d5100">loadOperator</a> (Functor f) const</td></tr>
-<tr class="memdesc:ac900e5833cee1e74d1fde973077d5100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for evaluating a the linear form of $(b_i, f(x))$.  <a href="classippl_1_1NedelecSpace.html#ac900e5833cee1e74d1fde973077d5100">More...</a><br /></td></tr>
-<tr class="separator:ac900e5833cee1e74d1fde973077d5100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81fb3aca4d79e5243628057f41958de4"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION <a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a81fb3aca4d79e5243628057f41958de4">evaluateRefElementShapeFunction</a> (const size_t &amp;localDOF, const <a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> &amp;localPoint) const</td></tr>
-<tr class="memdesc:a81fb3aca4d79e5243628057f41958de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the shape function of a local degree of freedom at a given point in the reference element.  <a href="classippl_1_1NedelecSpace.html#a81fb3aca4d79e5243628057f41958de4">More...</a><br /></td></tr>
+<tr class="memdesc:a81fb3aca4d79e5243628057f41958de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basis functions and gradients /////////////////////////////////////.  <a href="classippl_1_1NedelecSpace.html#a81fb3aca4d79e5243628057f41958de4">More...</a><br /></td></tr>
 <tr class="separator:a81fb3aca4d79e5243628057f41958de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecbcb2e044d5ff39c86a8aac20068c97"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION <a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#aecbcb2e044d5ff39c86a8aac20068c97">evaluateRefElementShapeFunctionGradient</a> (const size_t &amp;localDOF, const <a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> &amp;localPoint) const override</td></tr>
 <tr class="memdesc:aecbcb2e044d5ff39c86a8aac20068c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the gradient of the shape function of a local degree of freedom at a given point in the reference element.  <a href="classippl_1_1NedelecSpace.html#aecbcb2e044d5ff39c86a8aac20068c97">More...</a><br /></td></tr>
@@ -185,45 +185,44 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a58ae2f8b7601ada5ae8013e305a1f3af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the curl of the shape function of a local degree of of freedom at ta given point in the reference element.  <a href="classippl_1_1NedelecSpace.html#a58ae2f8b7601ada5ae8013e305a1f3af">More...</a><br /></td></tr>
 <tr class="separator:a58ae2f8b7601ada5ae8013e305a1f3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bb3ac55e6be81fd1602d8772e884527"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
-<tr class="memitem:a2bb3ac55e6be81fd1602d8772e884527"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a2bb3ac55e6be81fd1602d8772e884527">evaluateAx</a> (<a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;x, F &amp;evalFunction) const</td></tr>
+<tr class="memitem:a2bb3ac55e6be81fd1602d8772e884527"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a2bb3ac55e6be81fd1602d8772e884527">evaluateAx</a> (<a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; &amp;x, F &amp;evalFunction) const</td></tr>
 <tr class="memdesc:a2bb3ac55e6be81fd1602d8772e884527"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assembly operations ///////////////////////////////////////////////.  <a href="classippl_1_1NedelecSpace.html#a2bb3ac55e6be81fd1602d8772e884527">More...</a><br /></td></tr>
 <tr class="separator:a2bb3ac55e6be81fd1602d8772e884527"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78b9b660b87a7ea915ae80636d9fa075"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a78b9b660b87a7ea915ae80636d9fa075">evaluateLoadVector</a> (const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> &gt; &amp;f) const</td></tr>
-<tr class="memdesc:a78b9b660b87a7ea915ae80636d9fa075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the load vector b of the system Ax = b.  <a href="classippl_1_1NedelecSpace.html#a78b9b660b87a7ea915ae80636d9fa075">More...</a><br /></td></tr>
+<tr class="memitem:a78b9b660b87a7ea915ae80636d9fa075"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a78b9b660b87a7ea915ae80636d9fa075">evaluateLoadVector</a> (const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> &gt; &amp;f) const</td></tr>
+<tr class="memdesc:a78b9b660b87a7ea915ae80636d9fa075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the load vector b of the system Ax = b, given a field of the right hand side defined at the Nédélec DOF positions. If a functor instead of a field should be used, use the function <code><a class="el" href="classippl_1_1NedelecSpace.html#a02c5426e7f6700fc0e98419cf926d4ce" title="Assemble the load vector b of the system Ax = b, given a functional of the rhs. If a field instead of...">NedelecSpace::evaluateLoadVectorFunctor</a></code>.  <a href="classippl_1_1NedelecSpace.html#a78b9b660b87a7ea915ae80636d9fa075">More...</a><br /></td></tr>
 <tr class="separator:a78b9b660b87a7ea915ae80636d9fa075"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74db439d34622c55154259bf9542abf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a74db439d34622c55154259bf9542abf3">interpolateToFEMVector</a> (const FieldType &amp;field) const</td></tr>
-<tr class="memdesc:a74db439d34622c55154259bf9542abf3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> conversion //////////////////////////////////////////////.  <a href="classippl_1_1NedelecSpace.html#a74db439d34622c55154259bf9542abf3">More...</a><br /></td></tr>
+<tr class="memitem:a02c5426e7f6700fc0e98419cf926d4ce"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a02c5426e7f6700fc0e98419cf926d4ce"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a02c5426e7f6700fc0e98419cf926d4ce">evaluateLoadVectorFunctor</a> (const F &amp;f) const</td></tr>
+<tr class="memdesc:a02c5426e7f6700fc0e98419cf926d4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the load vector b of the system Ax = b, given a functional of the rhs. If a field instead of a functor should be used, use the function <code><a class="el" href="classippl_1_1NedelecSpace.html#a78b9b660b87a7ea915ae80636d9fa075" title="Assemble the load vector b of the system Ax = b, given a field of the right hand side defined at the ...">NedelecSpace::evaluateLoadVector</a></code>.  <a href="classippl_1_1NedelecSpace.html#a02c5426e7f6700fc0e98419cf926d4ce">More...</a><br /></td></tr>
+<tr class="separator:a02c5426e7f6700fc0e98419cf926d4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74db439d34622c55154259bf9542abf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a74db439d34622c55154259bf9542abf3">interpolateToFEMVector</a> (const FieldType &amp;field) const</td></tr>
+<tr class="memdesc:a74db439d34622c55154259bf9542abf3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> conversion and creation//////////////////////////////////.  <a href="classippl_1_1NedelecSpace.html#a74db439d34622c55154259bf9542abf3">More...</a><br /></td></tr>
 <tr class="separator:a74db439d34622c55154259bf9542abf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5adbdd3ce5552c3fef79431bbea2823"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#ad5adbdd3ce5552c3fef79431bbea2823">reconstructBasis</a> (const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;coef) const</td></tr>
-<tr class="memdesc:ad5adbdd3ce5552c3fef79431bbea2823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the basis function coefficients evaluates them and returns a <code><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">ippl::FEMVector</a></code> defined at the Nédélec DOFs.  <a href="classippl_1_1NedelecSpace.html#ad5adbdd3ce5552c3fef79431bbea2823">More...</a><br /></td></tr>
-<tr class="separator:ad5adbdd3ce5552c3fef79431bbea2823"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac45a2a0a75bd005a693217466b1af134"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#ac45a2a0a75bd005a693217466b1af134">interpolateToField</a> (const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;vector, FieldType &amp;field) const</td></tr>
-<tr class="memdesc:ac45a2a0a75bd005a693217466b1af134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolates data from a <code><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">ippl::FEMVector</a></code> to a <code><a class="el" href="classippl_1_1Field.html">ippl::Field</a></code>.  <a href="classippl_1_1NedelecSpace.html#ac45a2a0a75bd005a693217466b1af134">More...</a><br /></td></tr>
-<tr class="separator:ac45a2a0a75bd005a693217466b1af134"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b3f91f9192fb51a198dc06c4b1c806b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a5b3f91f9192fb51a198dc06c4b1c806b">reconstructSolution</a> (const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;x, FieldType &amp;field) const</td></tr>
+<tr class="memitem:a60729dfdca14fd15af5a913de7dd77f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a60729dfdca14fd15af5a913de7dd77f2">createFEMVector</a> () const</td></tr>
+<tr class="memdesc:a60729dfdca14fd15af5a913de7dd77f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and empty <a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a>.  <a href="classippl_1_1NedelecSpace.html#a60729dfdca14fd15af5a913de7dd77f2">More...</a><br /></td></tr>
+<tr class="separator:a60729dfdca14fd15af5a913de7dd77f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b3f91f9192fb51a198dc06c4b1c806b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a5b3f91f9192fb51a198dc06c4b1c806b">reconstructSolution</a> (const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; &amp;x, FieldType &amp;field) const</td></tr>
 <tr class="memdesc:a5b3f91f9192fb51a198dc06c4b1c806b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconstruct a solution given the basis function coefficient vector <code>x</code>.  <a href="classippl_1_1NedelecSpace.html#a5b3f91f9192fb51a198dc06c4b1c806b">More...</a><br /></td></tr>
 <tr class="separator:a5b3f91f9192fb51a198dc06c4b1c806b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac43f479ae96c058b3feba3e3b6db63db"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
-<tr class="memitem:ac43f479ae96c058b3feba3e3b6db63db"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#ac43f479ae96c058b3feba3e3b6db63db">computeError</a> (const FieldType &amp;u_h, const F &amp;u_sol) const</td></tr>
-<tr class="memdesc:ac43f479ae96c058b3feba3e3b6db63db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error norm computations ///////////////////////////////////////////.  <a href="classippl_1_1NedelecSpace.html#ac43f479ae96c058b3feba3e3b6db63db">More...</a><br /></td></tr>
-<tr class="separator:ac43f479ae96c058b3feba3e3b6db63db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9f47693f17fb9e82df3f8f7ba439d8c"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
-<tr class="memitem:aa9f47693f17fb9e82df3f8f7ba439d8c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#aa9f47693f17fb9e82df3f8f7ba439d8c">computeErrorInf</a> (const FieldType &amp;u_h, const F &amp;u_sol) const</td></tr>
-<tr class="memdesc:aa9f47693f17fb9e82df3f8f7ba439d8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given two fields, compute the L-infinity error.  <a href="classippl_1_1NedelecSpace.html#aa9f47693f17fb9e82df3f8f7ba439d8c">More...</a><br /></td></tr>
-<tr class="separator:aa9f47693f17fb9e82df3f8f7ba439d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7579e703f78f96762ef546c7b37dee1f"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a7579e703f78f96762ef546c7b37dee1f">isDOFOnBoundary</a> (const size_t &amp;dofIdx) const</td></tr>
-<tr class="memdesc:a7579e703f78f96762ef546c7b37dee1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a DOF is on the boundary of the mesh.  <a href="classippl_1_1NedelecSpace.html#a7579e703f78f96762ef546c7b37dee1f">More...</a><br /></td></tr>
-<tr class="separator:a7579e703f78f96762ef546c7b37dee1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f02db3e88a98993fdf105ac394af804"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a4f02db3e88a98993fdf105ac394af804">getBoundarySide</a> (const size_t &amp;dofIdx) const</td></tr>
-<tr class="separator:a4f02db3e88a98993fdf105ac394af804"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2c43437bf8813692fd42e1c18e1e9b4"><td class="memTemplParams" colspan="2">template&lt;typename Functor &gt; </td></tr>
-<tr class="memitem:aa2c43437bf8813692fd42e1c18e1e9b4"><td class="memTemplItemLeft" align="right" valign="top">KOKKOS_FUNCTION std::function&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>(size_t, size_t, <a class="el" href="classippl_1_1Vector.html">ippl::Vector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#aa2c43437bf8813692fd42e1c18e1e9b4">loadOperator</a> (Functor f) const</td></tr>
-<tr class="separator:aa2c43437bf8813692fd42e1c18e1e9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbacee834975853ff6e15defc54049f1"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:abbacee834975853ff6e15defc54049f1"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#abbacee834975853ff6e15defc54049f1">computeError</a> (const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; T, Dim &gt; &gt; &amp;u_h, const F &amp;u_sol) const</td></tr>
+<tr class="memdesc:abbacee834975853ff6e15defc54049f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error norm computations ///////////////////////////////////////////.  <a href="classippl_1_1NedelecSpace.html#abbacee834975853ff6e15defc54049f1">More...</a><br /></td></tr>
+<tr class="separator:abbacee834975853ff6e15defc54049f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5124d4296ef8dfd5b92fddbb37d4b6a1"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a5124d4296ef8dfd5b92fddbb37d4b6a1"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a5124d4296ef8dfd5b92fddbb37d4b6a1">computeErrorCoeff</a> (const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; &amp;u_h, const F &amp;u_sol) const</td></tr>
+<tr class="memdesc:a5124d4296ef8dfd5b92fddbb37d4b6a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the Nedelec space DoF coefficients and an analytical solution computes the L2 norm error.  <a href="classippl_1_1NedelecSpace.html#a5124d4296ef8dfd5b92fddbb37d4b6a1">More...</a><br /></td></tr>
+<tr class="separator:a5124d4296ef8dfd5b92fddbb37d4b6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a093d115a9bf76de1c6d6b1f0dab096ba"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a093d115a9bf76de1c6d6b1f0dab096ba">isDOFOnBoundary</a> (const size_t &amp;dofIdx) const</td></tr>
+<tr class="memdesc:a093d115a9bf76de1c6d6b1f0dab096ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a DOF is on the boundary of the mesh.  <a href="classippl_1_1NedelecSpace.html#a093d115a9bf76de1c6d6b1f0dab096ba">More...</a><br /></td></tr>
+<tr class="separator:a093d115a9bf76de1c6d6b1f0dab096ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498c77bc768bdd99cf9e32b4d1c6433e"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a498c77bc768bdd99cf9e32b4d1c6433e">getBoundarySide</a> (const size_t &amp;dofIdx) const</td></tr>
+<tr class="memdesc:a498c77bc768bdd99cf9e32b4d1c6433e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns which side the boundary is on.  <a href="classippl_1_1NedelecSpace.html#a498c77bc768bdd99cf9e32b4d1c6433e">More...</a><br /></td></tr>
+<tr class="separator:a498c77bc768bdd99cf9e32b4d1c6433e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classippl_1_1FiniteElementSpace"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classippl_1_1FiniteElementSpace')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace&lt; T, Dim, getNedelecNumElementDOFs(Dim, Order), ElementType, QuadratureType, FEMVector&lt; T &gt;, FEMVector&lt; T &gt; &gt;</a></td></tr>
-<tr class="memitem:a22431704078c7819295ae0d912e3cd90 inherit pub_methods_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a22431704078c7819295ae0d912e3cd90">FiniteElementSpace</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;mesh, ElementType &amp;ref_element, const QuadratureType &amp;quadrature)</td></tr>
+<tr class="memitem:a22431704078c7819295ae0d912e3cd90 inherit pub_methods_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a22431704078c7819295ae0d912e3cd90">FiniteElementSpace</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;mesh, ElementType &amp;ref_element, const QuadratureType &amp;quadrature)</td></tr>
 <tr class="memdesc:a22431704078c7819295ae0d912e3cd90 inherit pub_methods_classippl_1_1FiniteElementSpace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new FiniteElementSpace object.  <a href="classippl_1_1FiniteElementSpace.html#a22431704078c7819295ae0d912e3cd90">More...</a><br /></td></tr>
 <tr class="separator:a22431704078c7819295ae0d912e3cd90 inherit pub_methods_classippl_1_1FiniteElementSpace"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac80911a61fb8615fabf4aa10c147af88 inherit pub_methods_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ac80911a61fb8615fabf4aa10c147af88">setMesh</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;mesh)</td></tr>
+<tr class="memitem:ac80911a61fb8615fabf4aa10c147af88 inherit pub_methods_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ac80911a61fb8615fabf4aa10c147af88">setMesh</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;mesh)</td></tr>
 <tr class="separator:ac80911a61fb8615fabf4aa10c147af88 inherit pub_methods_classippl_1_1FiniteElementSpace"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8d61e8ec1b4c3f2f9703d3526e92fca inherit pub_methods_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ae8d61e8ec1b4c3f2f9703d3526e92fca">numElements</a> () const</td></tr>
 <tr class="memdesc:ae8d61e8ec1b4c3f2f9703d3526e92fca inherit pub_methods_classippl_1_1FiniteElementSpace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh and Element operations ///////////////////////////////////////.  <a href="classippl_1_1FiniteElementSpace.html#ae8d61e8ec1b4c3f2f9703d3526e92fca">More...</a><br /></td></tr>
@@ -255,7 +254,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ad4713b5b85ef51ac80b6075b3411ce09"><td class="memItemLeft" align="right" valign="top">static constexpr unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> = <a class="el" href="NedelecSpace_8h.html#ae6940cd74faee9439fe6759755a94794">getNedelecNumElementDOFs</a>(<a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order)</td></tr>
+<tr class="memitem:ad4713b5b85ef51ac80b6075b3411ce09"><td class="memItemLeft" align="right" valign="top">static constexpr unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> = <a class="el" href="NedelecSpace_8h.html#ae6940cd74faee9439fe6759755a94794">getNedelecNumElementDOFs</a>(Dim, Order)</td></tr>
 <tr class="separator:ad4713b5b85ef51ac80b6075b3411ce09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c2ab9fe3f1ec101c202c0f6111f8a68"><td class="memItemLeft" align="right" valign="top">static constexpr unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a5c2ab9fe3f1ec101c202c0f6111f8a68">dim</a></td></tr>
 <tr class="separator:a5c2ab9fe3f1ec101c202c0f6111f8a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -271,28 +270,37 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a099faa6d1294fa54f324cbda33743e50 inherit pub_static_attribs_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">static constexpr unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a099faa6d1294fa54f324cbda33743e50">numElementDOFs</a></td></tr>
 <tr class="separator:a099faa6d1294fa54f324cbda33743e50 inherit pub_static_attribs_classippl_1_1FiniteElementSpace"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:afa8454015cc201363076642483af1baa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#afa8454015cc201363076642483af1baa">createFEMVector2d</a> () const</td></tr>
+<tr class="separator:afa8454015cc201363076642483af1baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c40468b9caf66f00c0f40c6b0115e53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a5c40468b9caf66f00c0f40c6b0115e53">createFEMVector3d</a> () const</td></tr>
+<tr class="separator:a5c40468b9caf66f00c0f40c6b0115e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a3925c549caacc3261dac5a128cf148e9"><td class="memItemLeft" align="right" valign="top">Kokkos::View&lt; size_t * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a3925c549caacc3261dac5a128cf148e9">elementIndices</a></td></tr>
+<tr class="memdesc:a3925c549caacc3261dac5a128cf148e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores which elements (squares or cubes) belong to the current MPI rank.  <a href="classippl_1_1NedelecSpace.html#a3925c549caacc3261dac5a128cf148e9">More...</a><br /></td></tr>
 <tr class="separator:a3925c549caacc3261dac5a128cf148e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7204e2e0ac34657cf5fc743912eb8a4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a7204e2e0ac34657cf5fc743912eb8a4c">layout_m</a></td></tr>
+<tr class="memdesc:a7204e2e0ac34657cf5fc743912eb8a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The layout of the MPI ranks over the mesh.  <a href="classippl_1_1NedelecSpace.html#a7204e2e0ac34657cf5fc743912eb8a4c">More...</a><br /></td></tr>
 <tr class="separator:a7204e2e0ac34657cf5fc743912eb8a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classippl_1_1FiniteElementSpace"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classippl_1_1FiniteElementSpace')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace&lt; T, Dim, getNedelecNumElementDOFs(Dim, Order), ElementType, QuadratureType, FEMVector&lt; T &gt;, FEMVector&lt; T &gt; &gt;</a></td></tr>
-<tr class="memitem:ad61407dba5ef67f59e7f0d83148acb03 inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ad61407dba5ef67f59e7f0d83148acb03">mesh_m</a></td></tr>
+<tr class="memitem:ad61407dba5ef67f59e7f0d83148acb03 inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ad61407dba5ef67f59e7f0d83148acb03">mesh_m</a></td></tr>
 <tr class="memdesc:ad61407dba5ef67f59e7f0d83148acb03 inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assembly operations ///////////////////////////////////////////////.  <a href="classippl_1_1FiniteElementSpace.html#ad61407dba5ef67f59e7f0d83148acb03">More...</a><br /></td></tr>
 <tr class="separator:ad61407dba5ef67f59e7f0d83148acb03 inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ce9c625a922cfb4d36a0e6475de52b9 inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">ElementType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a6ce9c625a922cfb4d36a0e6475de52b9">ref_element_m</a></td></tr>
 <tr class="separator:a6ce9c625a922cfb4d36a0e6475de52b9 inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a687c7d737de7af779e56b1997ed8edcf inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top">const QuadratureType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a687c7d737de7af779e56b1997ed8edcf">quadrature_m</a></td></tr>
 <tr class="separator:a687c7d737de7af779e56b1997ed8edcf inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8afb896925202f489a1ee60f4e2a4082 inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a8afb896925202f489a1ee60f4e2a4082">nr_m</a></td></tr>
+<tr class="memitem:a8afb896925202f489a1ee60f4e2a4082 inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a8afb896925202f489a1ee60f4e2a4082">nr_m</a></td></tr>
 <tr class="separator:a8afb896925202f489a1ee60f4e2a4082 inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae25907d97d85173edf9de0d130676a34 inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; double, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ae25907d97d85173edf9de0d130676a34">hr_m</a></td></tr>
+<tr class="memitem:ae25907d97d85173edf9de0d130676a34 inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; double, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ae25907d97d85173edf9de0d130676a34">hr_m</a></td></tr>
 <tr class="separator:ae25907d97d85173edf9de0d130676a34 inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb1da62c59098fe295d89f28614b80fa inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; double, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#abb1da62c59098fe295d89f28614b80fa">origin_m</a></td></tr>
+<tr class="memitem:abb1da62c59098fe295d89f28614b80fa inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; double, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#abb1da62c59098fe295d89f28614b80fa">origin_m</a></td></tr>
 <tr class="separator:abb1da62c59098fe295d89f28614b80fa inherit pub_attribs_classippl_1_1FiniteElementSpace"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -320,7 +328,7 @@ class ippl::NedelecSpace&lt; T, Dim, Order, ElementType, QuadratureType, FieldTy
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structippl_1_1detail_1_1ViewType.html">detail::ViewType</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, 1, Kokkos::MemoryTraits&lt;Kokkos::Atomic&gt; &gt;::<a class="el" href="AlpineManager_8h.html#abac6b71b6ea68a6c8bb864e8ebd5fe62">view_type</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#ac17b30c5701233a01bdaf842e019c26c">AtomicViewType</a></td>
+          <td class="memname">typedef <a class="el" href="structippl_1_1detail_1_1ViewType.html">detail::ViewType</a>&lt;T, 1, Kokkos::MemoryTraits&lt;Kokkos::Atomic&gt; &gt;::view_type <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#ac17b30c5701233a01bdaf842e019c26c">AtomicViewType</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -336,7 +344,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType, QuadratureType, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&gt;, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&gt; &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a1ad7f34eed2d3f37b53379c200b9d919">indices_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a1ad7f34eed2d3f37b53379c200b9d919">indices_t</a></td>
+          <td class="memname">typedef <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt;T, Dim, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType, QuadratureType, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt;T&gt;, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt;T&gt; &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a1ad7f34eed2d3f37b53379c200b9d919">indices_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a1ad7f34eed2d3f37b53379c200b9d919">indices_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -352,7 +360,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classippl_1_1FieldLayout.html">FieldLayout</a>&lt;<a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a></td>
+          <td class="memname">typedef <a class="el" href="classippl_1_1FieldLayout.html">FieldLayout</a>&lt;Dim&gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -368,7 +376,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType, QuadratureType, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&gt;, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&gt; &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a></td>
+          <td class="memname">typedef <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt;T, Dim, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType, QuadratureType, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt;T&gt;, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt;T&gt; &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -384,7 +392,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType, QuadratureType, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&gt;, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&gt; &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a90da9fd90803a6ac17805d0ca2976667">vertex_points_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a90da9fd90803a6ac17805d0ca2976667">vertex_points_t</a></td>
+          <td class="memname">typedef <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt;T, Dim, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType, QuadratureType, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt;T&gt;, <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt;T&gt; &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a90da9fd90803a6ac17805d0ca2976667">vertex_points_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a90da9fd90803a6ac17805d0ca2976667">vertex_points_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -400,7 +408,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structippl_1_1detail_1_1ViewType.html">detail::ViewType</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, 1&gt;::<a class="el" href="AlpineManager_8h.html#abac6b71b6ea68a6c8bb864e8ebd5fe62">view_type</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a57146ddc120cbaec0cff1f9e158c66d1">ViewType</a></td>
+          <td class="memname">typedef <a class="el" href="structippl_1_1detail_1_1ViewType.html">detail::ViewType</a>&lt;T, 1&gt;::view_type <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a57146ddc120cbaec0cff1f9e158c66d1">ViewType</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -417,9 +425,9 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a> </td>
+          <td class="memname"><a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>mesh</em>, </td>
         </tr>
         <tr>
@@ -470,9 +478,9 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a> </td>
+          <td class="memname"><a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>mesh</em>, </td>
         </tr>
         <tr>
@@ -508,8 +516,8 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac43f479ae96c058b3feba3e3b6db63db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac43f479ae96c058b3feba3e3b6db63db">&#9670;&nbsp;</a></span>computeError()</h2>
+<a id="abbacee834975853ff6e15defc54049f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbacee834975853ff6e15defc54049f1">&#9670;&nbsp;</a></span>computeError()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -519,9 +527,9 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename F &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::computeError </td>
+          <td class="memname">T <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::computeError </td>
           <td>(</td>
-          <td class="paramtype">const FieldType &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; T, Dim &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>u_h</em>, </td>
         </tr>
         <tr>
@@ -551,8 +559,8 @@ template&lt;typename F &gt; </div>
 
 </div>
 </div>
-<a id="aa9f47693f17fb9e82df3f8f7ba439d8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9f47693f17fb9e82df3f8f7ba439d8c">&#9670;&nbsp;</a></span>computeErrorInf()</h2>
+<a id="a5124d4296ef8dfd5b92fddbb37d4b6a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5124d4296ef8dfd5b92fddbb37d4b6a1">&#9670;&nbsp;</a></span>computeErrorCoeff()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -562,9 +570,9 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename F &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::computeErrorInf </td>
+          <td class="memname">T <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::computeErrorCoeff </td>
           <td>(</td>
-          <td class="paramtype">const FieldType &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>u_h</em>, </td>
         </tr>
         <tr>
@@ -581,20 +589,20 @@ template&lt;typename F &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Given two fields, compute the L-infinity error. </p>
+<p>Given the Nedelec space DoF coefficients and an analytical solution computes the L2 norm error. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">u_h</td><td>The numerical solution found using FEM &#160;</td></tr>
+    <tr><td class="paramname">u_h</td><td>The basis function coefficients obtained via FEM. &#160;</td></tr>
     <tr><td class="paramname">u_sol</td><td>The analytical solution (functor)</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>error - The error ||u_h - u_sol||_Linf </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>error - The error ||u_h - u_sol||_L2 </dd></dl>
 
 </div>
 </div>
-<a id="af775cd826dfec4d2b9e88afcd12b09e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af775cd826dfec4d2b9e88afcd12b09e7">&#9670;&nbsp;</a></span>curlCurlOperator()</h2>
+<a id="a60729dfdca14fd15af5a913de7dd77f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60729dfdca14fd15af5a913de7dd77f2">&#9670;&nbsp;</a></span>createFEMVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -602,14 +610,62 @@ template&lt;typename F &gt; </div>
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION std::function&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>(size_t, size_t, size_t)&gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::curlCurlOperator</td>
+          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::createFEMVector</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Basis functions and gradients /////////////////////////////////////. </p>
-<p>Functor for evaluating a the bilinear form of $(\nabla \times b_j, \nabla \times b_i)$</p>
-<dl class="section return"><dt>Returns</dt><dd>std::function&lt;T(size_t,size_t,size_t)&gt; - The corresponding functor object </dd></dl>
+<p>Creates and empty <a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a>. </p>
+<p>Creates and empty <a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> which corresponds to the domain this MPI rank owns (according to the ippl layout created for this mesh). To this extend it will also setup all the information needed to exchange halo cells.</p>
+<dl class="section return"><dt>Returns</dt><dd>An empty <a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> for this domain. </dd></dl>
+
+</div>
+</div>
+<a id="afa8454015cc201363076642483af1baa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa8454015cc201363076642483af1baa">&#9670;&nbsp;</a></span>createFEMVector2d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::createFEMVector2d</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c40468b9caf66f00c0f40c6b0115e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c40468b9caf66f00c0f40c6b0115e53">&#9670;&nbsp;</a></span>createFEMVector3d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::createFEMVector3d</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -624,9 +680,9 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename F &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::evaluateAx </td>
+          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::evaluateAx </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
@@ -664,7 +720,7 @@ template&lt;typename F &gt; </div>
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::evaluateLoadVector </td>
+          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::evaluateLoadVector </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
@@ -673,10 +729,47 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
       </table>
 </div><div class="memdoc">
 
-<p>Assemble the load vector b of the system Ax = b. </p>
+<p>Assemble the load vector b of the system Ax = b, given a field of the right hand side defined at the Nédélec DOF positions. If a functor instead of a field should be used, use the function <code><a class="el" href="classippl_1_1NedelecSpace.html#a02c5426e7f6700fc0e98419cf926d4ce" title="Assemble the load vector b of the system Ax = b, given a functional of the rhs. If a field instead of...">NedelecSpace::evaluateLoadVectorFunctor</a></code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">f</td><td>The source field defined at the Nédélec degrees fo freedom.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The resulting rhs b of the Galerkin discretization. </dd></dl>
+
+</div>
+</div>
+<a id="a02c5426e7f6700fc0e98419cf926d4ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c5426e7f6700fc0e98419cf926d4ce">&#9670;&nbsp;</a></span>evaluateLoadVectorFunctor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::evaluateLoadVectorFunctor </td>
+          <td>(</td>
+          <td class="paramtype">const F &amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assemble the load vector b of the system Ax = b, given a functional of the rhs. If a field instead of a functor should be used, use the function <code><a class="el" href="classippl_1_1NedelecSpace.html#a78b9b660b87a7ea915ae80636d9fa075" title="Assemble the load vector b of the system Ax = b, given a field of the right hand side defined at the ...">NedelecSpace::evaluateLoadVector</a></code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The source function, which can be evaluated at arbitrary points.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">F</td><td>The functor type.</td></tr>
   </table>
   </dd>
 </dl>
@@ -693,7 +786,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::evaluateRefElementShapeFunction </td>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::evaluateRefElementShapeFunction </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>localDOF</em>, </td>
@@ -712,8 +805,8 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
       </table>
 </div><div class="memdoc">
 
-<p>Evaluate the shape function of a local degree of freedom at a given point in the reference element. </p>
-<p>Basis functions and gradients /////////////////////////////////////.</p>
+<p>Basis functions and gradients /////////////////////////////////////. </p>
+<p>Evaluate the shape function of a local degree of freedom at a given point in the reference element</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">localDOF</td><td>size_t - The local degree of freedom index </td></tr>
@@ -734,7 +827,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::evaluateRefElementShapeFunctionCurl </td>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::evaluateRefElementShapeFunctionCurl </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>localDOF</em>, </td>
@@ -777,7 +870,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::evaluateRefElementShapeFunctionGradient </td>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::evaluateRefElementShapeFunctionGradient </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>localDOF</em>, </td>
@@ -815,37 +908,111 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 
 </div>
 </div>
-<a id="a4f02db3e88a98993fdf105ac394af804"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f02db3e88a98993fdf105ac394af804">&#9670;&nbsp;</a></span>getBoundarySide()</h2>
+<a id="a498c77bc768bdd99cf9e32b4d1c6433e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498c77bc768bdd99cf9e32b4d1c6433e">&#9670;&nbsp;</a></span>getBoundarySide()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION int <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::getBoundarySide </td>
+          <td class="memname">int <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::getBoundarySide </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>dofIdx</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Returns which side the boundary is on. </p>
+<p>This function takes as input the global index of a DoF and then returns on which side of the domain boundary it is on, in 2d that would be either south, north, west, east and in 3d space and ground is added. The mapping is as follows: 0 = south 1 = west 2 = north 3 = east 4 = ground 5 = space -1 = not on a boundary.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">boundarySide</td><td>Which boundary we are on, west,... east,... mapping is: 0 = south 1 = west 2 = north 3 = east </td></tr>
+    <tr><td class="paramname">dofIdx</td><td>the global DoF index for which the boundary side should be retrieved.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Which boundary side the DoF is on or -1 if on no boundary. </dd></dl>
+
+</div>
+</div>
+<a id="a1e7faaad63add57a344ad72036b9af60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e7faaad63add57a344ad72036b9af60">&#9670;&nbsp;</a></span>getFEMVectorDOFIndices() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::getFEMVectorDOFIndices </td>
+          <td>(</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>elementIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classippl_1_1NDIndex.html">NDIndex</a>&lt; Dim &gt;&#160;</td>
+          <td class="paramname"><em>ldom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the DOF indices (vector of indices) corresponding to the position inside the <a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> of an element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elementIndex</td><td>size_t - The index of the element</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector&lt;size_t, NumElementDOFs&gt; - The DOF indices </dd></dl>
+
+</div>
+</div>
+<a id="adcd83b089a31e9b29fab809d8bccb230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd83b089a31e9b29fab809d8bccb230">&#9670;&nbsp;</a></span>getFEMVectorDOFIndices() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>&gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::getFEMVectorDOFIndices </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classippl_1_1NedelecSpace.html#a1ad7f34eed2d3f37b53379c200b9d919">indices_t</a>&#160;</td>
+          <td class="paramname"><em>elementIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classippl_1_1NDIndex.html">NDIndex</a>&lt; Dim &gt;&#160;</td>
+          <td class="paramname"><em>ldom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the DOF indices (vector of indices) corresponding to the position inside the <a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> of an element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elementIndex</td><td>indices_t - The index of the element</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector&lt;size_t, NumElementDOFs&gt; - The DOF indices </dd></dl>
 
 </div>
 </div>
@@ -861,7 +1028,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::getGlobalDOFIndex </td>
+          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::getGlobalDOFIndex </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>elementIndex</em>, </td>
@@ -899,8 +1066,37 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 
 </div>
 </div>
-<a id="a9d9df37faf249022213914890ba1242a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d9df37faf249022213914890ba1242a">&#9670;&nbsp;</a></span>getGlobalDOFIndices()</h2>
+<a id="af70e2038edbf10016c9d0c88a2bbab8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af70e2038edbf10016c9d0c88a2bbab8d">&#9670;&nbsp;</a></span>getGlobalDOFIndices() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, <a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>&gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::getGlobalDOFIndices </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classippl_1_1NedelecSpace.html#a1ad7f34eed2d3f37b53379c200b9d919">indices_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>elementIndex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the global DOF indices (vector of global DOF indices) of an element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elementIndex</td><td>indices_t - The index of the element</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector&lt;size_t, NumElementDOFs&gt; - The global DOF indices </dd></dl>
+
+</div>
+</div>
+<a id="a89ec8dfda5be9cc8d58d5069c5a79070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89ec8dfda5be9cc8d58d5069c5a79070">&#9670;&nbsp;</a></span>getGlobalDOFIndices() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -911,10 +1107,10 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::getGlobalDOFIndices </td>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::getGlobalDOFIndices </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
-          <td class="paramname"><em>element_index</em></td><td>)</td>
+          <td class="paramname"><em>elementIndex</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -950,7 +1146,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::getLocalDOFIndex </td>
+          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::getLocalDOFIndex </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>elementIndex</em>, </td>
@@ -1000,7 +1196,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::getLocalDOFIndices</td>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a> &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::getLocalDOFIndices</td>
         </tr>
       </table>
   </td>
@@ -1026,7 +1222,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::getLocalDOFPosition </td>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1NedelecSpace.html">NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::<a class="el" href="classippl_1_1NedelecSpace.html#a0933135b229dcee389184bee3e992572">point_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::getLocalDOFPosition </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>localDOFIndex</em></td><td>)</td>
@@ -1049,9 +1245,9 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::initialize </td>
+          <td class="memname">void <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::initialize </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>mesh</em>, </td>
         </tr>
         <tr>
@@ -1088,7 +1284,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::initializeElementIndices </td>
+          <td class="memname">void <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::initializeElementIndices </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a> &amp;&#160;</td>
           <td class="paramname"><em>layout</em></td><td>)</td>
@@ -1110,7 +1306,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::interpolateToFEMVector </td>
+          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::interpolateToFEMVector </td>
           <td>(</td>
           <td class="paramtype">const FieldType &amp;&#160;</td>
           <td class="paramname"><em>field</em></td><td>)</td>
@@ -1119,7 +1315,8 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> conversion //////////////////////////////////////////////. </p>
+<p><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> conversion and creation//////////////////////////////////. </p>
+<p><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> conversion //////////////////////////////////////////////.</p>
 <p>Interpolates data from a field to a <code><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">ippl::FEMVector</a></code>.</p>
 <p>Given a field defined on the vertices of a mesh (e.g. <a class="el" href="classippl_1_1Field.html">ippl::Field</a>) will interpolate the values to the Nédélec DOF positions and return a <code><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">ippl::FEMVector</a></code> with the appropriate values.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1132,8 +1329,8 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 
 </div>
 </div>
-<a id="ac45a2a0a75bd005a693217466b1af134"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac45a2a0a75bd005a693217466b1af134">&#9670;&nbsp;</a></span>interpolateToField()</h2>
+<a id="a093d115a9bf76de1c6d6b1f0dab096ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a093d115a9bf76de1c6d6b1f0dab096ba">&#9670;&nbsp;</a></span>isDOFOnBoundary()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1141,145 +1338,26 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::interpolateToField </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">FieldType &amp;&#160;</td>
-          <td class="paramname"><em>field</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Interpolates data from a <code><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">ippl::FEMVector</a></code> to a <code><a class="el" href="classippl_1_1Field.html">ippl::Field</a></code>. </p>
-<p>Given an <code><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">ippl::FEMVector</a></code> defined at the Nédéle DOF positions interpolate the data to the mesh vertecies defined by the field <code>field</code>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vector</td><td>The vector from which to take the data from. </td></tr>
-    <tr><td class="paramname">field</td><td>The field to which to interpolate the data to. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a7579e703f78f96762ef546c7b37dee1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7579e703f78f96762ef546c7b37dee1f">&#9670;&nbsp;</a></span>isDOFOnBoundary()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">KOKKOS_FUNCTION bool <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::isDOFOnBoundary </td>
+          <td class="memname">bool <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::isDOFOnBoundary </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>dofIdx</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Check if a DOF is on the boundary of the mesh. </p>
+<p>This function takes as input the global index of a DoF and returns if this DoF is on. If one would like to know which boundary this is the function <code><a class="el" href="classippl_1_1NedelecSpace.html#a498c77bc768bdd99cf9e32b4d1c6433e" title="Returns which side the boundary is on.">NedelecSpace::getBoundarySide</a></code> can be used.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ndindex</td><td>The <a class="el" href="classippl_1_1NDIndex.html">NDIndex</a> of the DOF</td></tr>
+    <tr><td class="paramname">dofIdx</td><td>The global DoF index for which should be checked if it is on the boundary.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - If the DOF is on the boundary </dd>
+<dl class="section return"><dt>Returns</dt><dd>true - If the DOF is on the domain boundary </dd>
 <dd>
-false - If the DOF is not on the boundary </dd></dl>
-
-</div>
-</div>
-<a id="ac900e5833cee1e74d1fde973077d5100"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac900e5833cee1e74d1fde973077d5100">&#9670;&nbsp;</a></span>loadOperator() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
-<div class="memtemplate">
-template&lt;typename Functor &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">KOKKOS_FUNCTION std::function&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>(size_t,size_t, <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>,<a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt;)&gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::loadOperator </td>
-          <td>(</td>
-          <td class="paramtype">Functor&#160;</td>
-          <td class="paramname"><em>f</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Functor for evaluating a the linear form of $(b_i, f(x))$. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">f</td><td>function like T(point_t) - The load function object </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>std::function&lt;T(size_t,size_t,point_t)&gt; - The corresponding functor object </dd></dl>
-
-</div>
-</div>
-<a id="aa2c43437bf8813692fd42e1c18e1e9b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2c43437bf8813692fd42e1c18e1e9b4">&#9670;&nbsp;</a></span>loadOperator() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
-<div class="memtemplate">
-template&lt;typename Functor &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">KOKKOS_FUNCTION std::function&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>(size_t,size_t,<a class="el" href="classippl_1_1Vector.html">ippl::Vector</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>,<a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt;)&gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::loadOperator </td>
-          <td>(</td>
-          <td class="paramtype">Functor&#160;</td>
-          <td class="paramname"><em>f</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa50f364aa4a2ed024345393ecca61556"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa50f364aa4a2ed024345393ecca61556">&#9670;&nbsp;</a></span>massOperator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">KOKKOS_FUNCTION std::function&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>(size_t, size_t, size_t)&gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::massOperator</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Functor for evaluating a the bilinear form of $(b_j, b_i)$. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::function&lt;T(size_t,size_t,size_t)&gt; - The corresponding functor object </dd></dl>
+false - If the DOF is not on the domain boundary </dd></dl>
 
 </div>
 </div>
@@ -1295,7 +1373,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::numGlobalDOFs</td>
+          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::numGlobalDOFs</td>
         </tr>
       </table>
   </td>
@@ -1313,36 +1391,6 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 
 </div>
 </div>
-<a id="ad5adbdd3ce5552c3fef79431bbea2823"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5adbdd3ce5552c3fef79431bbea2823">&#9670;&nbsp;</a></span>reconstructBasis()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::reconstructBasis </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>coef</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Given the basis function coefficients evaluates them and returns a <code><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">ippl::FEMVector</a></code> defined at the Nédélec DOFs. </p>
-<p>This function takes as input a <code><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">ippl::FEMVector</a></code> which defines the basis function coefficients of the Nédélec space, it will then evaluate the basis functions given the coefficients and return a new <code><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">ippl::FEMVector</a></code> which stores the resulting vector field defined at the Nédélec DOF positions.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coef</td><td>The coefficients of the basis functions.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The evaluation of the basis functions given the coefficients defined at the Nédélec DOF positions. </dd></dl>
-
-</div>
-</div>
 <a id="a5b3f91f9192fb51a198dc06c4b1c806b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b3f91f9192fb51a198dc06c4b1c806b">&#9670;&nbsp;</a></span>reconstructSolution()</h2>
 
@@ -1352,9 +1400,9 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
 template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::reconstructSolution </td>
+          <td class="memname">void <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::reconstructSolution </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classippl_1_1FEMVector.html">FEMVector</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
@@ -1396,7 +1444,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::dim</td>
+          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::dim</td>
         </tr>
       </table>
   </td>
@@ -1405,10 +1453,8 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="classippl_1_1FiniteElementSpace.html#a22431704078c7819295ae0d912e3cd90">FiniteElementSpace</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <a class="code" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType,</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="classippl_1_1FiniteElementSpace.html#a22431704078c7819295ae0d912e3cd90">FiniteElementSpace</a>&lt;T, Dim, <a class="code" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>, ElementType,</div>
 <div class="line">                                            QuadratureType, FEMVector&lt;T&gt;, FEMVector&lt;T&gt;&gt;<a class="code" href="classippl_1_1NedelecSpace.html#a5c2ab9fe3f1ec101c202c0f6111f8a68">::dim</a></div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_a6b2d038ea9c8d2651eecffe0e28b7ebb"><div class="ttname"><a href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a></div><div class="ttdeci">double T</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:23</div></div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_afef54e0ebfe65da0a396b342dcbe30f5"><div class="ttname"><a href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a></div><div class="ttdeci">constexpr unsigned Dim</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:22</div></div>
 <div class="ttc" id="aclassippl_1_1FiniteElementSpace_html_a22431704078c7819295ae0d912e3cd90"><div class="ttname"><a href="classippl_1_1FiniteElementSpace.html#a22431704078c7819295ae0d912e3cd90">ippl::FiniteElementSpace&lt; T, Dim, getNedelecNumElementDOFs(Dim, Order), ElementType, QuadratureType, FEMVector&lt; T &gt;, FEMVector&lt; T &gt; &gt;::FiniteElementSpace</a></div><div class="ttdeci">FiniteElementSpace(UniformCartesian&lt; T, Dim &gt; &amp;mesh, ElementType &amp;ref_element, const QuadratureType &amp;quadrature)</div><div class="ttdoc">Construct a new FiniteElementSpace object.</div><div class="ttdef"><b>Definition:</b> FiniteElementSpace.hpp:6</div></div>
 <div class="ttc" id="aclassippl_1_1NedelecSpace_html_a5c2ab9fe3f1ec101c202c0f6111f8a68"><div class="ttname"><a href="classippl_1_1NedelecSpace.html#a5c2ab9fe3f1ec101c202c0f6111f8a68">ippl::NedelecSpace::dim</a></div><div class="ttdeci">static constexpr unsigned dim</div><div class="ttdef"><b>Definition:</b> NedelecSpace.h:41</div></div>
 <div class="ttc" id="aclassippl_1_1NedelecSpace_html_ad4713b5b85ef51ac80b6075b3411ce09"><div class="ttname"><a href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">ippl::NedelecSpace::numElementDOFs</a></div><div class="ttdeci">static constexpr unsigned numElementDOFs</div><div class="ttdef"><b>Definition:</b> NedelecSpace.h:38</div></div>
@@ -1427,7 +1473,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Kokkos::View&lt;size_t*&gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::elementIndices</td>
+          <td class="memname">Kokkos::View&lt;size_t*&gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::elementIndices</td>
         </tr>
       </table>
   </td>
@@ -1436,6 +1482,8 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Stores which elements (squares or cubes) belong to the current MPI rank. </p>
 
 </div>
 </div>
@@ -1451,7 +1499,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::layout_m</td>
+          <td class="memname"><a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a> <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::layout_m</td>
         </tr>
       </table>
   </td>
@@ -1460,6 +1508,9 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The layout of the MPI ranks over the mesh. </p>
+<p>Standart ippl layout which dictates how the MPI ranks are layed out over the mesh. It is used in order to be able to create FEMVectors, retreive correct DOF indices and intitalize the elementIndices. </p>
 
 </div>
 </div>
@@ -1475,7 +1526,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::numElementDOFs = <a class="el" href="NedelecSpace_8h.html#ae6940cd74faee9439fe6759755a94794">getNedelecNumElementDOFs</a>(<a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order)</td>
+          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::numElementDOFs = <a class="el" href="NedelecSpace_8h.html#ae6940cd74faee9439fe6759755a94794">getNedelecNumElementDOFs</a>(Dim, Order)</td>
         </tr>
       </table>
   </td>
@@ -1499,7 +1550,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::numElementVertices</td>
+          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::numElementVertices</td>
         </tr>
       </table>
   </td>
@@ -1508,7 +1559,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="classippl_1_1FiniteElementSpace.html#a22431704078c7819295ae0d912e3cd90">FiniteElementSpace</a>&lt;<a class="code" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <a class="code" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>,</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="classippl_1_1FiniteElementSpace.html#a22431704078c7819295ae0d912e3cd90">FiniteElementSpace</a>&lt;T, Dim, <a class="code" href="classippl_1_1NedelecSpace.html#ad4713b5b85ef51ac80b6075b3411ce09">numElementDOFs</a>,</div>
 <div class="line">                        ElementType, QuadratureType, FEMVector&lt;T&gt;, FEMVector&lt;T&gt;&gt;<a class="code" href="classippl_1_1NedelecSpace.html#a18a1ed804ad922256f68655c0bae8425">::numElementVertices</a></div>
 <div class="ttc" id="aclassippl_1_1NedelecSpace_html_a18a1ed804ad922256f68655c0bae8425"><div class="ttname"><a href="classippl_1_1NedelecSpace.html#a18a1ed804ad922256f68655c0bae8425">ippl::NedelecSpace::numElementVertices</a></div><div class="ttdeci">static constexpr unsigned numElementVertices</div><div class="ttdef"><b>Definition:</b> NedelecSpace.h:48</div></div>
 </div><!-- fragment -->
@@ -1526,7 +1577,7 @@ template&lt;typename T , unsigned Dim, unsigned Order, typename ElementType , ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::order = Order</td>
+          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;::order = Order</td>
         </tr>
       </table>
   </td>

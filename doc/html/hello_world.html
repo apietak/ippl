@@ -74,14 +74,14 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This is Hello World in IPPL.</p>
-<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="BumponTailInstability_8cpp.html#a17a8b6df8e098aa2526217331771b090">TestName</a> = <span class="stringliteral">&quot;IPPL_Test&quot;</span>;</div>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span>* TestName = <span class="stringliteral">&quot;IPPL_Test&quot;</span>;</div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="Ippl_8h.html">Ippl.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code" href="BumponTailInstability_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
 <div class="line">    <a class="code" href="namespaceippl.html#a0c7376f5476bb172361c963569a0c546">ippl::initialize</a>(argc, argv);</div>
 <div class="line">    {</div>
-<div class="line">        <a class="code" href="classInform.html">Inform</a> msg(<a class="code" href="BumponTailInstability_8cpp.html#a17a8b6df8e098aa2526217331771b090">TestName</a>);</div>
+<div class="line">        <a class="code" href="classInform.html">Inform</a> msg(TestName);</div>
 <div class="line"> </div>
 <div class="line">        msg &lt;&lt; <span class="stringliteral">&quot;Hello World&quot;</span> &lt;&lt; <a class="code" href="Inform_8cpp.html#a3479363bc276c3798e3f3656c66d93ed">endl</a>;</div>
 <div class="line">    }</div>
@@ -89,8 +89,6 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="BumponTailInstability_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:45</div></div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_a17a8b6df8e098aa2526217331771b090"><div class="ttname"><a href="BumponTailInstability_8cpp.html#a17a8b6df8e098aa2526217331771b090">TestName</a></div><div class="ttdeci">const char * TestName</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:24</div></div>
 <div class="ttc" id="aInform_8cpp_html_a3479363bc276c3798e3f3656c66d93ed"><div class="ttname"><a href="Inform_8cpp.html#a3479363bc276c3798e3f3656c66d93ed">endl</a></div><div class="ttdeci">Inform &amp; endl(Inform &amp;inf)</div><div class="ttdef"><b>Definition:</b> Inform.cpp:42</div></div>
 <div class="ttc" id="aIppl_8h_html"><div class="ttname"><a href="Ippl_8h.html">Ippl.h</a></div></div>
 <div class="ttc" id="aclassInform_html"><div class="ttname"><a href="classInform.html">Inform</a></div><div class="ttdef"><b>Definition:</b> Inform.h:40</div></div>

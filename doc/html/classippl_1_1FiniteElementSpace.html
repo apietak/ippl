@@ -112,9 +112,9 @@ Collaboration diagram for ippl::FiniteElementSpace&lt; T, Dim, NumElementDOFs, E
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a3fd4966339e615203f25519ffa0616e4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a></td></tr>
+<tr class="memitem:a3fd4966339e615203f25519ffa0616e4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a></td></tr>
 <tr class="separator:a3fd4966339e615203f25519ffa0616e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14e949596df9f85b145b1263cac186a4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a14e949596df9f85b145b1263cac186a4">point_t</a></td></tr>
+<tr class="memitem:a14e949596df9f85b145b1263cac186a4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; T, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a14e949596df9f85b145b1263cac186a4">point_t</a></td></tr>
 <tr class="separator:a14e949596df9f85b145b1263cac186a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5171c6b1d5177882d494c6087d205842"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="classippl_1_1FiniteElementSpace.html#a60db42bceccdd9d7466d66f41895879e">numElementVertices</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a5171c6b1d5177882d494c6087d205842">vertex_indices_t</a></td></tr>
 <tr class="separator:a5171c6b1d5177882d494c6087d205842"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,10 +125,10 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a22431704078c7819295ae0d912e3cd90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a22431704078c7819295ae0d912e3cd90">FiniteElementSpace</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;mesh, ElementType &amp;ref_element, const QuadratureType &amp;quadrature)</td></tr>
+<tr class="memitem:a22431704078c7819295ae0d912e3cd90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a22431704078c7819295ae0d912e3cd90">FiniteElementSpace</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;mesh, ElementType &amp;ref_element, const QuadratureType &amp;quadrature)</td></tr>
 <tr class="memdesc:a22431704078c7819295ae0d912e3cd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classippl_1_1FiniteElementSpace.html" title="The FiniteElementSpace class handles the mesh index mapping to vertices and elements and is the base ...">FiniteElementSpace</a> object.  <a href="classippl_1_1FiniteElementSpace.html#a22431704078c7819295ae0d912e3cd90">More...</a><br /></td></tr>
 <tr class="separator:a22431704078c7819295ae0d912e3cd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac80911a61fb8615fabf4aa10c147af88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ac80911a61fb8615fabf4aa10c147af88">setMesh</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;mesh)</td></tr>
+<tr class="memitem:ac80911a61fb8615fabf4aa10c147af88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ac80911a61fb8615fabf4aa10c147af88">setMesh</a> (<a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;mesh)</td></tr>
 <tr class="separator:ac80911a61fb8615fabf4aa10c147af88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8d61e8ec1b4c3f2f9703d3526e92fca"><td class="memItemLeft" align="right" valign="top">KOKKOS_FUNCTION size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ae8d61e8ec1b4c3f2f9703d3526e92fca">numElements</a> () const</td></tr>
 <tr class="memdesc:ae8d61e8ec1b4c3f2f9703d3526e92fca"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classippl_1_1Mesh.html">Mesh</a> and <a class="el" href="classippl_1_1Element.html" title="Base class for all elements.">Element</a> operations ///////////////////////////////////////.  <a href="classippl_1_1FiniteElementSpace.html#ae8d61e8ec1b4c3f2f9703d3526e92fca">More...</a><br /></td></tr>
@@ -178,25 +178,25 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad61407dba5ef67f59e7f0d83148acb03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ad61407dba5ef67f59e7f0d83148acb03">mesh_m</a></td></tr>
+<tr class="memitem:ad61407dba5ef67f59e7f0d83148acb03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ad61407dba5ef67f59e7f0d83148acb03">mesh_m</a></td></tr>
 <tr class="memdesc:ad61407dba5ef67f59e7f0d83148acb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assembly operations ///////////////////////////////////////////////.  <a href="classippl_1_1FiniteElementSpace.html#ad61407dba5ef67f59e7f0d83148acb03">More...</a><br /></td></tr>
 <tr class="separator:ad61407dba5ef67f59e7f0d83148acb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ce9c625a922cfb4d36a0e6475de52b9"><td class="memItemLeft" align="right" valign="top">ElementType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a6ce9c625a922cfb4d36a0e6475de52b9">ref_element_m</a></td></tr>
 <tr class="separator:a6ce9c625a922cfb4d36a0e6475de52b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a687c7d737de7af779e56b1997ed8edcf"><td class="memItemLeft" align="right" valign="top">const QuadratureType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a687c7d737de7af779e56b1997ed8edcf">quadrature_m</a></td></tr>
 <tr class="separator:a687c7d737de7af779e56b1997ed8edcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8afb896925202f489a1ee60f4e2a4082"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a8afb896925202f489a1ee60f4e2a4082">nr_m</a></td></tr>
+<tr class="memitem:a8afb896925202f489a1ee60f4e2a4082"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; size_t, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a8afb896925202f489a1ee60f4e2a4082">nr_m</a></td></tr>
 <tr class="separator:a8afb896925202f489a1ee60f4e2a4082"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae25907d97d85173edf9de0d130676a34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; double, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ae25907d97d85173edf9de0d130676a34">hr_m</a></td></tr>
+<tr class="memitem:ae25907d97d85173edf9de0d130676a34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; double, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#ae25907d97d85173edf9de0d130676a34">hr_m</a></td></tr>
 <tr class="separator:ae25907d97d85173edf9de0d130676a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb1da62c59098fe295d89f28614b80fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; double, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#abb1da62c59098fe295d89f28614b80fa">origin_m</a></td></tr>
+<tr class="memitem:abb1da62c59098fe295d89f28614b80fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; double, Dim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#abb1da62c59098fe295d89f28614b80fa">origin_m</a></td></tr>
 <tr class="separator:abb1da62c59098fe295d89f28614b80fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a285ebeb635506e82200c9e6091b3838b"><td class="memItemLeft" align="right" valign="top">static constexpr unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a285ebeb635506e82200c9e6091b3838b">dim</a> = <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a></td></tr>
+<tr class="memitem:a285ebeb635506e82200c9e6091b3838b"><td class="memItemLeft" align="right" valign="top">static constexpr unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a285ebeb635506e82200c9e6091b3838b">dim</a> = Dim</td></tr>
 <tr class="separator:a285ebeb635506e82200c9e6091b3838b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60db42bceccdd9d7466d66f41895879e"><td class="memItemLeft" align="right" valign="top">static constexpr unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a60db42bceccdd9d7466d66f41895879e">numElementVertices</a> = <a class="el" href="FiniteElementSpace_8h.html#a92d5fced4657eb0309fee9c4096bd30f">calculateNumElementVertices</a>(<a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>)</td></tr>
+<tr class="memitem:a60db42bceccdd9d7466d66f41895879e"><td class="memItemLeft" align="right" valign="top">static constexpr unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a60db42bceccdd9d7466d66f41895879e">numElementVertices</a> = <a class="el" href="FiniteElementSpace_8h.html#a92d5fced4657eb0309fee9c4096bd30f">calculateNumElementVertices</a>(Dim)</td></tr>
 <tr class="separator:a60db42bceccdd9d7466d66f41895879e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a099faa6d1294fa54f324cbda33743e50"><td class="memItemLeft" align="right" valign="top">static constexpr unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FiniteElementSpace.html#a099faa6d1294fa54f324cbda33743e50">numElementDOFs</a> = NumElementDOFs</td></tr>
 <tr class="separator:a099faa6d1294fa54f324cbda33743e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -227,7 +227,7 @@ class ippl::FiniteElementSpace&lt; T, Dim, NumElementDOFs, ElementType, Quadratu
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a>, <a class="el" href="classippl_1_1FiniteElementSpace.html#a60db42bceccdd9d7466d66f41895879e">numElementVertices</a>&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a27e7f98b8ec8391aa231c4983469179c">indices_list_t</a></td>
+          <td class="memname">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a>, <a class="el" href="classippl_1_1FiniteElementSpace.html#a60db42bceccdd9d7466d66f41895879e">numElementVertices</a>&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a27e7f98b8ec8391aa231c4983469179c">indices_list_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -243,7 +243,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a></td>
+          <td class="memname">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, Dim&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -259,7 +259,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a14e949596df9f85b145b1263cac186a4">point_t</a></td>
+          <td class="memname">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;T, Dim&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a14e949596df9f85b145b1263cac186a4">point_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -275,7 +275,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, <a class="el" href="classippl_1_1FiniteElementSpace.html#a60db42bceccdd9d7466d66f41895879e">numElementVertices</a>&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a5171c6b1d5177882d494c6087d205842">vertex_indices_t</a></td>
+          <td class="memname">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, <a class="el" href="classippl_1_1FiniteElementSpace.html#a60db42bceccdd9d7466d66f41895879e">numElementVertices</a>&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a5171c6b1d5177882d494c6087d205842">vertex_indices_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -291,7 +291,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="el" href="classippl_1_1FiniteElementSpace.html#a14e949596df9f85b145b1263cac186a4">point_t</a>, <a class="el" href="classippl_1_1FiniteElementSpace.html#a60db42bceccdd9d7466d66f41895879e">numElementVertices</a>&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a9139587bbf5a27207055e3b4ef8ede67">vertex_points_t</a></td>
+          <td class="memname">typedef <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="el" href="classippl_1_1FiniteElementSpace.html#a14e949596df9f85b145b1263cac186a4">point_t</a>, <a class="el" href="classippl_1_1FiniteElementSpace.html#a60db42bceccdd9d7466d66f41895879e">numElementVertices</a>&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a9139587bbf5a27207055e3b4ef8ede67">vertex_points_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -308,9 +308,9 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a> </td>
+          <td class="memname"><a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>mesh</em>, </td>
         </tr>
         <tr>
@@ -358,7 +358,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual KOKKOS_FUNCTION <a class="el" href="classippl_1_1FiniteElementSpace.html#a14e949596df9f85b145b1263cac186a4">point_t</a> <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::evaluateRefElementShapeFunctionGradient </td>
+          <td class="memname">virtual KOKKOS_FUNCTION <a class="el" href="classippl_1_1FiniteElementSpace.html#a14e949596df9f85b145b1263cac186a4">point_t</a> <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::evaluateRefElementShapeFunctionGradient </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>localDOF</em>, </td>
@@ -415,7 +415,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getElementIndex </td>
+          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getElementIndex </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a> &amp;&#160;</td>
           <td class="paramname"><em>ndindex</em></td><td>)</td>
@@ -444,7 +444,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a5171c6b1d5177882d494c6087d205842">vertex_indices_t</a> <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getElementMeshVertexIndices </td>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a5171c6b1d5177882d494c6087d205842">vertex_indices_t</a> <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getElementMeshVertexIndices </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a> &amp;&#160;</td>
           <td class="paramname"><em>elementNDIndex</em></td><td>)</td>
@@ -473,7 +473,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a27e7f98b8ec8391aa231c4983469179c">indices_list_t</a> <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getElementMeshVertexNDIndices </td>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a27e7f98b8ec8391aa231c4983469179c">indices_list_t</a> <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getElementMeshVertexNDIndices </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a> &amp;&#160;</td>
           <td class="paramname"><em>elementNDIndex</em></td><td>)</td>
@@ -502,7 +502,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a9139587bbf5a27207055e3b4ef8ede67">vertex_points_t</a> <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getElementMeshVertexPoints </td>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a9139587bbf5a27207055e3b4ef8ede67">vertex_points_t</a> <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getElementMeshVertexPoints </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a> &amp;&#160;</td>
           <td class="paramname"><em>elementNDIndex</em></td><td>)</td>
@@ -531,7 +531,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a> <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getElementNDIndex </td>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a> <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getElementNDIndex </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>elementIndex</em></td><td>)</td>
@@ -563,7 +563,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getGlobalDOFIndex </td>
+          <td class="memname">virtual KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getGlobalDOFIndex </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>elementIndex</em>, </td>
@@ -613,7 +613,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, NumElementDOFs&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getGlobalDOFIndices </td>
+          <td class="memname">virtual KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, NumElementDOFs&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getGlobalDOFIndices </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>elementIndex</em></td><td>)</td>
@@ -636,7 +636,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vector&lt;size_t, NumElementDOFs&gt; - The global DOF indices </dd></dl>
 
-<p>Implemented in <a class="el" href="classippl_1_1NedelecSpace.html#a9d9df37faf249022213914890ba1242a">ippl::NedelecSpace&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;</a>, <a class="el" href="classippl_1_1NedelecSpace.html#a9d9df37faf249022213914890ba1242a">ippl::NedelecSpace&lt; T, Dim, 1, ElementType, QuadratureType, FieldType &gt;</a>, <a class="el" href="classippl_1_1LagrangeSpaceFEMVector.html#a4a76d8247db56e63b71d6f0beddda10e">ippl::LagrangeSpaceFEMVector&lt; T, Dim, Order, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;</a>, <a class="el" href="classippl_1_1LagrangeSpaceFEMVector.html#a4a76d8247db56e63b71d6f0beddda10e">ippl::LagrangeSpaceFEMVector&lt; Tlhs, Dim, 1, ElementType, QuadratureType, FEMVector&lt; Tlhs &gt;, FieldLHS &gt;</a>, <a class="el" href="classippl_1_1LagrangeSpace.html#a3f8774d067516170be74ee24a3772a4b">ippl::LagrangeSpace&lt; T, Dim, Order, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;</a>, and <a class="el" href="classippl_1_1LagrangeSpace.html#a3f8774d067516170be74ee24a3772a4b">ippl::LagrangeSpace&lt; Tlhs, Dim, 1, ElementType, QuadratureType, FieldLHS, FieldLHS &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classippl_1_1NedelecSpace.html#a89ec8dfda5be9cc8d58d5069c5a79070">ippl::NedelecSpace&lt; T, Dim, Order, ElementType, QuadratureType, FieldType &gt;</a>, <a class="el" href="classippl_1_1NedelecSpace.html#a89ec8dfda5be9cc8d58d5069c5a79070">ippl::NedelecSpace&lt; T, Dim, 1, ElementType, QuadratureType, FieldType &gt;</a>, <a class="el" href="classippl_1_1LagrangeSpaceFEMVector.html#a4a76d8247db56e63b71d6f0beddda10e">ippl::LagrangeSpaceFEMVector&lt; T, Dim, Order, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;</a>, <a class="el" href="classippl_1_1LagrangeSpaceFEMVector.html#a4a76d8247db56e63b71d6f0beddda10e">ippl::LagrangeSpaceFEMVector&lt; Tlhs, Dim, 1, ElementType, QuadratureType, FEMVector&lt; Tlhs &gt;, FieldLHS &gt;</a>, <a class="el" href="classippl_1_1LagrangeSpace.html#a3f8774d067516170be74ee24a3772a4b">ippl::LagrangeSpace&lt; T, Dim, Order, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;</a>, and <a class="el" href="classippl_1_1LagrangeSpace.html#a3f8774d067516170be74ee24a3772a4b">ippl::LagrangeSpace&lt; Tlhs, Dim, 1, ElementType, QuadratureType, FieldLHS, FieldLHS &gt;</a>.</p>
 
 </div>
 </div>
@@ -652,7 +652,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getLocalDOFIndex </td>
+          <td class="memname">virtual KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getLocalDOFIndex </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>elementIndex</em>, </td>
@@ -702,7 +702,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, NumElementDOFs&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getLocalDOFIndices </td>
+          <td class="memname">virtual KOKKOS_FUNCTION <a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, NumElementDOFs&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getLocalDOFIndices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -731,7 +731,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getMeshVertexIndex </td>
+          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getMeshVertexIndex </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a> &amp;&#160;</td>
           <td class="paramname"><em>vertex_nd_index</em></td><td>)</td>
@@ -760,7 +760,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a> <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getMeshVertexNDIndex </td>
+          <td class="memname">KOKKOS_FUNCTION <a class="el" href="classippl_1_1FiniteElementSpace.html">FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FiniteElementSpace.html#a3fd4966339e615203f25519ffa0616e4">indices_t</a> <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::getMeshVertexNDIndex </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>vertex_index</em></td><td>)</td>
@@ -789,7 +789,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::numElements</td>
+          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::numElements</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -809,7 +809,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::numElementsInDim </td>
+          <td class="memname">KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::numElementsInDim </td>
           <td>(</td>
           <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>dim</em></td><td>)</td>
@@ -841,7 +841,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::numGlobalDOFs </td>
+          <td class="memname">virtual KOKKOS_FUNCTION size_t <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::numGlobalDOFs </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -871,9 +871,9 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::setMesh </td>
+          <td class="memname">void <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::setMesh </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt; T, Dim &gt; &amp;&#160;</td>
           <td class="paramname"><em>mesh</em></td><td>)</td>
           <td></td>
         </tr>
@@ -895,7 +895,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::dim = <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a></td>
+          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::dim = Dim</td>
         </tr>
       </table>
   </td>
@@ -916,7 +916,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;double, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::hr_m</td>
+          <td class="memname"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;double, Dim&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::hr_m</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -932,7 +932,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt;<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt;&amp; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::mesh_m</td>
+          <td class="memname"><a class="el" href="classippl_1_1UniformCartesian.html">UniformCartesian</a>&lt;T, Dim&gt;&amp; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::mesh_m</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -959,7 +959,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::nr_m</td>
+          <td class="memname"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;size_t, Dim&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::nr_m</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -978,7 +978,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::numElementDOFs = NumElementDOFs</td>
+          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::numElementDOFs = NumElementDOFs</td>
         </tr>
       </table>
   </td>
@@ -1002,7 +1002,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::numElementVertices = <a class="el" href="FiniteElementSpace_8h.html#a92d5fced4657eb0309fee9c4096bd30f">calculateNumElementVertices</a>(<a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>)</td>
+          <td class="memname">constexpr unsigned <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::numElementVertices = <a class="el" href="FiniteElementSpace_8h.html#a92d5fced4657eb0309fee9c4096bd30f">calculateNumElementVertices</a>(Dim)</td>
         </tr>
       </table>
   </td>
@@ -1023,7 +1023,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;double, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::origin_m</td>
+          <td class="memname"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;double, Dim&gt; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::origin_m</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1039,7 +1039,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const QuadratureType&amp; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::quadrature_m</td>
+          <td class="memname">const QuadratureType&amp; <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::quadrature_m</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1055,7 +1055,7 @@ template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename Element
 template&lt;typename T , unsigned Dim, unsigned NumElementDOFs, typename ElementType , typename QuadratureType , typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">ElementType <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::ref_element_m</td>
+          <td class="memname">ElementType <a class="el" href="classippl_1_1FiniteElementSpace.html">ippl::FiniteElementSpace</a>&lt; T, Dim, NumElementDOFs, ElementType, QuadratureType, FieldLHS, FieldRHS &gt;::ref_element_m</td>
         </tr>
       </table>
 </div><div class="memdoc">

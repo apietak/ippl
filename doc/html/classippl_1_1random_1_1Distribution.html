@@ -97,35 +97,35 @@ Collaboration diagram for ippl::random::Distribution&lt; T, Dim, DimP, Distribut
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab102cf193df9e14e6a96f49a28145917"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#ab102cf193df9e14e6a96f49a28145917">Distribution</a> (const <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> *par_p)</td></tr>
+<tr class="memitem:ab102cf193df9e14e6a96f49a28145917"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#ab102cf193df9e14e6a96f49a28145917">Distribution</a> (const T *par_p)</td></tr>
 <tr class="memdesc:ab102cf193df9e14e6a96f49a28145917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classippl_1_1random_1_1Distribution.html" title="The class that represents a distribution.">Distribution</a> class.  <a href="classippl_1_1random_1_1Distribution.html#ab102cf193df9e14e6a96f49a28145917">More...</a><br /></td></tr>
 <tr class="separator:ab102cf193df9e14e6a96f49a28145917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79289199ea9cf3d7b6bd57de7a8fcf56"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#a79289199ea9cf3d7b6bd57de7a8fcf56">~Distribution</a> ()</td></tr>
 <tr class="memdesc:a79289199ea9cf3d7b6bd57de7a8fcf56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the <a class="el" href="classippl_1_1random_1_1Distribution.html" title="The class that represents a distribution.">Distribution</a> class.  <a href="classippl_1_1random_1_1Distribution.html#a79289199ea9cf3d7b6bd57de7a8fcf56">More...</a><br /></td></tr>
 <tr class="separator:a79289199ea9cf3d7b6bd57de7a8fcf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab75f7845bca2f538d5ad9b17e669f524"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#ab75f7845bca2f538d5ad9b17e669f524">getPdf</a> (<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> x, unsigned int d) const</td></tr>
+<tr class="memitem:ab75f7845bca2f538d5ad9b17e669f524"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#ab75f7845bca2f538d5ad9b17e669f524">getPdf</a> (T x, unsigned int d) const</td></tr>
 <tr class="memdesc:ab75f7845bca2f538d5ad9b17e669f524"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper to change the signature arguments of pdf in each dimension d from (x, d, par) to (x, d).  <a href="classippl_1_1random_1_1Distribution.html#ab75f7845bca2f538d5ad9b17e669f524">More...</a><br /></td></tr>
 <tr class="separator:ab75f7845bca2f538d5ad9b17e669f524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c585e1985411d39e8157138fb783cc8"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#a5c585e1985411d39e8157138fb783cc8">getCdf</a> (<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> x, unsigned int d) const</td></tr>
+<tr class="memitem:a5c585e1985411d39e8157138fb783cc8"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#a5c585e1985411d39e8157138fb783cc8">getCdf</a> (T x, unsigned int d) const</td></tr>
 <tr class="memdesc:a5c585e1985411d39e8157138fb783cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper to change the signature arguments of cdf in each dimension d from (x, d, par) to (x, d).  <a href="classippl_1_1random_1_1Distribution.html#a5c585e1985411d39e8157138fb783cc8">More...</a><br /></td></tr>
 <tr class="separator:a5c585e1985411d39e8157138fb783cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5f67d2b546ad9f1bbc81892e08f94ef"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#ac5f67d2b546ad9f1bbc81892e08f94ef">getEstimate</a> (<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> x, unsigned int d) const</td></tr>
+<tr class="memitem:ac5f67d2b546ad9f1bbc81892e08f94ef"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#ac5f67d2b546ad9f1bbc81892e08f94ef">getEstimate</a> (T x, unsigned int d) const</td></tr>
 <tr class="memdesc:ac5f67d2b546ad9f1bbc81892e08f94ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper to change the signature arguments of estimate in each dimension d from (x, d, par) to (x, d).  <a href="classippl_1_1random_1_1Distribution.html#ac5f67d2b546ad9f1bbc81892e08f94ef">More...</a><br /></td></tr>
 <tr class="separator:ac5f67d2b546ad9f1bbc81892e08f94ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a1005ca4fa246843347e39a962d3ee7"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#a0a1005ca4fa246843347e39a962d3ee7">getObjFunc</a> (<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> x, unsigned int d, <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> u) const</td></tr>
+<tr class="memitem:a0a1005ca4fa246843347e39a962d3ee7"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#a0a1005ca4fa246843347e39a962d3ee7">getObjFunc</a> (T x, unsigned int d, T u) const</td></tr>
 <tr class="separator:a0a1005ca4fa246843347e39a962d3ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e2b62de1dcac9c358b6aa09a4d3463c"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#a2e2b62de1dcac9c358b6aa09a4d3463c">getDerObjFunc</a> (<a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> x, unsigned int d) const</td></tr>
+<tr class="memitem:a2e2b62de1dcac9c358b6aa09a4d3463c"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#a2e2b62de1dcac9c358b6aa09a4d3463c">getDerObjFunc</a> (T x, unsigned int d) const</td></tr>
 <tr class="separator:a2e2b62de1dcac9c358b6aa09a4d3463c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdcc7b83db1fb0b3a4e9942bb016e9ef"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#acdcc7b83db1fb0b3a4e9942bb016e9ef">getFullPdf</a> (<a class="el" href="classippl_1_1Vector.html">ippl::Vector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt; x) const</td></tr>
+<tr class="memitem:acdcc7b83db1fb0b3a4e9942bb016e9ef"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#acdcc7b83db1fb0b3a4e9942bb016e9ef">getFullPdf</a> (<a class="el" href="classippl_1_1Vector.html">ippl::Vector</a>&lt; T, Dim &gt; x) const</td></tr>
 <tr class="separator:acdcc7b83db1fb0b3a4e9942bb016e9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a672a17a124019f704045d451a275605a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#a672a17a124019f704045d451a275605a">par_m</a> [DimP]</td></tr>
+<tr class="memitem:a672a17a124019f704045d451a275605a"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#a672a17a124019f704045d451a275605a">par_m</a> [DimP]</td></tr>
 <tr class="separator:a672a17a124019f704045d451a275605a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8b5d39981a5352c7ddd61946335a9f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="LandauDampingParameterList_8cpp.html#a549f79ffac7c519e2b26a00cb0f68794">DistributionFunctions::PDF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#af8b5d39981a5352c7ddd61946335a9f4">pdf_m</a></td></tr>
+<tr class="memitem:af8b5d39981a5352c7ddd61946335a9f4"><td class="memItemLeft" align="right" valign="top">DistributionFunctions::PDF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#af8b5d39981a5352c7ddd61946335a9f4">pdf_m</a></td></tr>
 <tr class="separator:af8b5d39981a5352c7ddd61946335a9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc97631f21fa872af533a92163e06155"><td class="memItemLeft" align="right" valign="top"><a class="el" href="LandauDampingParameterList_8cpp.html#adcbe49679e9b4ae58eb04e60c45e26bb">DistributionFunctions::CDF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#acc97631f21fa872af533a92163e06155">cdf_m</a></td></tr>
+<tr class="memitem:acc97631f21fa872af533a92163e06155"><td class="memItemLeft" align="right" valign="top">DistributionFunctions::CDF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#acc97631f21fa872af533a92163e06155">cdf_m</a></td></tr>
 <tr class="separator:acc97631f21fa872af533a92163e06155"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28210290d84f3a37c72179abbd996bad"><td class="memItemLeft" align="right" valign="top">DistributionFunctions::Estimate&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1random_1_1Distribution.html#a28210290d84f3a37c72179abbd996bad">estimate_m</a></td></tr>
 <tr class="separator:a28210290d84f3a37c72179abbd996bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,9 +159,9 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, DimP, DistributionFunctions &gt;::<a class="el" href="classippl_1_1random_1_1Distribution.html">Distribution</a> </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; T, Dim, DimP, DistributionFunctions &gt;::<a class="el" href="classippl_1_1random_1_1Distribution.html">Distribution</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> *&#160;</td>
+          <td class="paramtype">const T *&#160;</td>
           <td class="paramname"><em>par_p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -195,7 +195,7 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, DimP, DistributionFunctions &gt;::~<a class="el" href="classippl_1_1random_1_1Distribution.html">Distribution</a> </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; T, Dim, DimP, DistributionFunctions &gt;::~<a class="el" href="classippl_1_1random_1_1Distribution.html">Distribution</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -225,9 +225,9 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, DimP, DistributionFunctions &gt;::getCdf </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION T <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; T, Dim, DimP, DistributionFunctions &gt;::getCdf </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
@@ -265,9 +265,9 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, DimP, DistributionFunctions &gt;::getDerObjFunc </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION T <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; T, Dim, DimP, DistributionFunctions &gt;::getDerObjFunc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
@@ -304,9 +304,9 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, DimP, DistributionFunctions &gt;::getEstimate </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION T <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; T, Dim, DimP, DistributionFunctions &gt;::getEstimate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
@@ -344,9 +344,9 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, DimP, DistributionFunctions &gt;::getFullPdf </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION T <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; T, Dim, DimP, DistributionFunctions &gt;::getFullPdf </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classippl_1_1Vector.html">ippl::Vector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="classippl_1_1Vector.html">ippl::Vector</a>&lt; T, Dim &gt;&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -373,9 +373,9 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, DimP, DistributionFunctions &gt;::getObjFunc </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION T <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; T, Dim, DimP, DistributionFunctions &gt;::getObjFunc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
@@ -387,7 +387,7 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>u</em>&#160;</td>
         </tr>
         <tr>
@@ -418,9 +418,9 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, DimP, DistributionFunctions &gt;::getPdf </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION T <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; T, Dim, DimP, DistributionFunctions &gt;::getPdf </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
@@ -456,7 +456,7 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
 template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunctions &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="LandauDampingParameterList_8cpp.html#adcbe49679e9b4ae58eb04e60c45e26bb">DistributionFunctions::CDF</a> <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, DimP, DistributionFunctions &gt;::cdf_m</td>
+          <td class="memname">DistributionFunctions::CDF <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; T, Dim, DimP, DistributionFunctions &gt;::cdf_m</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -472,7 +472,7 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
 template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunctions &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">DistributionFunctions::Estimate <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, DimP, DistributionFunctions &gt;::estimate_m</td>
+          <td class="memname">DistributionFunctions::Estimate <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; T, Dim, DimP, DistributionFunctions &gt;::estimate_m</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -488,7 +488,7 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
 template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunctions &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, DimP, DistributionFunctions &gt;::par_m[DimP]</td>
+          <td class="memname">T <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; T, Dim, DimP, DistributionFunctions &gt;::par_m[DimP]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -513,7 +513,7 @@ template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunct
 template&lt;typename T , unsigned Dim, unsigned DimP, typename DistributionFunctions &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="LandauDampingParameterList_8cpp.html#a549f79ffac7c519e2b26a00cb0f68794">DistributionFunctions::PDF</a> <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, DimP, DistributionFunctions &gt;::pdf_m</td>
+          <td class="memname">DistributionFunctions::PDF <a class="el" href="classippl_1_1random_1_1Distribution.html">ippl::random::Distribution</a>&lt; T, Dim, DimP, DistributionFunctions &gt;::pdf_m</td>
         </tr>
       </table>
 </div><div class="memdoc">

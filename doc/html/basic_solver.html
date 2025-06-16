@@ -103,7 +103,7 @@ Example: Poisson solver</h2>
 <p>To start we define the mesh and the field types: </p><div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="classippl_1_1UniformCartesian.html">Mesh_t</a>      = <a class="code" href="classippl_1_1UniformCartesian.html">ippl::UniformCartesian&lt;double, 3&gt;</a>;</div>
 <div class="line"><span class="keyword">using</span> <a class="code" href="FieldSolverBase_8h.html#aa0c2f6ddbc74317f18dde648c40d6123">Centering_t</a> = <a class="code" href="classippl_1_1UniformCartesian.html#a2d5cf0e70cd04bdf6e154478abc66893">Mesh_t::DefaultCentering</a>;</div>
 <div class="line"><span class="keyword">typedef</span> <a class="code" href="classippl_1_1Field.html">ippl::Field&lt;double, Dim, Mesh_t, Centering_t&gt;</a> field;</div>
-<div class="line"><span class="keyword">typedef</span> <a class="code" href="classippl_1_1Field.html">ippl::Field&lt;ippl::Vector&lt;double, Dim&gt;</a>, <a class="code" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, <a class="code" href="FieldSolverBase_8h.html#acf6afef09138aaa7329f5076e9d2d27f">Mesh_t</a>, <a class="code" href="FieldSolverBase_8h.html#aa0c2f6ddbc74317f18dde648c40d6123">Centering_t</a>&gt; fieldV;</div>
+<div class="line"><span class="keyword">typedef</span> <a class="code" href="classippl_1_1Field.html">ippl::Field&lt;ippl::Vector&lt;double, Dim&gt;</a>, Dim, <a class="code" href="FieldSolverBase_8h.html#acf6afef09138aaa7329f5076e9d2d27f">Mesh_t</a>, <a class="code" href="FieldSolverBase_8h.html#aa0c2f6ddbc74317f18dde648c40d6123">Centering_t</a>&gt; fieldV;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// .... Define the mesh and the field types .... //</span></div>
@@ -118,7 +118,6 @@ Example: Poisson solver</h2>
 <div class="line">fieldV exactE, fieldE;</div>
 <div class="line">exactE.initialize(mesh, layout);</div>
 <div class="line">fieldE.initialize(mesh, layout);</div>
-<div class="ttc" id="aBumponTailInstability_8cpp_html_afef54e0ebfe65da0a396b342dcbe30f5"><div class="ttname"><a href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a></div><div class="ttdeci">constexpr unsigned Dim</div><div class="ttdef"><b>Definition:</b> BumponTailInstability.cpp:22</div></div>
 <div class="ttc" id="aFieldSolverBase_8h_html_aa0c2f6ddbc74317f18dde648c40d6123"><div class="ttname"><a href="FieldSolverBase_8h.html#aa0c2f6ddbc74317f18dde648c40d6123">Centering_t</a></div><div class="ttdeci">typename Mesh_t&lt; Dim &gt;::DefaultCentering Centering_t</div><div class="ttdef"><b>Definition:</b> FieldSolverBase.h:21</div></div>
 <div class="ttc" id="aFieldSolverBase_8h_html_acf6afef09138aaa7329f5076e9d2d27f"><div class="ttname"><a href="FieldSolverBase_8h.html#acf6afef09138aaa7329f5076e9d2d27f">Mesh_t</a></div><div class="ttdeci">ippl::UniformCartesian&lt; double, Dim &gt; Mesh_t</div><div class="ttdef"><b>Definition:</b> FieldSolverBase.h:15</div></div>
 <div class="ttc" id="aclassippl_1_1Field_html"><div class="ttname"><a href="classippl_1_1Field.html">ippl::Field</a></div><div class="ttdef"><b>Definition:</b> Field.h:18</div></div>
@@ -146,7 +145,7 @@ Example: Poisson solver</h2>
 </div><!-- fragment --><p>Now we can define the solver object and solve the Poisson equation: </p><div class="fragment"><div class="line"><a class="code" href="FieldSolverBase_8h.html#a0260ca71634192b16e08be9a76cd0e1a">Solver_t</a> FFTsolver(fieldE, rho, params);</div>
 <div class="line">FFTsolver.solve();</div>
 </div><!-- fragment --><p> The potential is stored in the rho Field. The E-Field is stored in the fieldE Field.</p>
-<h2><a class="anchor" id="autotoc_md20"></a>
+<h2><a class="anchor" id="autotoc_md5"></a>
 [Optional] Using a Preconditioner</h2>
 <p>If you want to precondition the solver you can add following parameters to the parameter list: </p><div class="fragment"><div class="line"><span class="comment">// Define the preconditioner type (jacobi, newton, chebyshev, richardson or gauss_seidel)</span></div>
 <div class="line">params.<a class="code" href="classippl_1_1ParameterList.html#ab4b572b0db6bad6f631b23320a8f4722">add</a>(<span class="stringliteral">&quot;preconditioner_type&quot;</span>, preconditioner_type);</div>

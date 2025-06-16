@@ -99,22 +99,22 @@ Collaboration diagram for ippl::random::randn&lt; T, Dim &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aecf1075cf26b4d41b7236801d55b932f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a> = typename <a class="el" href="structippl_1_1detail_1_1ViewType.html">ippl::detail::ViewType</a>&lt; <a class="el" href="classippl_1_1Vector.html">ippl::Vector</a>&lt; double, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;, 1 &gt;::<a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a></td></tr>
+<tr class="memitem:aecf1075cf26b4d41b7236801d55b932f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a> = typename <a class="el" href="structippl_1_1detail_1_1ViewType.html">ippl::detail::ViewType</a>&lt; <a class="el" href="classippl_1_1Vector.html">ippl::Vector</a>&lt; double, Dim &gt;, 1 &gt;::<a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a></td></tr>
 <tr class="separator:aecf1075cf26b4d41b7236801d55b932f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae3413f968a0c232ad159b3cb00505cf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#aae3413f968a0c232ad159b3cb00505cf">GeneratorPool</a> = typename Kokkos::Random_XorShift64_Pool&lt;&gt;</td></tr>
 <tr class="separator:aae3413f968a0c232ad159b3cb00505cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a75b9f30b7550dcaeb3363ff273a610a4"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#a75b9f30b7550dcaeb3363ff273a610a4">randn</a> (<a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a> v_, <a class="el" href="structippl_1_1random_1_1randn.html#aae3413f968a0c232ad159b3cb00505cf">GeneratorPool</a> rand_pool_, <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> *mu_p, <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> *sd_p)</td></tr>
+<tr class="memitem:a75b9f30b7550dcaeb3363ff273a610a4"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#a75b9f30b7550dcaeb3363ff273a610a4">randn</a> (<a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a> v_, <a class="el" href="structippl_1_1random_1_1randn.html#aae3413f968a0c232ad159b3cb00505cf">GeneratorPool</a> rand_pool_, T *mu_p, T *sd_p)</td></tr>
 <tr class="memdesc:a75b9f30b7550dcaeb3363ff273a610a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the randn functor.  <a href="structippl_1_1random_1_1randn.html#a75b9f30b7550dcaeb3363ff273a610a4">More...</a><br /></td></tr>
 <tr class="separator:a75b9f30b7550dcaeb3363ff273a610a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a391e47a951a49c4b4dfe2582595387ca"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#a391e47a951a49c4b4dfe2582595387ca">randn</a> (<a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a> v_, <a class="el" href="structippl_1_1random_1_1randn.html#aae3413f968a0c232ad159b3cb00505cf">GeneratorPool</a> rand_pool_)</td></tr>
 <tr class="separator:a391e47a951a49c4b4dfe2582595387ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c7ce8ee0fc149520220af8fd5879c97"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION const <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#a2c7ce8ee0fc149520220af8fd5879c97">getMu</a> (unsigned int idx) const</td></tr>
+<tr class="memitem:a2c7ce8ee0fc149520220af8fd5879c97"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#a2c7ce8ee0fc149520220af8fd5879c97">getMu</a> (unsigned int idx) const</td></tr>
 <tr class="memdesc:a2c7ce8ee0fc149520220af8fd5879c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter function for mean in idx dimension.  <a href="structippl_1_1random_1_1randn.html#a2c7ce8ee0fc149520220af8fd5879c97">More...</a><br /></td></tr>
 <tr class="separator:a2c7ce8ee0fc149520220af8fd5879c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08d1822593f8ce5fb230c924a37f0681"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION const <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#a08d1822593f8ce5fb230c924a37f0681">getSd</a> (unsigned int idx) const</td></tr>
+<tr class="memitem:a08d1822593f8ce5fb230c924a37f0681"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#a08d1822593f8ce5fb230c924a37f0681">getSd</a> (unsigned int idx) const</td></tr>
 <tr class="memdesc:a08d1822593f8ce5fb230c924a37f0681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter function for the standard deviation in idx dimension.  <a href="structippl_1_1random_1_1randn.html#a08d1822593f8ce5fb230c924a37f0681">More...</a><br /></td></tr>
 <tr class="separator:a08d1822593f8ce5fb230c924a37f0681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecb04bb41cdc3b3d9a737b50804cf11a"><td class="memItemLeft" align="right" valign="top">KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#aecb04bb41cdc3b3d9a737b50804cf11a">operator()</a> (const size_t i) const</td></tr>
@@ -127,9 +127,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a1797f41f7e05dda3c9708959c3d9600a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55d072fee6d6c3a5850fd1da89c919c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structippl_1_1random_1_1randn.html#aae3413f968a0c232ad159b3cb00505cf">GeneratorPool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#a55d072fee6d6c3a5850fd1da89c919c8">rand_pool</a></td></tr>
 <tr class="separator:a55d072fee6d6c3a5850fd1da89c919c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad032d70e65cee022f5ee6bef27ffe74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#aad032d70e65cee022f5ee6bef27ffe74">mu</a> [<a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>]</td></tr>
+<tr class="memitem:aad032d70e65cee022f5ee6bef27ffe74"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#aad032d70e65cee022f5ee6bef27ffe74">mu</a> [Dim]</td></tr>
 <tr class="separator:aad032d70e65cee022f5ee6bef27ffe74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1f6962bdbc13cf4efe879d9d6ec6d33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#ad1f6962bdbc13cf4efe879d9d6ec6d33">sd</a> [<a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>]</td></tr>
+<tr class="memitem:ad1f6962bdbc13cf4efe879d9d6ec6d33"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structippl_1_1random_1_1randn.html#ad1f6962bdbc13cf4efe879d9d6ec6d33">sd</a> [Dim]</td></tr>
 <tr class="separator:ad1f6962bdbc13cf4efe879d9d6ec6d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -156,7 +156,7 @@ struct ippl::random::randn&lt; T, Dim &gt;</h3>
 template&lt;typename T , unsigned Dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;::<a class="el" href="structippl_1_1random_1_1randn.html#aae3413f968a0c232ad159b3cb00505cf">GeneratorPool</a> =  typename Kokkos::Random_XorShift64_Pool&lt;&gt;</td>
+          <td class="memname">using <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; T, Dim &gt;::<a class="el" href="structippl_1_1random_1_1randn.html#aae3413f968a0c232ad159b3cb00505cf">GeneratorPool</a> =  typename Kokkos::Random_XorShift64_Pool&lt;&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -172,7 +172,7 @@ template&lt;typename T , unsigned Dim&gt; </div>
 template&lt;typename T , unsigned Dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;::<a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a> =  typename <a class="el" href="structippl_1_1detail_1_1ViewType.html">ippl::detail::ViewType</a>&lt;<a class="el" href="classippl_1_1Vector.html">ippl::Vector</a>&lt;double, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>&gt;, 1&gt;::<a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a></td>
+          <td class="memname">using <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; T, Dim &gt;::<a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a> =  typename <a class="el" href="structippl_1_1detail_1_1ViewType.html">ippl::detail::ViewType</a>&lt;<a class="el" href="classippl_1_1Vector.html">ippl::Vector</a>&lt;double, Dim&gt;, 1&gt;::<a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -192,7 +192,7 @@ template&lt;typename T , unsigned Dim&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;::<a class="el" href="structippl_1_1random_1_1randn.html">randn</a> </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; T, Dim &gt;::<a class="el" href="structippl_1_1random_1_1randn.html">randn</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a>&#160;</td>
           <td class="paramname"><em>v_</em>, </td>
@@ -206,13 +206,13 @@ template&lt;typename T , unsigned Dim&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> *&#160;</td>
+          <td class="paramtype">T *&#160;</td>
           <td class="paramname"><em>mu_p</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> *&#160;</td>
+          <td class="paramtype">T *&#160;</td>
           <td class="paramname"><em>sd_p</em>&#160;</td>
         </tr>
         <tr>
@@ -253,7 +253,7 @@ template&lt;typename T , unsigned Dim&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;::<a class="el" href="structippl_1_1random_1_1randn.html">randn</a> </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; T, Dim &gt;::<a class="el" href="structippl_1_1random_1_1randn.html">randn</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a>&#160;</td>
           <td class="paramname"><em>v_</em>, </td>
@@ -292,7 +292,7 @@ template&lt;typename T , unsigned Dim&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION const <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&amp; <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;::getMu </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION const T&amp; <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; T, Dim &gt;::getMu </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>idx</em></td><td>)</td>
@@ -328,7 +328,7 @@ template&lt;typename T , unsigned Dim&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION const <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&amp; <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;::getSd </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION const T&amp; <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; T, Dim &gt;::getSd </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>idx</em></td><td>)</td>
@@ -364,7 +364,7 @@ template&lt;typename T , unsigned Dim&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">KOKKOS_INLINE_FUNCTION void <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;::operator() </td>
+          <td class="memname">KOKKOS_INLINE_FUNCTION void <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; T, Dim &gt;::operator() </td>
           <td>(</td>
           <td class="paramtype">const size_t&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -398,7 +398,7 @@ template&lt;typename T , unsigned Dim&gt; </div>
 template&lt;typename T , unsigned Dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;::mu[<a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>]</td>
+          <td class="memname">T <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; T, Dim &gt;::mu[Dim]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -414,7 +414,7 @@ template&lt;typename T , unsigned Dim&gt; </div>
 template&lt;typename T , unsigned Dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structippl_1_1random_1_1randn.html#aae3413f968a0c232ad159b3cb00505cf">GeneratorPool</a> <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;::rand_pool</td>
+          <td class="memname"><a class="el" href="structippl_1_1random_1_1randn.html#aae3413f968a0c232ad159b3cb00505cf">GeneratorPool</a> <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; T, Dim &gt;::rand_pool</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -430,7 +430,7 @@ template&lt;typename T , unsigned Dim&gt; </div>
 template&lt;typename T , unsigned Dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;::sd[<a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>]</td>
+          <td class="memname">T <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; T, Dim &gt;::sd[Dim]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -446,7 +446,7 @@ template&lt;typename T , unsigned Dim&gt; </div>
 template&lt;typename T , unsigned Dim&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a> <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="PenningTrap_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a> &gt;::v</td>
+          <td class="memname"><a class="el" href="structippl_1_1random_1_1randn.html#aecf1075cf26b4d41b7236801d55b932f">view_type</a> <a class="el" href="structippl_1_1random_1_1randn.html">ippl::random::randn</a>&lt; T, Dim &gt;::v</td>
         </tr>
       </table>
 </div><div class="memdoc">

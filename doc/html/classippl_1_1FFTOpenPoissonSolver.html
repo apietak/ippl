@@ -141,7 +141,7 @@ Public Types</h2></td></tr>
 <tr class="separator:a9cc56c843b6a193a3c3eeac6e22b7766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15fc74460aac62a7fab8e27ab1644df2"><td class="memItemLeft" align="right" valign="top">typedef FieldRHS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#a15fc74460aac62a7fab8e27ab1644df2">Field_t</a></td></tr>
 <tr class="separator:a15fc74460aac62a7fab8e27ab1644df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a883afd7fa98c9d5cfa4bc0d6d373f159"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ChargedParticles_8hpp.html#aa0c2f6ddbc74317f18dde648c40d6123">FieldLHS::Centering_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#a883afd7fa98c9d5cfa4bc0d6d373f159">Centering</a></td></tr>
+<tr class="memitem:a883afd7fa98c9d5cfa4bc0d6d373f159"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="FieldSolverBase_8h.html#aa0c2f6ddbc74317f18dde648c40d6123">FieldLHS::Centering_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#a883afd7fa98c9d5cfa4bc0d6d373f159">Centering</a></td></tr>
 <tr class="separator:a883afd7fa98c9d5cfa4bc0d6d373f159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d2437ef2cbebd076cd8824ef3ce180e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classippl_1_1Field.html">Field</a>&lt; int, <a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#af282da576fe15815c8d1ff2ee1086b27">Dim</a>, <a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#aa682906ee3e32d8f41d51bbe24a68903">mesh_type</a>, <a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#a883afd7fa98c9d5cfa4bc0d6d373f159">Centering</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#a4d2437ef2cbebd076cd8824ef3ce180e">IField_t</a></td></tr>
 <tr class="separator:a4d2437ef2cbebd076cd8824ef3ce180e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,7 +220,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2cd2417480ea384dc27ede6653f2cc1b inherit pub_methods_classippl_1_1Poisson"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#a2cd2417480ea384dc27ede6653f2cc1b">Poisson</a> (<a class="el" href="classippl_1_1Poisson.html#afb9803ccc30ca00408107714a1f7ab41">lhs_type</a> &amp;lhs, <a class="el" href="classippl_1_1Poisson.html#a96a91a7da45bb0d881ec749ddfef38e3">rhs_type</a> &amp;rhs)</td></tr>
 <tr class="separator:a2cd2417480ea384dc27ede6653f2cc1b inherit pub_methods_classippl_1_1Poisson"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeffb02adbeee92aba98355bc136bdc71 inherit pub_methods_classippl_1_1Poisson"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aeffb02adbeee92aba98355bc136bdc71 inherit pub_methods_classippl_1_1Poisson"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#aeffb02adbeee92aba98355bc136bdc71">updateParameter</a> (const std::string &amp;key, const <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &amp;value)</td></tr>
+<tr class="memitem:aeffb02adbeee92aba98355bc136bdc71 inherit pub_methods_classippl_1_1Poisson"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#aeffb02adbeee92aba98355bc136bdc71">updateParameter</a> (const std::string &amp;key, const T &amp;value)</td></tr>
 <tr class="separator:aeffb02adbeee92aba98355bc136bdc71 inherit pub_methods_classippl_1_1Poisson"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac81577029a8345555afccd846ab6924f inherit pub_methods_classippl_1_1Poisson"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1Poisson.html#ac81577029a8345555afccd846ab6924f">updateParameters</a> (const <a class="el" href="classippl_1_1ParameterList.html">ParameterList</a> &amp;params)</td></tr>
 <tr class="separator:ac81577029a8345555afccd846ab6924f inherit pub_methods_classippl_1_1Poisson"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,7 +242,7 @@ Protected Member Functions</h2></td></tr>
 Private Types</h2></td></tr>
 <tr class="memitem:a4055faad2859d213996e3d8d150db2d8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#a4055faad2859d213996e3d8d150db2d8">Trhs</a> = typename FieldRHS::value_type</td></tr>
 <tr class="separator:a4055faad2859d213996e3d8d150db2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa682906ee3e32d8f41d51bbe24a68903"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#aa682906ee3e32d8f41d51bbe24a68903">mesh_type</a> = typename <a class="el" href="ChargedParticles_8hpp.html#acf6afef09138aaa7329f5076e9d2d27f">FieldLHS::Mesh_t</a></td></tr>
+<tr class="memitem:aa682906ee3e32d8f41d51bbe24a68903"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#aa682906ee3e32d8f41d51bbe24a68903">mesh_type</a> = typename <a class="el" href="FieldSolverBase_8h.html#acf6afef09138aaa7329f5076e9d2d27f">FieldLHS::Mesh_t</a></td></tr>
 <tr class="separator:aa682906ee3e32d8f41d51bbe24a68903"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0543b83e62bfa3a48770c51de37932b4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#a0543b83e62bfa3a48770c51de37932b4">Tg</a> = typename FieldLHS::value_type::value_type</td></tr>
 <tr class="separator:a0543b83e62bfa3a48770c51de37932b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -375,7 +375,7 @@ template&lt;typename FieldLHS , typename FieldRHS &gt; </div>
 template&lt;typename FieldLHS , typename FieldRHS &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="ChargedParticles_8hpp.html#aa0c2f6ddbc74317f18dde648c40d6123">FieldLHS::Centering_t</a> <a class="el" href="classippl_1_1FFTOpenPoissonSolver.html">ippl::FFTOpenPoissonSolver</a>&lt; FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#a883afd7fa98c9d5cfa4bc0d6d373f159">Centering</a></td>
+          <td class="memname">typedef <a class="el" href="FieldSolverBase_8h.html#aa0c2f6ddbc74317f18dde648c40d6123">FieldLHS::Centering_t</a> <a class="el" href="classippl_1_1FFTOpenPoissonSolver.html">ippl::FFTOpenPoissonSolver</a>&lt; FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#a883afd7fa98c9d5cfa4bc0d6d373f159">Centering</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -554,7 +554,7 @@ template&lt;typename FieldLHS , typename FieldRHS &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classippl_1_1FFTOpenPoissonSolver.html">ippl::FFTOpenPoissonSolver</a>&lt; FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#aa682906ee3e32d8f41d51bbe24a68903">mesh_type</a> =  typename <a class="el" href="ChargedParticles_8hpp.html#acf6afef09138aaa7329f5076e9d2d27f">FieldLHS::Mesh_t</a></td>
+          <td class="memname">using <a class="el" href="classippl_1_1FFTOpenPoissonSolver.html">ippl::FFTOpenPoissonSolver</a>&lt; FieldLHS, FieldRHS &gt;::<a class="el" href="classippl_1_1FFTOpenPoissonSolver.html#aa682906ee3e32d8f41d51bbe24a68903">mesh_type</a> =  typename <a class="el" href="FieldSolverBase_8h.html#acf6afef09138aaa7329f5076e9d2d27f">FieldLHS::Mesh_t</a></td>
         </tr>
       </table>
   </td>

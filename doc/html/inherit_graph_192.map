@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classippl_1_1mpi_1_1Request.html" title=" " alt="" coords="5,5,145,32"/>
+<area shape="rect" id="node1" href="$classippl_1_1Poisson.html" title=" " alt="" coords="5,71,184,112"/>
+<area shape="rect" id="node2" href="$classippl_1_1FEMPoissonSolver.html" title="A solver for the poisson equation using finite element methods and Conjugate Gradient (CG)" alt="" coords="266,5,441,47"/>
+<area shape="rect" id="node3" href="$classippl_1_1FEMPoissonSolverFEMVector.html" title="A solver for the poisson equation using finite element methods and Conjugate Gradient (CG)" alt="" coords="232,71,475,112"/>
+<area shape="rect" id="node4" href="$classippl_1_1PoissonCG.html" title=" " alt="" coords="254,136,453,177"/>
 </map>
