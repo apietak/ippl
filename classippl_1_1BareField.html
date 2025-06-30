@@ -114,17 +114,17 @@ Collaboration diagram for ippl::BareField&lt; T, Dim, ViewArgs &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classippl_1_1BareField__coll__graph.png" border="0" usemap="#aippl_1_1BareField_3_01T_00_01Dim_00_01ViewArgs_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aippl_1_1BareField_3_01T_00_01Dim_00_01ViewArgs_01_4_coll__map" id="aippl_1_1BareField_3_01T_00_01Dim_00_01ViewArgs_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="334,1091,465,1365"/>
+<area shape="rect" title=" " alt="" coords="335,1091,466,1365"/>
 <area shape="rect" href="structippl_1_1detail_1_1Expression.html" title=" " alt="" coords="5,775,228,889"/>
 <area shape="rect" href="structippl_1_1detail_1_1ViewType.html" title=" " alt="" coords="253,805,407,859"/>
-<area shape="rect" href="classippl_1_1detail_1_1HaloCells.html" title=" " alt="" coords="432,746,607,918"/>
-<area shape="rect" href="structippl_1_1detail_1_1FieldBufferData.html" title=" " alt="" coords="444,365,595,449"/>
-<area shape="rect" href="structippl_1_1detail_1_1ViewType.html" title=" " alt="" coords="446,64,593,119"/>
-<area shape="rect" href="classippl_1_1FieldLayout.html" title=" " alt="" coords="631,636,802,1028"/>
-<area shape="rect" href="classippl_1_1mpi_1_1Communicator.html" title=" " alt="" coords="622,240,806,573"/>
-<area shape="rect" href="classTagMaker.html" title=" " alt="" coords="630,5,763,177"/>
-<area shape="rect" href="structippl_1_1detail_1_1ContainerForAllSpaces.html" title=" " alt="" coords="787,57,1014,126"/>
-<area shape="rect" href="structippl_1_1detail_1_1ViewType.html" title=" " alt="" coords="830,379,977,434"/>
+<area shape="rect" href="classippl_1_1detail_1_1HaloCells.html" title=" " alt="" coords="432,739,620,925"/>
+<area shape="rect" href="structippl_1_1detail_1_1FieldBufferData.html" title=" " alt="" coords="451,365,601,449"/>
+<area shape="rect" href="structippl_1_1detail_1_1ViewType.html" title=" " alt="" coords="453,64,599,119"/>
+<area shape="rect" href="classippl_1_1FieldLayout.html" title=" " alt="" coords="645,636,815,1028"/>
+<area shape="rect" href="classippl_1_1mpi_1_1Communicator.html" title=" " alt="" coords="631,240,815,573"/>
+<area shape="rect" href="classTagMaker.html" title=" " alt="" coords="637,5,770,177"/>
+<area shape="rect" href="structippl_1_1detail_1_1ContainerForAllSpaces.html" title=" " alt="" coords="794,57,1021,126"/>
+<area shape="rect" href="structippl_1_1detail_1_1ViewType.html" title=" " alt="" coords="839,379,986,434"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -183,6 +183,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa5126202358432ede91a07b3f7ba4512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4500b35d4a051a1c2ad86ac7c4d5031a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1BareField.html#a4500b35d4a051a1c2ad86ac7c4d5031a">accumulateHalo</a> ()</td></tr>
 <tr class="separator:a4500b35d4a051a1c2ad86ac7c4d5031a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2c81080b9f23ce73c3f2009ec896e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1BareField.html#ad2c81080b9f23ce73c3f2009ec896e7f">accumulateHalo_noghost</a> (int nghost=1)</td></tr>
+<tr class="separator:ad2c81080b9f23ce73c3f2009ec896e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8502eaaf351b2c4a85c22300bd881481"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1BareField.html#a8502eaaf351b2c4a85c22300bd881481">getCommunicator</a> () const</td></tr>
 <tr class="separator:a8502eaaf351b2c4a85c22300bd881481"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03944cc0274a28c7d2de62c3d54a62bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1BareField.html#a65473a60d3fcd5cffd90ad4bb9c6bc23">Layout_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1BareField.html#a03944cc0274a28c7d2de62c3d54a62bc">getLayout</a> () const</td></tr>
@@ -541,6 +543,26 @@ template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d03
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classippl_1_1BareField.html">ippl::BareField</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, ViewArgs &gt;::accumulateHalo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2c81080b9f23ce73c3f2009ec896e7f" name="ad2c81080b9f23ce73c3f2009ec896e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2c81080b9f23ce73c3f2009ec896e7f">&#9670;&#160;</a></span>accumulateHalo_noghost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , unsigned Dim, class... ViewArgs&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classippl_1_1BareField.html">ippl::BareField</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, ViewArgs &gt;::accumulateHalo_noghost </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nghost</em> = <code>1</code></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -5,7 +5,7 @@ var searchData=
   ['parameters_2',['parameters',['../structippl_1_1LogEntry.html#a1cf29df3fa51b87d11ddb9be79be6566',1,'ippl::LogEntry']]],
   ['params_5fm_3',['params_m',['../classippl_1_1FEMSolver.html#acfaf544e523a188970056aed60cc3e47',1,'ippl::FEMSolver::params_m()'],['../classippl_1_1Maxwell.html#a13da1696856e668b7744395099d8cbdf',1,'ippl::Maxwell::params_m()'],['../classippl_1_1Poisson.html#a73eae524c9fa61e6d71d4e1edc045500',1,'ippl::Poisson::params_m()'],['../classippl_1_1ParameterList.html#a93fd3a92b33cb5ee955aab5e185fee1f',1,'ippl::ParameterList::params_m()']]],
   ['pc_5fm_4',['pc_m',['../classLoadBalancer.html#ae3440302b86803a29ab06a964c010aee',1,'LoadBalancer']]],
-  ['pcg_5falgo_5fm_5',['pcg_algo_m',['../classippl_1_1FEMSolver.html#a4b31ea54c464233adba2f20278d88060',1,'ippl::FEMSolver::pcg_algo_m()'],['../classippl_1_1FEMMaxwellDiffusionSolver.html#aabe40ac0d6164bbc4064ba5bf0d49b73',1,'ippl::FEMMaxwellDiffusionSolver::pcg_algo_m()'],['../classippl_1_1FEMPoissonSolver.html#a4a2c040f274e2bd682039f7d22e9482c',1,'ippl::FEMPoissonSolver::pcg_algo_m()'],['../classippl_1_1FEMPoissonSolverFEMVector.html#ac508bc4d63b2391bf3af44699eab64e0',1,'ippl::FEMPoissonSolverFEMVector::pcg_algo_m()']]],
+  ['pcg_5falgo_5fm_5',['pcg_algo_m',['../classippl_1_1FEMSolver.html#a4b31ea54c464233adba2f20278d88060',1,'ippl::FEMSolver::pcg_algo_m()'],['../classippl_1_1FEMMaxwellDiffusionSolver.html#aabe40ac0d6164bbc4064ba5bf0d49b73',1,'ippl::FEMMaxwellDiffusionSolver::pcg_algo_m()'],['../classippl_1_1FEMPoissonSolver.html#afe47990355d10cb211d70809c71377f1',1,'ippl::FEMPoissonSolver::pcg_algo_m()'],['../classippl_1_1FEMPoissonSolverFEMVector.html#ac508bc4d63b2391bf3af44699eab64e0',1,'ippl::FEMPoissonSolverFEMVector::pcg_algo_m()']]],
   ['pcontainer_5fm_6',['pcontainer_m',['../classippl_1_1PicManager.html#a162bca7531cc11944f9969c4bd74ada6',1,'ippl::PicManager']]],
   ['pdf_5fm_7',['pdf_m',['../classippl_1_1random_1_1Distribution.html#af8b5d39981a5352c7ddd61946335a9f4',1,'ippl::random::Distribution']]],
   ['phase_8',['phase',['../structBumponTailInstabilityManager_1_1PhaseDump.html#adfc036c396d1d60de5e8aee0922ce72e',1,'BumponTailInstabilityManager::PhaseDump']]],
@@ -13,12 +13,13 @@ var searchData=
   ['phasespace_10',['phaseSpace',['../structBumponTailInstabilityManager_1_1PhaseDump.html#a42e25a3d2077ff2f796a11585dc69fad',1,'BumponTailInstabilityManager::PhaseDump']]],
   ['phasespacebuf_11',['phaseSpaceBuf',['../structBumponTailInstabilityManager_1_1PhaseDump.html#a142eee19475839ba70a30c3871770b62',1,'BumponTailInstabilityManager::PhaseDump']]],
   ['phi_5fm_12',['phi_m',['../classChargedParticles.html#a3b5db5a63a8fc61daf1b5fbef69ee5bb',1,'ChargedParticles::phi_m()'],['../classFieldContainer.html#a75bd05fd082ab170f3381ca3f3d8fcdd',1,'FieldContainer::phi_m()'],['../classFieldSolver.html#a24de4937837db666ebe01972010fbcbf',1,'FieldSolver::phi_m()'],['../classLoadBalancer.html#a7da2daa104b56c4cd797b704824022f4',1,'LoadBalancer::phi_m()']]],
-  ['pi_13',['pi',['../structNewton1D.html#a864f14c686710274cb204576b6776dce',1,'Newton1D::pi()'],['../structNewton1D.html#a7f450be3f2f7a16b87337a7e9b7fb64a',1,'Newton1D::pi()'],['../datatypes_8h.html#a43016d873124d39034edb8cd164794db',1,'pi():&#160;datatypes.h'],['../ChargedParticles_8hpp.html#a43016d873124d39034edb8cd164794db',1,'pi():&#160;ChargedParticles.hpp']]],
+  ['pi_13',['pi',['../structNewton1D.html#a864f14c686710274cb204576b6776dce',1,'Newton1D::pi()'],['../structNewton1D.html#a7f450be3f2f7a16b87337a7e9b7fb64a',1,'Newton1D::pi()'],['../ChargedParticles_8hpp.html#a43016d873124d39034edb8cd164794db',1,'pi():&#160;ChargedParticles.hpp']]],
   ['pl_5fm_14',['pl_m',['../classParticleContainer.html#a895a0e08527eb6fa42162eea8cf8885d',1,'ParticleContainer']]],
   ['pool_5fm_15',['pool_m',['../structippl_1_1random_1_1InverseTransformSampling_1_1fill__random.html#ab279e507ff4961cbf4ddb82c7305a004',1,'ippl::random::InverseTransformSampling::fill_random']]],
-  ['preconditioner_5fm_16',['preconditioner_m',['../classippl_1_1PCG.html#a4c4f64a255e77c9d5ea8dded61fce53e',1,'ippl::PCG']]],
-  ['printnode_17',['PrintNode',['../classInform.html#a365a619e4580b0df6e7912448ac8733b',1,'Inform']]],
-  ['prod_18',['prod',['../namespaceippl.html#a4a18c8ae92048307dad2530aa3c2cb31',1,'ippl']]],
-  ['ptype_5fm_19',['ptype_m',['../classChargedParticles.html#ad31559e5b77befafd532f076ea6bcf1f',1,'ChargedParticles']]],
-  ['px_20',['px',['../classmy__auto__ptr.html#ad040b4d59a7327923d4772bdf63a00d4',1,'my_auto_ptr']]]
+  ['preconditioner_5fm_16',['preconditioner_m',['../classippl_1_1PCG.html#aebbe17a4e11e48c98dcaeab46f6b4d2b',1,'ippl::PCG']]],
+  ['preconditioner_5fparams_5fm_17',['preconditioner_params_m',['../classAlpineManager.html#a53b8714f505f7825b2b6cfb5d306c2e3',1,'AlpineManager::preconditioner_params_m()'],['../classFieldSolver.html#a92d97f7bf79d268d9b35727b04b32e0b',1,'FieldSolver::preconditioner_params_m()']]],
+  ['printnode_18',['PrintNode',['../classInform.html#a365a619e4580b0df6e7912448ac8733b',1,'Inform']]],
+  ['prod_19',['prod',['../namespaceippl.html#a4a18c8ae92048307dad2530aa3c2cb31',1,'ippl']]],
+  ['ptype_5fm_20',['ptype_m',['../classChargedParticles.html#ad31559e5b77befafd532f076ea6bcf1f',1,'ChargedParticles']]],
+  ['px_21',['px',['../classmy__auto__ptr.html#ad040b4d59a7327923d4772bdf63a00d4',1,'my_auto_ptr']]]
 ];

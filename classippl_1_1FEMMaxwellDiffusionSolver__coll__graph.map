@@ -1,17 +1,18 @@
 <map id="ippl::FEMMaxwellDiffusionSolver&lt; FieldType &gt;" name="ippl::FEMMaxwellDiffusionSolver&lt; FieldType &gt;">
-<area shape="rect" id="node1" title="A solver for the electric diffusion equation given by &#160;and &#160;using the Nédélec basis functions." alt="" coords="328,1312,533,1557"/>
-<area shape="rect" id="node2" href="$classippl_1_1Maxwell.html" title=" " alt="" coords="5,975,176,1176"/>
+<area shape="rect" id="node1" title="A solver for the electric diffusion equation given by &#160;and &#160;using the Nédélec basis functions." alt="" coords="328,1341,533,1587"/>
+<area shape="rect" id="node2" href="$classippl_1_1Maxwell.html" title=" " alt="" coords="5,1004,176,1205"/>
 <area shape="rect" id="node3" href="$classippl_1_1ParameterList.html" title=" " alt="" coords="23,571,158,758"/>
-<area shape="rect" id="node4" href="$classippl_1_1CG.html" title=" " alt="" coords="200,960,427,1191"/>
-<area shape="rect" id="node5" href="$classippl_1_1SolverAlgorithm.html" title=" " alt="" coords="232,630,395,699"/>
-<area shape="rect" id="node6" href="$classippl_1_1GaussJacobiQuadrature.html" title=" " alt="" coords="451,989,650,1161"/>
-<area shape="rect" id="node7" href="$classippl_1_1Quadrature.html" title="This is the base class for all quadrature rules." alt="" coords="436,520,636,809"/>
-<area shape="rect" id="node8" href="$classippl_1_1Vector.html" title=" " alt="" coords="431,161,641,391"/>
-<area shape="rect" id="node9" href="$structippl_1_1detail_1_1Expression.html" title=" " alt="" coords="450,5,622,104"/>
-<area shape="rect" id="node10" href="$classippl_1_1NedelecSpace.html" title=" " alt="" coords="679,901,870,1249"/>
-<area shape="rect" id="node11" href="$classippl_1_1FiniteElementSpace.html" title=" " alt="" coords="661,491,897,839"/>
-<area shape="rect" id="node12" href="$classippl_1_1Vector.html" title=" " alt="" coords="685,153,809,399"/>
-<area shape="rect" id="node13" href="$structippl_1_1detail_1_1Expression.html" title=" " alt="" coords="665,13,817,97"/>
-<area shape="rect" id="node14" href="$classippl_1_1Vector.html" title=" " alt="" coords="842,153,985,399"/>
-<area shape="rect" id="node15" href="$structippl_1_1detail_1_1Expression.html" title=" " alt="" coords="841,13,993,97"/>
+<area shape="rect" id="node4" href="$classippl_1_1CG.html" title=" " alt="" coords="200,989,427,1220"/>
+<area shape="rect" id="node5" href="$classippl_1_1SolverAlgorithm.html" title=" " alt="" coords="207,630,369,699"/>
+<area shape="rect" id="node6" href="$classippl_1_1GaussJacobiQuadrature.html" title=" " alt="" coords="451,1033,650,1176"/>
+<area shape="rect" id="node7" href="$classippl_1_1Quadrature.html" title="This is the base class for all quadrature rules." alt="" coords="393,520,593,809"/>
+<area shape="rect" id="node8" href="$classippl_1_1Vector.html" title=" " alt="" coords="389,161,598,391"/>
+<area shape="rect" id="node9" href="$structippl_1_1detail_1_1Expression.html" title=" " alt="" coords="407,5,579,104"/>
+<area shape="rect" id="node10" title=" " alt="" coords="618,645,678,685"/>
+<area shape="rect" id="node11" href="$classippl_1_1NedelecSpace.html" title=" " alt="" coords="699,931,890,1279"/>
+<area shape="rect" id="node12" href="$classippl_1_1FiniteElementSpace.html" title=" " alt="" coords="702,491,938,839"/>
+<area shape="rect" id="node13" href="$classippl_1_1Vector.html" title=" " alt="" coords="693,153,817,399"/>
+<area shape="rect" id="node14" href="$structippl_1_1detail_1_1Expression.html" title=" " alt="" coords="673,13,825,97"/>
+<area shape="rect" id="node15" href="$classippl_1_1Vector.html" title=" " alt="" coords="850,153,993,399"/>
+<area shape="rect" id="node16" href="$structippl_1_1detail_1_1Expression.html" title=" " alt="" coords="849,13,1001,97"/>
 </map>

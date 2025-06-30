@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['lagrangespace_5fm_0',['lagrangeSpace_m',['../classippl_1_1FEMPoissonSolverFEMVector.html#ac686089f829a381a6fd79490e9f71555',1,'ippl::FEMPoissonSolverFEMVector::lagrangeSpace_m()'],['../classippl_1_1FEMPoissonSolver.html#a6ead69fe2e446cf3c70de3245844cddc',1,'ippl::FEMPoissonSolver::lagrangeSpace_m()']]],
+  ['lagrangespace_5fm_0',['lagrangeSpace_m',['../classippl_1_1FEMPoissonSolverFEMVector.html#ac686089f829a381a6fd79490e9f71555',1,'ippl::FEMPoissonSolverFEMVector::lagrangeSpace_m()'],['../classippl_1_1FEMPoissonSolver.html#ab53225d2c764827d2e03a8044bbec1c3',1,'ippl::FEMPoissonSolver::lagrangeSpace_m()']]],
   ['layout_1',['layout',['../structBumponTailInstabilityManager_1_1PhaseDump.html#a30c14cf93829b9a349fc0e007f31b1c9',1,'BumponTailInstabilityManager::PhaseDump']]],
   ['layout2_5fm_2',['layout2_m',['../classippl_1_1FFTOpenPoissonSolver.html#a2f1264ccadc0fd2917c7a235eee1149c',1,'ippl::FFTOpenPoissonSolver']]],
   ['layout2n1_5fm_3',['layout2n1_m',['../classippl_1_1FFTOpenPoissonSolver.html#a946072c758a52eccdd45555e31b508ce',1,'ippl::FFTOpenPoissonSolver']]],
   ['layout4_5fm_4',['layout4_m',['../classippl_1_1FFTOpenPoissonSolver.html#a6089ba87c2823464f35425ca66f5b7ae',1,'ippl::FFTOpenPoissonSolver']]],
-  ['layout_5fm_5',['layout_m',['../classippl_1_1FEMSolver.html#a8a0edb81aa56835b48a52ca8b2b485bf',1,'ippl::FEMSolver::layout_m()'],['../classippl_1_1LagrangeSpaceFEMVector.html#a7e74d8fbf4266b9d22ea635ee053f55f',1,'ippl::LagrangeSpaceFEMVector::layout_m()'],['../classippl_1_1NedelecSpace.html#a7204e2e0ac34657cf5fc743912eb8a4c',1,'ippl::NedelecSpace::layout_m()'],['../classippl_1_1BareField.html#a33d0de2917691c854dd90db9e9f1d448',1,'ippl::BareField::layout_m()'],['../classippl_1_1ParticleBase.html#a4d389f0c5f399676137343b693979de5',1,'ippl::ParticleBase::layout_m()']]],
-  ['layout_5fmp_6',['layout_mp',['../classippl_1_1FFTOpenPoissonSolver.html#aeff5517115183735d8eb74c8319c3dc5',1,'ippl::FFTOpenPoissonSolver::layout_mp()'],['../classippl_1_1P3MSolver.html#adba42ab70718360c3bb91afdc5670a0d',1,'ippl::P3MSolver::layout_mp()']]],
+  ['layout_5fm_5',['layout_m',['../classippl_1_1ParticleBase.html#a4d389f0c5f399676137343b693979de5',1,'ippl::ParticleBase::layout_m()'],['../classippl_1_1BareField.html#a33d0de2917691c854dd90db9e9f1d448',1,'ippl::BareField::layout_m()'],['../classippl_1_1NedelecSpace.html#a7204e2e0ac34657cf5fc743912eb8a4c',1,'ippl::NedelecSpace::layout_m()'],['../classippl_1_1LagrangeSpaceFEMVector.html#a7e74d8fbf4266b9d22ea635ee053f55f',1,'ippl::LagrangeSpaceFEMVector::layout_m()'],['../classippl_1_1FEMSolver.html#a8a0edb81aa56835b48a52ca8b2b485bf',1,'ippl::FEMSolver::layout_m()']]],
+  ['layout_5fmp_6',['layout_mp',['../classippl_1_1FDTDSolverBase.html#a1b81aedaddafd2ee11e0ec82b6a79c03',1,'ippl::FDTDSolverBase::layout_mp()'],['../classippl_1_1FFTOpenPoissonSolver.html#aeff5517115183735d8eb74c8319c3dc5',1,'ippl::FFTOpenPoissonSolver::layout_mp()'],['../classippl_1_1P3MSolver.html#adba42ab70718360c3bb91afdc5670a0d',1,'ippl::P3MSolver::layout_mp()']]],
   ['layoutcomplex_5fm_7',['layoutComplex_m',['../classippl_1_1FFTOpenPoissonSolver.html#aac6cf2737ad70365e50a54ed16086b14',1,'ippl::FFTOpenPoissonSolver::layoutComplex_m()'],['../classippl_1_1P3MSolver.html#a874db021251ec2c629b00cace80fc82d',1,'ippl::P3MSolver::layoutComplex_m()']]],
   ['layoutcomplex_5fmp_8',['layoutComplex_mp',['../classippl_1_1FFTPeriodicPoissonSolver.html#a9c1536b2f77ae21f03d0c1f4628ba5fd',1,'ippl::FFTPeriodicPoissonSolver']]],
   ['lbt_5fm_9',['lbt_m',['../classAlpineManager.html#ad3677f3d77d7c2ba482963266c14866b',1,'AlpineManager']]],
@@ -24,5 +24,5 @@ var searchData=
   ['localnum_5fmp_21',['localNum_mp',['../classippl_1_1detail_1_1ParticleAttribBase.html#a433bcdcece76a442a6cc5d3031fb7edf',1,'ippl::detail::ParticleAttribBase']]],
   ['logentries_5fm_22',['logEntries_m',['../classippl_1_1LoggingBufferHandler.html#aeb097286e797ffc2cea88cccff7d168a',1,'ippl::LoggingBufferHandler']]],
   ['loggingperiod_23',['LoggingPeriod',['../ChargedParticles_8hpp.html#a0aa8bf7a8574af24aeccc5d3be28b335',1,'ChargedParticles.hpp']]],
-  ['lower_5fm_24',['lower_m',['../structippl_1_1gs__preconditioner.html#a3e36bf4b42cf56654ade0877cfc11093',1,'ippl::gs_preconditioner']]]
+  ['lower_5fm_24',['lower_m',['../structippl_1_1gs__preconditioner.html#a3e36bf4b42cf56654ade0877cfc11093',1,'ippl::gs_preconditioner::lower_m()'],['../structippl_1_1ssor__preconditioner.html#aac6aa7139fc48892c0959b4b6ecdb2f4',1,'ippl::ssor_preconditioner::lower_m()']]]
 ];
