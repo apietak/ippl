@@ -11,9 +11,8 @@ var searchData=
   ['solveralgorithm_3c_20femvector_3c_20t_20_3e_2c_20femvector_3c_20t_20_3e_20_3e_8',['SolverAlgorithm&lt; FEMVector&lt; T &gt;, FEMVector&lt; T &gt; &gt;',['../classippl_1_1SolverAlgorithm.html',1,'ippl']]],
   ['solveralgorithm_3c_20femvector_3c_20tlhs_20_3e_2c_20femvector_3c_20tlhs_20_3e_20_3e_9',['SolverAlgorithm&lt; FEMVector&lt; Tlhs &gt;, FEMVector&lt; Tlhs &gt; &gt;',['../classippl_1_1SolverAlgorithm.html',1,'ippl']]],
   ['solveralgorithm_3c_20fieldlhs_2c_20fieldlhs_20_3e_10',['SolverAlgorithm&lt; FieldLHS, FieldLHS &gt;',['../classippl_1_1SolverAlgorithm.html',1,'ippl']]],
-  ['solveralgorithm_3c_20fieldrhs_2c_20fieldrhs_20_3e_11',['SolverAlgorithm&lt; FieldRHS, FieldRHS &gt;',['../classippl_1_1SolverAlgorithm.html',1,'ippl']]],
-  ['ssor_5fpreconditioner_12',['ssor_preconditioner',['../structippl_1_1ssor__preconditioner.html',1,'ippl']]],
-  ['standardfdtdsolver_13',['StandardFDTDSolver',['../classippl_1_1StandardFDTDSolver.html',1,'ippl']]],
-  ['status_14',['Status',['../classippl_1_1mpi_1_1Status.html',1,'ippl::mpi']]],
-  ['sum_15',['Sum',['../structKokkosCorrection_1_1Sum.html',1,'KokkosCorrection']]]
+  ['ssor_5fpreconditioner_11',['ssor_preconditioner',['../structippl_1_1ssor__preconditioner.html',1,'ippl']]],
+  ['standardfdtdsolver_12',['StandardFDTDSolver',['../classippl_1_1StandardFDTDSolver.html',1,'ippl']]],
+  ['status_13',['Status',['../classippl_1_1mpi_1_1Status.html',1,'ippl::mpi']]],
+  ['sum_14',['Sum',['../structKokkosCorrection_1_1Sum.html',1,'KokkosCorrection']]]
 ];
