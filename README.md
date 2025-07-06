@@ -1,6 +1,10 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5940225.svg)](https://doi.org/10.5281/zenodo.8389192)
 [![License](https://img.shields.io/github/license/IPPL-framework/ippl)](https://github.com/IPPL-framework/ippl/blob/master/LICENSE)
 
+# FEMVector Lagrange space
+This branch contains an implementation of the Lagrange space using the FEMVector, this can be found in the files `src/FEM/LagrangeSpaceFEMVector.h/hpp`. Note that this implementation was a proof of concept and therefore the implementation is not very clean. A test for this can be found in `test/solver/fem/TestFEMVectorZeroBC_sin.cpp`.
+
+
 # Independent Parallel Particle Layer (IPPL)
 Independent Parallel Particle Layer (IPPL) is a performance portable C++ library for Particle-Mesh methods. IPPL makes use of Kokkos (https://github.com/kokkos/kokkos), HeFFTe (https://github.com/icl-utk-edu/heffte), and MPI (Message Passing Interface) to deliver a portable, massively parallel toolkit for particle-mesh methods. IPPL supports simulations in one to six dimensions, mixed precision, and asynchronous execution in different execution spaces (e.g. CPUs and GPUs). 
 

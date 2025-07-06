@@ -40,9 +40,5 @@ install(FILES
     LagrangeSpaceFEMVector.h
     LagrangeSpaceFEMVector.hpp
 
-    # Solvers
-    FEMSolver.h
-    FEMSolver.hpp
-
     DESTINATION include/FEM
 )
