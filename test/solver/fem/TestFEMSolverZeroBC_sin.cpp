@@ -1,14 +1,4 @@
-// Tests the FEM EM diffusion solver by solving the problem:
-//
-// curl(curl(E)) + E = [(1+k^2)sin(k*y), (1+k^2)sin(k*z), (1+k^2)sin(k*x)]^T, (x,y,z) in [-1,1]^3
-// cross(E,n) = 0 on boundary
-//
-// Exact solution is E = [sin(k*y), sin(k*z), sin(k*x)]
-//
-// BCs: Zero curl
-//
-// Usage:
-//    ./TestNedelecZeroCurl --info 5
+// Solves the Poisson equation using the FEMSolver class.
 
 #include "Ippl.h"
 
@@ -192,6 +182,7 @@ void testFEMSolver(const unsigned& numNodesPerDim, const T& domain_start = 0.0,
         }
         ippl::Comm->barrier();
     }
+        
 
     // start the timer
     static IpplTimings::TimerRef errorTimer = IpplTimings::getTimer("computeError");
@@ -199,7 +190,7 @@ void testFEMSolver(const unsigned& numNodesPerDim, const T& domain_start = 0.0,
     
     // Compute the error
     AnalyticSol<T, Dim> analytic;
-    T relError = space.computeError(result, analytic);
+    T relError = space.computeErrorL2(result, analytic);
 
     if (ippl::Comm->rank() == 0) {
         std::cout << std::setw(10) << numNodesPerDim;

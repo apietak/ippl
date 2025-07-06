@@ -432,6 +432,7 @@ namespace ippl{
                 }
             });
         
+            /*
         for (int r = 0; r < ippl::Comm->size(); ++r) {
             if (r == Comm->rank()) {
                 std::cout << "rank: " << r << "\n";
@@ -443,6 +444,7 @@ namespace ippl{
             }
             Comm->barrier();
         }
+            */
     }
 
 
