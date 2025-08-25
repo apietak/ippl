@@ -211,13 +211,13 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a80e2dc0b274c86f07bf43a8242c0aa41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data this object is storing.  <a href="classippl_1_1FEMVector.html#a80e2dc0b274c86f07bf43a8242c0aa41">More...</a><br /></td></tr>
 <tr class="separator:a80e2dc0b274c86f07bf43a8242c0aa41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0eafdceba52f1c1a0d522a9862f05a86"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structippl_1_1FEMVector_1_1BoundaryInfo.html">BoundaryInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FEMVector.html#a0eafdceba52f1c1a0d522a9862f05a86">boundaryInfo_m</a></td></tr>
-<tr class="memdesc:a0eafdceba52f1c1a0d522a9862f05a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct holding all the MPI and boundary infromation.  <a href="classippl_1_1FEMVector.html#a0eafdceba52f1c1a0d522a9862f05a86">More...</a><br /></td></tr>
+<tr class="memdesc:a0eafdceba52f1c1a0d522a9862f05a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct holding all the MPI and boundary information.  <a href="classippl_1_1FEMVector.html#a0eafdceba52f1c1a0d522a9862f05a86">More...</a><br /></td></tr>
 <tr class="separator:a0eafdceba52f1c1a0d522a9862f05a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&gt;<br />
 class ippl::FEMVector&lt; T &gt;</div><p >1D vector used in the context of FEM. </p>
-<p >This class represents a 1D vector which stores elements of type <code>T</code> and provides functionalities to handle halo cells and their exchanges. It can conceptually be though of being a mathemtical vector, and to this extend is used during fem to represent the vectors \(a\), \(b\) when solving the linear system \(Ax = b\).</p>
+<p >This class represents a 1D vector which stores elements of type <code>T</code> and provides functionalities to handle halo cells and their exchanges. It can conceptually be though of being a mathemtical vector, and to this extend is used during fem to represent the vectors \(x\), \(b\) when solving the linear system \(Ax = b\).</p>
 <p >We use this instead of an <code><a class="el" href="classippl_1_1Field.html">ippl::Field</a></code>, because for basis functions which have DoFs at non-vertex positions a representation as a field is not easily possible.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -287,12 +287,12 @@ template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d03
 </div><div class="memdoc">
 
 <p>Constructor taking size, neighbors, and halo exchange indices. </p>
-<p >Constrcutor of a <a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> taking in the size and information about the neighboring MPI ranks.</p>
+<p >Constructor of a <a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> taking in the size and information about the neighboring MPI ranks.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>The size of the vector. </td></tr>
     <tr><td class="paramname">neighbors</td><td>The ranks of the neighboring MPI tasks. </td></tr>
-    <tr><td class="paramname">sendIdxs</td><td>The indices for which the data should be send to the MPI neighbors. </td></tr>
+    <tr><td class="paramname">sendIdxs</td><td>The indices for which the data should be sent to the MPI neighbors. </td></tr>
     <tr><td class="paramname">recvIdxs</td><td>The halo cell indices. </td></tr>
   </table>
   </dd>
@@ -407,7 +407,7 @@ template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d03
 </div><div class="memdoc">
 
 <p>Copy values from neighboring ranks into local halo. </p>
-<p >This function takes local values and copies to them to the corresponding halo cells of the neighbors. </p>
+<p >This function takes local values (internal boundary values) and copies to them to the corresponding halo cells of the neighbors. </p>
 
 </div>
 </div>
@@ -503,7 +503,7 @@ template&lt;typename E , size_t N&gt; </div>
 <p >Set the values of this vector to the values of <code>expr</code> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">otherVector</td><td>The expression from which to copy the values</td></tr>
+    <tr><td class="paramname">expr</td><td>The expression from which to copy the values</td></tr>
   </table>
   </dd>
 </dl>
@@ -620,7 +620,7 @@ template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d03
 <p >This function takes data from the vector accoding to <code>idxStore</code> and stores it inside of <code><a class="el" href="structippl_1_1FEMVector_1_1BoundaryInfo.html#aeb79a857804881f558b9e690a416e9d0" title="Buffer for MPI communication.">BoundaryInfo::commBuffer_m</a></code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">idxStore</td><td>A 2D <a class="el" href="namespaceKokkos.html">Kokkos</a> view which stores the the indices for <code><a class="el" href="classippl_1_1FEMVector.html#a80e2dc0b274c86f07bf43a8242c0aa41" title="Data this object is storing.">FEMVector::data_m</a></code> which we want to send. </td></tr>
+    <tr><td class="paramname">idxStore</td><td>A 1D <a class="el" href="namespaceKokkos.html">Kokkos</a> view which stores the the indices for <code><a class="el" href="classippl_1_1FEMVector.html#a80e2dc0b274c86f07bf43a8242c0aa41" title="Data this object is storing.">FEMVector::data_m</a></code> which we want to send. </td></tr>
   </table>
   </dd>
 </dl>
@@ -761,8 +761,8 @@ template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d03
 </table>
 </div><div class="memdoc">
 
-<p>Struct holding all the MPI and boundary infromation. </p>
-<p >Pointer to a struct holding all the infromation required for MPI communication and general boundary information. The reason for it beeing a pointer, is such that when this <code><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a></code> object is copied to device only a pointer and not all the data needs to be copied to device. </p>
+<p>Struct holding all the MPI and boundary information. </p>
+<p >Pointer to a struct holding all the information required for MPI communication and general boundary information. The reason for it beeing a pointer, is such that when this <code><a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a></code> object is copied to device only a pointer and not all the data needs to be copied to device. </p>
 
 </div>
 </div>

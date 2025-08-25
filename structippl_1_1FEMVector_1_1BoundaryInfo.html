@@ -167,7 +167,7 @@ template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d03
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">neighbors</td><td>The ranks of the neighboring MPI tasks. </td></tr>
-    <tr><td class="paramname">sendIdxs</td><td>The indices for which the data should be send to the MPI neighbors. </td></tr>
+    <tr><td class="paramname">sendIdxs</td><td>The indices for which the data should be sent to the MPI neighbors. </td></tr>
     <tr><td class="paramname">recvIdxs</td><td>The halo cell indices. </td></tr>
   </table>
   </dd>
@@ -249,7 +249,7 @@ template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d03
 </div><div class="memdoc">
 
 <p>Stores indices of <code><a class="el" href="classippl_1_1FEMVector.html#a80e2dc0b274c86f07bf43a8242c0aa41" title="Data this object is storing.">FEMVector::data_m</a></code> which need to be send to the MPI neighbors. </p>
-<p >This is a 2D list which stores the indices of the <code><a class="el" href="classippl_1_1FEMVector.html#a80e2dc0b274c86f07bf43a8242c0aa41" title="Data this object is storing.">FEMVector::data_m</a></code> variable which need to be send to the MPI neighbors. The first dimension goes over all the neighbors and should be used in combination with <code>BounderyInfo::neighbors_m</code> while the second dimension goes over the actual indices.</p>
+<p >This is a 2D list which stores the indices of the <code><a class="el" href="classippl_1_1FEMVector.html#a80e2dc0b274c86f07bf43a8242c0aa41" title="Data this object is storing.">FEMVector::data_m</a></code> variable which need to be sent to the MPI neighbors. The first dimension goes over all the neighbors and should be used in combination with <code><a class="el" href="structippl_1_1FEMVector_1_1BoundaryInfo.html#a95e243a3f924561c67fcf9b2976d3724" title="Stores the ranks of the neighboring MPI tasks.">BoundaryInfo::neighbors_m</a></code> while the second dimension goes over the actual indices.</p>
 <p >This corresponds to the indices which belong to this rank but are shared by the halos of the other ranks. </p>
 
 </div>
