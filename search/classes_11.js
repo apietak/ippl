@@ -14,5 +14,6 @@ var searchData=
   ['ssor_5fpreconditioner_11',['ssor_preconditioner',['../structippl_1_1ssor__preconditioner.html',1,'ippl']]],
   ['standardfdtdsolver_12',['StandardFDTDSolver',['../classippl_1_1StandardFDTDSolver.html',1,'ippl']]],
   ['status_13',['Status',['../classippl_1_1mpi_1_1Status.html',1,'ippl::mpi']]],
-  ['sum_14',['Sum',['../structKokkosCorrection_1_1Sum.html',1,'KokkosCorrection']]]
+  ['subfieldlayout_14',['SubFieldLayout',['../classippl_1_1SubFieldLayout.html',1,'ippl']]],
+  ['sum_15',['Sum',['../structKokkosCorrection_1_1Sum.html',1,'KokkosCorrection']]]
 ];

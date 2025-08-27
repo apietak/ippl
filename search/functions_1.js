@@ -11,5 +11,6 @@ var searchData=
   ['binomialcoefficient_8',['binomialCoefficient',['../namespaceippl_1_1detail.html#a5af170e34c6a35663504bbdb93431a5c',1,'ippl::detail']]],
   ['boundaryinfo_9',['BoundaryInfo',['../structippl_1_1FEMVector_1_1BoundaryInfo.html#aa628a7e16d6a39f0ad3c0a057f913b74',1,'ippl::FEMVector::BoundaryInfo']]],
   ['buffersizecomparator_10',['bufferSizeComparator',['../classippl_1_1DefaultBufferHandler.html#a8378cafdc5fc434f7db8d6335321be49',1,'ippl::DefaultBufferHandler']]],
-  ['bumpontailinstabilitymanager_11',['BumponTailInstabilityManager',['../classBumponTailInstabilityManager.html#a39b2f4a1d13ef114f813faf18d101b03',1,'BumponTailInstabilityManager']]]
+  ['buildcells_11',['buildCells',['../classippl_1_1ParticleSpatialOverlapLayout.html#ae103def48782551ea15b0c0f5d196ebb',1,'ippl::ParticleSpatialOverlapLayout']]],
+  ['bumpontailinstabilitymanager_12',['BumponTailInstabilityManager',['../classBumponTailInstabilityManager.html#a39b2f4a1d13ef114f813faf18d101b03',1,'BumponTailInstabilityManager']]]
 ];
