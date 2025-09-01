@@ -101,7 +101,7 @@ Inheritance diagram for ippl::NedelecSpace&lt; T, Dim, Order, ElementType, Quadr
 <div class="dyncontent">
 <div class="center"><img src="classippl_1_1NedelecSpace__inherit__graph.png" border="0" usemap="#aippl_1_1NedelecSpace_3_01T_00_01Dim_00_01Order_00_01ElementType_00_01QuadratureType_00_01FieldType_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aippl_1_1NedelecSpace_3_01T_00_01Dim_00_01Order_00_01ElementType_00_01QuadratureType_00_01FieldType_01_4_inherit__map" id="aippl_1_1NedelecSpace_3_01T_00_01Dim_00_01Order_00_01ElementType_00_01QuadratureType_00_01FieldType_01_4_inherit__map">
-<area shape="rect" title="A class representing a Nedelec space for finite element methods on a structured, rectilinear grid." alt="" coords="25,445,221,793"/>
+<area shape="rect" title="A class representing a Nedelec space for finite element methods on a structured, rectilinear grid." alt="" coords="25,445,221,808"/>
 <area shape="rect" href="classippl_1_1FiniteElementSpace.html" title=" " alt="" coords="5,5,241,397"/>
 </map>
 </div>
@@ -110,12 +110,14 @@ Collaboration diagram for ippl::NedelecSpace&lt; T, Dim, Order, ElementType, Qua
 <div class="dyncontent">
 <div class="center"><img src="classippl_1_1NedelecSpace__coll__graph.png" border="0" usemap="#aippl_1_1NedelecSpace_3_01T_00_01Dim_00_01Order_00_01ElementType_00_01QuadratureType_00_01FieldType_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aippl_1_1NedelecSpace_3_01T_00_01Dim_00_01Order_00_01ElementType_00_01QuadratureType_00_01FieldType_01_4_coll__map" id="aippl_1_1NedelecSpace_3_01T_00_01Dim_00_01Order_00_01ElementType_00_01QuadratureType_00_01FieldType_01_4_coll__map">
-<area shape="rect" title="A class representing a Nedelec space for finite element methods on a structured, rectilinear grid." alt="" coords="67,859,263,1207"/>
-<area shape="rect" href="classippl_1_1FiniteElementSpace.html" title=" " alt="" coords="47,461,283,809"/>
+<area shape="rect" title="A class representing a Nedelec space for finite element methods on a structured, rectilinear grid." alt="" coords="233,872,429,1220"/>
+<area shape="rect" href="classippl_1_1FiniteElementSpace.html" title=" " alt="" coords="113,461,349,809"/>
 <area shape="rect" href="classippl_1_1Vector.html" title=" " alt="" coords="25,139,149,384"/>
 <area shape="rect" href="structippl_1_1detail_1_1Expression.html" title=" " alt="" coords="5,5,157,89"/>
 <area shape="rect" href="classippl_1_1Vector.html" title=" " alt="" coords="182,139,325,384"/>
 <area shape="rect" href="structippl_1_1detail_1_1Expression.html" title=" " alt="" coords="181,5,333,89"/>
+<area shape="rect" href="classippl_1_1Vector.html" title=" " alt="" coords="373,513,494,758"/>
+<area shape="rect" href="structippl_1_1detail_1_1Expression.html" title=" " alt="" coords="357,219,509,303"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -300,6 +302,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a3925c549caacc3261dac5a128cf148e9"><td class="memItemLeft" align="right" valign="top">Kokkos::View&lt; size_t * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a3925c549caacc3261dac5a128cf148e9">elementIndices</a></td></tr>
 <tr class="memdesc:a3925c549caacc3261dac5a128cf148e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores which elements (squares or cubes) belong to the current MPI rank.  <a href="classippl_1_1NedelecSpace.html#a3925c549caacc3261dac5a128cf148e9">More...</a><br /></td></tr>
 <tr class="separator:a3925c549caacc3261dac5a128cf148e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc16337b54c09b2f806e2eec0c1f8798"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt; <a class="el" href="classippl_1_1NedelecSpace.html#a5378e089229b8fcaaf7de5a2ebaa70cc">point_t</a>, 12 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#afc16337b54c09b2f806e2eec0c1f8798">localDofPositions_m</a></td></tr>
+<tr class="memdesc:afc16337b54c09b2f806e2eec0c1f8798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the positions of the local Degrees of Freedoms on the reference elements.  <a href="classippl_1_1NedelecSpace.html#afc16337b54c09b2f806e2eec0c1f8798">More...</a><br /></td></tr>
+<tr class="separator:afc16337b54c09b2f806e2eec0c1f8798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7204e2e0ac34657cf5fc743912eb8a4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classippl_1_1NedelecSpace.html#a4d10d5317c67c9c4ef9fd57074320235">Layout_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1NedelecSpace.html#a7204e2e0ac34657cf5fc743912eb8a4c">layout_m</a></td></tr>
 <tr class="memdesc:a7204e2e0ac34657cf5fc743912eb8a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The layout of the MPI ranks over the mesh.  <a href="classippl_1_1NedelecSpace.html#a7204e2e0ac34657cf5fc743912eb8a4c">More...</a><br /></td></tr>
 <tr class="separator:a7204e2e0ac34657cf5fc743912eb8a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1413,6 +1418,33 @@ template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d03
 
 <p>The layout of the MPI ranks over the mesh. </p>
 <p >Standart ippl layout which dictates how the MPI ranks are layed out over the mesh. It is used in order to be able to create FEMVectors, retreive correct DOF indices and intitalize the elementIndices. </p>
+
+</div>
+</div>
+<a id="afc16337b54c09b2f806e2eec0c1f8798" name="afc16337b54c09b2f806e2eec0c1f8798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc16337b54c09b2f806e2eec0c1f8798">&#9670;&#160;</a></span>localDofPositions_m</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , unsigned Dim, unsigned Order, typename ElementType , typename QuadratureType , typename FieldType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classippl_1_1Vector.html">Vector</a>&lt;<a class="el" href="classippl_1_1NedelecSpace.html#a5378e089229b8fcaaf7de5a2ebaa70cc">point_t</a>, 12&gt; <a class="el" href="classippl_1_1NedelecSpace.html">ippl::NedelecSpace</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="BumponTailInstability_8cpp.html#afef54e0ebfe65da0a396b342dcbe30f5">Dim</a>, Order, ElementType, QuadratureType, FieldType &gt;::localDofPositions_m</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stores the positions of the local Degrees of Freedoms on the reference elements. </p>
+<p >We are saying that the local degree of freedom positions are simply the centers of the edges. </p>
 
 </div>
 </div>

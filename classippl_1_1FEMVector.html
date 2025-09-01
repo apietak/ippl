@@ -172,9 +172,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a71b0fde79b67f8be8fca38bce6b2af5d"><td class="memItemLeft" align="right" valign="top">const Kokkos::View&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FEMVector.html#a71b0fde79b67f8be8fca38bce6b2af5d">getView</a> () const</td></tr>
 <tr class="memdesc:a71b0fde79b67f8be8fca38bce6b2af5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get underlying data view.  <a href="classippl_1_1FEMVector.html#a71b0fde79b67f8be8fca38bce6b2af5d">More...</a><br /></td></tr>
 <tr class="separator:a71b0fde79b67f8be8fca38bce6b2af5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7652b618c156cdb7ff976801cdef1e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FEMVector.html#af7652b618c156cdb7ff976801cdef1e1">getVolumeAverage</a> () const</td></tr>
-<tr class="memdesc:af7652b618c156cdb7ff976801cdef1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummy function used such that the <a class="el" href="classippl_1_1CG.html">CG</a> with periodic boundary compiles.  <a href="classippl_1_1FEMVector.html#af7652b618c156cdb7ff976801cdef1e1">More...</a><br /></td></tr>
-<tr class="separator:af7652b618c156cdb7ff976801cdef1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef3fc24ccfabacc43ca86d72ccea0d9b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1FEMVector.html#aef3fc24ccfabacc43ca86d72ccea0d9b">size</a> () const</td></tr>
 <tr class="memdesc:aef3fc24ccfabacc43ca86d72ccea0d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size (number of elements) of the vector.  <a href="classippl_1_1FEMVector.html#aef3fc24ccfabacc43ca86d72ccea0d9b">More...</a><br /></td></tr>
 <tr class="separator:aef3fc24ccfabacc43ca86d72ccea0d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -368,7 +365,7 @@ template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d03
 </div><div class="memdoc">
 
 <p>Accumulate halo values in neighbor. </p>
-<p >This function takes the local halo values and sums them to the corresponding values of the neighbor ranks. </p>
+<p >This function takes the local halo values (which are part of another ranks values) and sums them to these corresponding values of the neighbor ranks. </p>
 
 </div>
 </div>
@@ -407,7 +404,7 @@ template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d03
 </div><div class="memdoc">
 
 <p>Copy values from neighboring ranks into local halo. </p>
-<p >This function takes local values (internal boundary values) and copies to them to the corresponding halo cells of the neighbors. </p>
+<p >This function takes the local values which are part of other ranks halos and copies them to the corresponding halo cells of those neighbors. </p>
 
 </div>
 </div>
@@ -427,26 +424,6 @@ template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d03
 
 <p>Get underlying data view. </p>
 <p >Returns a constant reference to the underlying data the <a class="el" href="classippl_1_1FEMVector.html" title="1D vector used in the context of FEM.">FEMVector</a> is storing, this corresponds to a <code>Kokkos::View</code> living on the default device. </p>
-
-</div>
-</div>
-<a id="af7652b618c156cdb7ff976801cdef1e1" name="af7652b618c156cdb7ff976801cdef1e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7652b618c156cdb7ff976801cdef1e1">&#9670;&#160;</a></span>getVolumeAverage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> <a class="el" href="classippl_1_1FEMVector.html">ippl::FEMVector</a>&lt; <a class="el" href="BumponTailInstability_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;::getVolumeAverage</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Dummy function used such that the <a class="el" href="classippl_1_1CG.html">CG</a> with periodic boundary compiles. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>implement properly.</dd></dl>
-<p >Currently this is a dummy function such that the <a class="el" href="classippl_1_1CG.html">CG</a> code compiles. </p>
 
 </div>
 </div>

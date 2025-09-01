@@ -86,7 +86,7 @@ $(function() {
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classippl_1_1Maxwell-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">ippl::Maxwell&lt; EMField, SourceField &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">ippl::Maxwell&lt; EMField, SourceField &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -96,11 +96,11 @@ Inheritance diagram for ippl::Maxwell&lt; EMField, SourceField &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classippl_1_1Maxwell__inherit__graph.png" border="0" usemap="#aippl_1_1Maxwell_3_01EMField_00_01SourceField_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aippl_1_1Maxwell_3_01EMField_00_01SourceField_01_4_inherit__map" id="aippl_1_1Maxwell_3_01EMField_00_01SourceField_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="158,5,319,221"/>
-<area shape="rect" href="classippl_1_1FDTDSolverBase.html" title=" " alt="" coords="5,269,227,617"/>
-<area shape="rect" href="classippl_1_1FDTDSolverBase.html" title="Base class for FDTD solvers in the ippl library." alt="" coords="251,269,472,617"/>
-<area shape="rect" href="classippl_1_1NonStandardFDTDSolver.html" title="A solver for Maxwell&#39;s equations using a non&#45;standard Finite&#45;Difference Time&#45;Domain (FDTD) method." alt="" coords="157,665,355,793"/>
-<area shape="rect" href="classippl_1_1StandardFDTDSolver.html" title="A solver for Maxwell&#39;s equations using the Finite&#45;Difference Time&#45;Domain (FDTD) method." alt="" coords="379,665,554,793"/>
+<area shape="rect" title=" " alt="" coords="158,5,319,236"/>
+<area shape="rect" href="classippl_1_1FDTDSolverBase.html" title=" " alt="" coords="5,284,227,632"/>
+<area shape="rect" href="classippl_1_1FDTDSolverBase.html" title="Base class for FDTD solvers in the ippl library." alt="" coords="251,284,472,632"/>
+<area shape="rect" href="classippl_1_1NonStandardFDTDSolver.html" title="A solver for Maxwell&#39;s equations using a non&#45;standard Finite&#45;Difference Time&#45;Domain (FDTD) method." alt="" coords="157,680,355,808"/>
+<area shape="rect" href="classippl_1_1StandardFDTDSolver.html" title="A solver for Maxwell&#39;s equations using the Finite&#45;Difference Time&#45;Domain (FDTD) method." alt="" coords="379,680,554,808"/>
 </map>
 </div>
 <div class="dynheader">
@@ -108,7 +108,7 @@ Collaboration diagram for ippl::Maxwell&lt; EMField, SourceField &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classippl_1_1Maxwell__coll__graph.png" border="0" usemap="#aippl_1_1Maxwell_3_01EMField_00_01SourceField_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aippl_1_1Maxwell_3_01EMField_00_01SourceField_01_4_coll__map" id="aippl_1_1Maxwell_3_01EMField_00_01SourceField_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="5,255,167,456"/>
+<area shape="rect" title=" " alt="" coords="5,255,167,471"/>
 <area shape="rect" href="classippl_1_1ParameterList.html" title=" " alt="" coords="19,5,153,192"/>
 </map>
 </div>
@@ -125,6 +125,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abedd37932e39bc39f0e640b4136c07ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe737b3ac254e32781ef19e43d0be495"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1Maxwell.html#afe737b3ac254e32781ef19e43d0be495">mergeParameters</a> (const <a class="el" href="classippl_1_1ParameterList.html">ParameterList</a> &amp;params)</td></tr>
 <tr class="separator:afe737b3ac254e32781ef19e43d0be495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af92e3c97eba26b6de9f843460bcda6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1Maxwell.html#a4af92e3c97eba26b6de9f843460bcda6">solve</a> ()=0</td></tr>
+<tr class="separator:a4af92e3c97eba26b6de9f843460bcda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e2ccfe57f5384d8f548a55c9c337932"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classippl_1_1Maxwell.html#a6e2ccfe57f5384d8f548a55c9c337932">~Maxwell</a> ()</td></tr>
 <tr class="separator:a6e2ccfe57f5384d8f548a55c9c337932"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -249,7 +251,6 @@ template&lt;typename EMField , typename SourceField &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Solve the electromagnetic problem (<a class="el" href="classippl_1_1Maxwell.html">Maxwell</a>'s eqs) </p>
 
 </div>
 </div>
@@ -364,6 +365,36 @@ template&lt;typename EMField , typename SourceField &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a4af92e3c97eba26b6de9f843460bcda6" name="a4af92e3c97eba26b6de9f843460bcda6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4af92e3c97eba26b6de9f843460bcda6">&#9670;&#160;</a></span>solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename EMField , typename SourceField &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classippl_1_1Maxwell.html">ippl::Maxwell</a>&lt; EMField, SourceField &gt;::solve </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Solve the electromagnetic problem (<a class="el" href="classippl_1_1Maxwell.html">Maxwell</a>'s eqs) </p>
+
+<p>Implemented in <a class="el" href="classippl_1_1FDTDSolverBase.html#ac2b21ef80df02c074b625d540a0c698e">ippl::FDTDSolverBase&lt; EMField, SourceField, boundary_conditions &gt;</a>, <a class="el" href="classippl_1_1FDTDSolverBase.html#ac2b21ef80df02c074b625d540a0c698e">ippl::FDTDSolverBase&lt; EMField, SourceField, periodic &gt;</a>, and <a class="el" href="classippl_1_1FEMMaxwellDiffusionSolver.html#a47ed7b86dee95ac589cc00572bc9a0f6">ippl::FEMMaxwellDiffusionSolver&lt; FieldType &gt;</a>.</p>
 
 </div>
 </div>
