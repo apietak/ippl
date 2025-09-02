@@ -102,61 +102,62 @@ $(function() {
 <code>#include &quot;<a class="el" href="LagrangeSpace_8h_source.html">FEM/LagrangeSpace.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="NedelecSpace_8h_source.html">FEM/NedelecSpace.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="FEMVector_8h_source.html">FEM/FEMVector.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="FEMInterpolate_8hpp_source.html">FEM/FEMInterpolate.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for IpplCore.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="IpplCore_8h__incl.png" border="0" usemap="#aIpplCore_8h" alt=""/></div>
 <map name="aIpplCore_8h" id="aIpplCore_8h">
-<area shape="rect" title=" " alt="" coords="1905,5,1985,31"/>
-<area shape="rect" href="BareField_8h.html" title=" " alt="" coords="1884,174,2003,199"/>
-<area shape="rect" href="IpplInfo_8h.html" title=" " alt="" coords="2358,548,2470,573"/>
-<area shape="rect" href="FieldLayout_8h.html" title=" " alt="" coords="1141,328,1311,353"/>
-<area shape="rect" href="Vector_8h.html" title=" " alt="" coords="533,548,642,573"/>
-<area shape="rect" href="Field_8h.html" title=" " alt="" coords="2008,86,2100,111"/>
-<area shape="rect" href="BConds_8h.html" title=" " alt="" coords="2027,174,2137,199"/>
-<area shape="rect" href="SubFieldLayout_8h.html" title=" " alt="" coords="1749,255,1943,280"/>
-<area shape="rect" href="ParticleBase_8h.html" title=" " alt="" coords="383,255,538,280"/>
-<area shape="rect" href="ParticleSpatialLayout_8h.html" title=" " alt="" coords="727,167,882,207"/>
-<area shape="rect" href="OrthogonalRecursiveBisection_8h.html" title=" " alt="" coords="843,79,1017,119"/>
-<area shape="rect" href="EdgeElement_8h.html" title=" " alt="" coords="2175,86,2373,111"/>
-<area shape="rect" href="HexahedralElement_8h.html" title=" " alt="" coords="2397,86,2631,111"/>
-<area shape="rect" href="QuadrilateralElement_8h.html" title=" " alt="" coords="2655,79,2839,119"/>
-<area shape="rect" href="GaussJacobiQuadrature_8h.html" title=" " alt="" coords="2863,79,3061,119"/>
-<area shape="rect" href="MidpointQuadrature_8h.html" title=" " alt="" coords="3085,86,3329,111"/>
-<area shape="rect" href="LagrangeSpace_8h.html" title=" " alt="" coords="3354,86,3509,111"/>
-<area shape="rect" href="NedelecSpace_8h.html" title=" " alt="" coords="1556,86,1704,111"/>
-<area shape="rect" href="FEMVector_8h.html" title=" " alt="" coords="1139,174,1267,199"/>
-<area shape="rect" title=" " alt="" coords="1751,548,1875,573"/>
-<area shape="rect" title=" " alt="" coords="1964,475,2024,500"/>
-<area shape="rect" title=" " alt="" coords="2251,695,2323,720"/>
-<area shape="rect" href="IpplTypes_8h.html" title=" " alt="" coords="837,328,964,353"/>
-<area shape="rect" href="PAssert_8h.html" title=" " alt="" coords="2091,475,2207,500"/>
-<area shape="rect" href="ViewUtils_8h.html" title=" " alt="" coords="1791,328,1917,353"/>
-<area shape="rect" href="IpplExpressions_8h.html" title=" " alt="" coords="5,621,196,647"/>
-<area shape="rect" href="HaloCells_8h.html" title=" " alt="" coords="1143,255,1263,280"/>
-<area shape="rect" href="BareField_8hpp.html" title=" " alt="" coords="2015,328,2149,353"/>
-<area shape="rect" href="BareFieldOperations_8hpp.html" title=" " alt="" coords="1389,255,1585,280"/>
-<area shape="rect" href="ViewTypes_8h.html" title=" " alt="" coords="1680,401,1815,427"/>
-<area shape="rect" title=" " alt="" coords="126,695,209,720"/>
-<area shape="rect" title=" " alt="" coords="1381,401,1431,427"/>
-<area shape="rect" href="NDIndex_8h.html" title=" " alt="" coords="643,475,761,500"/>
-<area shape="rect" title=" " alt="" coords="1309,401,1356,427"/>
-<area shape="rect" title=" " alt="" coords="647,401,706,427"/>
-<area shape="rect" href="Communicator_8h.html" title=" " alt="" coords="1455,401,1655,427"/>
-<area shape="rect" href="Partitioner_8h.html" title=" " alt="" coords="883,401,1025,427"/>
-<area shape="rect" href="FieldLayout_8hpp.html" title=" " alt="" coords="1101,401,1285,427"/>
-<area shape="rect" title=" " alt="" coords="2535,475,2603,500"/>
-<area shape="rect" href="TypeUtils_8h.html" title=" " alt="" coords="1297,475,1421,500"/>
-<area shape="rect" title=" " alt="" coords="654,621,750,647"/>
-<area shape="rect" href="Vector_8hpp.html" title=" " alt="" coords="545,621,629,647"/>
-<area shape="rect" href="UniformCartesian_8h.html" title=" " alt="" coords="2427,328,2609,353"/>
-<area shape="rect" href="Field_8hpp.html" title=" " alt="" coords="2355,174,2462,199"/>
-<area shape="rect" href="FieldOperations_8hpp.html" title=" " alt="" coords="2161,174,2331,199"/>
-<area shape="rect" href="BcTypes_8h.html" title=" " alt="" coords="1610,255,1725,280"/>
-<area shape="rect" href="BConds_8hpp.html" title=" " alt="" coords="2536,255,2660,280"/>
-<area shape="rect" href="SubFieldLayout_8hpp.html" title=" " alt="" coords="1891,401,2097,427"/>
-<area shape="rect" title=" " alt="" coords="373,328,423,353"/>
-<area shape="rect" href="ParticleLayout_8h.html" title=" " alt="" coords="599,328,762,353"/>
+<area shape="rect" title=" " alt="" coords="1804,5,1884,31"/>
+<area shape="rect" href="BareField_8h.html" title=" " alt="" coords="497,174,615,199"/>
+<area shape="rect" href="IpplInfo_8h.html" title=" " alt="" coords="117,563,229,588"/>
+<area shape="rect" href="FieldLayout_8h.html" title=" " alt="" coords="1304,343,1475,368"/>
+<area shape="rect" href="Vector_8h.html" title=" " alt="" coords="2157,563,2267,588"/>
+<area shape="rect" href="Field_8h.html" title=" " alt="" coords="1663,86,1755,111"/>
+<area shape="rect" href="BConds_8h.html" title=" " alt="" coords="1263,174,1374,199"/>
+<area shape="rect" href="SubFieldLayout_8h.html" title=" " alt="" coords="835,262,1029,287"/>
+<area shape="rect" href="ParticleBase_8h.html" title=" " alt="" coords="2365,343,2520,368"/>
+<area shape="rect" href="ParticleSpatialLayout_8h.html" title=" " alt="" coords="2085,255,2240,295"/>
+<area shape="rect" href="OrthogonalRecursiveBisection_8h.html" title=" " alt="" coords="2031,167,2206,207"/>
+<area shape="rect" href="EdgeElement_8h.html" title=" " alt="" coords="1881,86,2079,111"/>
+<area shape="rect" href="HexahedralElement_8h.html" title=" " alt="" coords="2103,86,2337,111"/>
+<area shape="rect" href="QuadrilateralElement_8h.html" title=" " alt="" coords="2361,79,2545,119"/>
+<area shape="rect" href="GaussJacobiQuadrature_8h.html" title=" " alt="" coords="2569,79,2767,119"/>
+<area shape="rect" href="MidpointQuadrature_8h.html" title=" " alt="" coords="2791,86,3035,111"/>
+<area shape="rect" href="LagrangeSpace_8h.html" title=" " alt="" coords="3060,86,3215,111"/>
+<area shape="rect" href="NedelecSpace_8h.html" title=" " alt="" coords="1491,86,1639,111"/>
+<area shape="rect" href="FEMVector_8h.html" title=" " alt="" coords="1452,174,1580,199"/>
+<area shape="rect" href="FEMInterpolate_8hpp.html" title=" " alt="" coords="3340,86,3505,111"/>
+<area shape="rect" title=" " alt="" coords="1569,563,1693,588"/>
+<area shape="rect" title=" " alt="" coords="667,489,727,515"/>
+<area shape="rect" title=" " alt="" coords="543,709,615,735"/>
+<area shape="rect" href="IpplTypes_8h.html" title=" " alt="" coords="1969,416,2095,441"/>
+<area shape="rect" href="PAssert_8h.html" title=" " alt="" coords="235,489,351,515"/>
+<area shape="rect" href="ViewUtils_8h.html" title=" " alt="" coords="901,343,1027,368"/>
+<area shape="rect" href="IpplExpressions_8h.html" title=" " alt="" coords="2542,636,2733,661"/>
+<area shape="rect" href="HaloCells_8h.html" title=" " alt="" coords="1456,262,1576,287"/>
+<area shape="rect" href="BareField_8hpp.html" title=" " alt="" coords="259,343,392,368"/>
+<area shape="rect" href="BareFieldOperations_8hpp.html" title=" " alt="" coords="195,262,391,287"/>
+<area shape="rect" href="ViewTypes_8h.html" title=" " alt="" coords="1675,416,1810,441"/>
+<area shape="rect" title=" " alt="" coords="2529,709,2612,735"/>
+<area shape="rect" title=" " alt="" coords="899,416,949,441"/>
+<area shape="rect" href="NDIndex_8h.html" title=" " alt="" coords="2039,489,2156,515"/>
+<area shape="rect" title=" " alt="" coords="726,416,773,441"/>
+<area shape="rect" title=" " alt="" coords="1835,416,1893,441"/>
+<area shape="rect" href="Communicator_8h.html" title=" " alt="" coords="1181,416,1381,441"/>
+<area shape="rect" href="Partitioner_8h.html" title=" " alt="" coords="1457,416,1599,441"/>
+<area shape="rect" href="FieldLayout_8hpp.html" title=" " alt="" coords="973,416,1157,441"/>
+<area shape="rect" title=" " alt="" coords="1049,489,1117,515"/>
+<area shape="rect" href="TypeUtils_8h.html" title=" " alt="" coords="1818,489,1942,515"/>
+<area shape="rect" title=" " alt="" coords="2049,636,2145,661"/>
+<area shape="rect" href="Vector_8hpp.html" title=" " alt="" coords="2170,636,2254,661"/>
+<area shape="rect" href="UniformCartesian_8h.html" title=" " alt="" coords="2006,343,2189,368"/>
+<area shape="rect" href="Field_8hpp.html" title=" " alt="" coords="1604,174,1711,199"/>
+<area shape="rect" href="FieldOperations_8hpp.html" title=" " alt="" coords="1786,174,1955,199"/>
+<area shape="rect" href="BcTypes_8h.html" title=" " alt="" coords="1807,262,1921,287"/>
+<area shape="rect" href="BConds_8hpp.html" title=" " alt="" coords="1257,262,1381,287"/>
+<area shape="rect" href="SubFieldLayout_8hpp.html" title=" " alt="" coords="619,343,826,368"/>
+<area shape="rect" title=" " alt="" coords="2416,416,2467,441"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
